@@ -507,28 +507,30 @@ h6,
 
 /*** Vendor Carousel ***/
 .vendor-carousel {
-    padding: 20px 0;
+    padding: 40px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 .vendor-carousel img {
     height: 80px;
     width: auto;
+    max-width: 120px;
     object-fit: contain;
-    margin: 0 20px;
     filter: grayscale(100%) brightness(0.8);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 8px;
-    padding: 10px;
-    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    background: rgba(255,255,255,0.9);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 0 auto;
 }
 
 .vendor-carousel img:hover {
     filter: grayscale(0%) brightness(1.1);
-    transform: scale(1.15) translateY(-5px);
+    transform: scale(1.1);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     background: rgba(255,255,255,1);
 }
@@ -537,9 +539,18 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .vendor-carousel .owl-stage {
     display: flex;
     align-items: center;
+}
+
+.vendor-carousel .owl-nav {
+    display: none;
+}
+
+.vendor-carousel .owl-dots {
+    display: none;
 }
