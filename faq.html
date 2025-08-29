@@ -16,6 +16,91 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- WhatsApp Button Styles -->
+    <style>
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn i {
+            font-size: 32px;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-left-color: #333;
+        }
+        
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive WhatsApp Button */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 28px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -57,6 +142,7 @@
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
                     <a href="service.html" class="nav-item nav-link">OUR OFFERINGS</a>
                     <a href="blog.html" class="nav-item nav-link">BLOGS</a>
+                    <a href="faq.html" class="nav-item nav-link active">FAQS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
@@ -115,92 +201,81 @@
                             </h2>
                             <div id="collapseCompany" class="accordion-collapse collapse show" aria-labelledby="headingCompany" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>Octalpha Business Solutions ("Octalpha") is an AI-powered online advertising technology ("AdTech") platform based in Bengaluru, India, revolutionizing the digital out-of-home (DOOH) advertising landscape by streamlining creative generation, campaign scheduling, and smart display placement.</p>
-                                    <p>We simplify LED digital screen advertising by providing a dashboard of outdoor hoarding inventory for effortless selection, booking, and campaign management. By streamlining this traditionally fragmented ecosystem, Octalpha lowers the barriers for small and medium businesses to launch professional, hyper-local digital screen campaigns—making outdoor advertising accessible to all: big brands, small advertisers, campaigners and individuals.</p>
+                                    <p><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
+                                    <p>We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
+                                    <p>Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
+                                    <p>Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingCreative">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCreative" aria-expanded="false" aria-controls="collapseCreative">
-                                    <strong>Ad Creative</strong>
+                            <h2 class="accordion-header" id="headingServices">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices">
+                                    <strong>Our Services</strong>
                                 </button>
                             </h2>
-                            <div id="collapseCreative" class="accordion-collapse collapse" aria-labelledby="headingCreative" data-bs-parent="#faqAccordion">
+                            <div id="collapseServices" class="accordion-collapse collapse" aria-labelledby="headingServices" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <div class="mb-4">
-                                        <h6><strong>1. What elements are allowed as the ad?</strong></h6>
-                                        <p>Your digital screen ad would be either:</p>
-                                        <ul>
-                                            <li>An image</li>
-                                            <li>An Animated Image Sequence</li>
-                                        </ul>
+                                        <h6><strong>1. What IT infrastructure services do you provide?</strong></h6>
+                                        <p>We offer comprehensive IT infrastructure solutions including design & implementation, virtualization, unified communications, servers, storage, networking, structured cabling, and data center building with racks, UPS & power, cooling, and environmental monitoring.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>2. What are the ways of crafting a creative for my campaign?</strong></h6>
-                                        <p>Irrespective of the package you choose, you can either:</p>
-                                        <ul>
-                                            <li>Upload your externally crafted creative</li>
-                                            <li>Design using our recommended external AI tools and templates</li>
-                                        </ul>
+                                        <h6><strong>2. What cybersecurity services do you offer?</strong></h6>
+                                        <p>Our cybersecurity portfolio includes network security (NGFW, IDS/IPS, VPN), endpoint security (EPP, EDR, MDM), identity & access management (SSO, MFA, PAM), threat detection & response (SIEM, XDR, MDR), and comprehensive VAPT services.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>3. Do I need specific file formats or sizes for my creative?</strong></h6>
-                                        <p>Yes, each location has unique dimensions, aspect ratios, and orientations. To ensure your ad displays perfectly and avoids delays or rejection, creatives must meet the exact specifications with high resolution. We accept PNG, JPEG, JPG, MP4, and MPEG4 file formats. PDFs are not accepted.</p>
+                                        <h6><strong>3. Do you provide cloud services?</strong></h6>
+                                        <p>Yes, we offer cloud services including Azure, AWS, Oracle, and Google Cloud solutions, cloud migration, cost optimization, scalability, cloud-native security, backup, and containerization services.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>4. What if I don't have a design for my ad?</strong></h6>
-                                        <p>No problem! You can create one yourself using AI tools like Canva, or our professional design team can craft it for you—just fill our form and we will call you right back.</p>
+                                        <h6><strong>4. What compliance frameworks do you support?</strong></h6>
+                                        <p>We support multiple frameworks including ISO 27001, ISO 27701, GDPR, UAE PDPL, NIST CSF, PCI DSS, HIPAA, ISO 45001, ISO 9001, NESA UAE IAS, and CBUAE regulations.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>5. Can you help me with design inspiration?</strong></h6>
-                                        <p>Yes! You can leave it to our experts for a professionally polished result at a reasonable additional cost. Our experts have crafted many breathtaking creatives for numerous occasions.</p>
+                                        <h6><strong>5. What managed IT services do you provide?</strong></h6>
+                                        <p>We offer annual maintenance contracts, remote & onsite support, proactive maintenance & patching, monitoring & issue prevention, backup & DR management, and asset & license management with certified engineers.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingCampaign">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCampaign" aria-expanded="false" aria-controls="collapseCampaign">
-                                    <strong>Campaign Management</strong>
+                            <h2 class="accordion-header" id="headingEngagement">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEngagement" aria-expanded="false" aria-controls="collapseEngagement">
+                                    <strong>Engagement & Support</strong>
                                 </button>
                             </h2>
-                            <div id="collapseCampaign" class="accordion-collapse collapse" aria-labelledby="headingCampaign" data-bs-parent="#faqAccordion">
+                            <div id="collapseEngagement" class="accordion-collapse collapse" aria-labelledby="headingEngagement" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <div class="mb-4">
-                                        <h6><strong>6. What is the length and frequency of the ad?</strong></h6>
-                                        <p>The duration of an ad is typically 10-second showing of your advertisement on a digital screen. Typically, digital screens operate for about 14 hours daily, and your ad is displayed repeatedly—once every minute or every one and a half minute—on one digital screen within your selected target area.</p>
+                                        <h6><strong>6. What engagement models do you offer?</strong></h6>
+                                        <p>We provide flexible engagement models including project-based solutions, annual maintenance contracts (AMC), or long-term contracts based on your business needs and requirements.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>7. Where will my ad be displayed?</strong></h6>
-                                        <p>Your ad would appear on one large LED digital screen in a high-sensitive traffic area based on your selected target location.</p>
+                                        <h6><strong>7. Do you provide 24/7 support?</strong></h6>
+                                        <p>Yes, we offer comprehensive support including remote monitoring, proactive maintenance, and 24/7 technical support to ensure minimal downtime and faster issue resolution.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>8. When will my ad be displayed?</strong></h6>
-                                        <p>Your ad would appear on the digital screen from 8am to 10pm on the chosen day(s).</p>
+                                        <h6><strong>8. What is your response time for support issues?</strong></h6>
+                                        <p>Our response times vary based on the severity of the issue and your service level agreement. We typically respond to critical issues within 1-2 hours and provide regular updates throughout the resolution process.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>9. How do I choose where my ad will be displayed?</strong></h6>
-                                        <p>When creating your campaign, simply choose your target location from the suggested options. Your ad will then appear on the digital screen, providing focused local coverage based on availability of the selected date.</p>
+                                        <h6><strong>9. Do you provide training for our team?</strong></h6>
+                                        <p>Yes, we offer comprehensive training programs for your IT team on new technologies, security best practices, and system management to ensure smooth operations and maximize ROI.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>10. Can I run my ad in multiple locations at the same time?</strong></h6>
-                                        <p>Yes! You'll need to create a separate order for each location as each location has its own availability, size, dimensions, and orientation.</p>
-                                    </div>
-                                    
-                                    <div class="mb-4">
-                                        <h6><strong>11. Can I change my ad or creative after the order?</strong></h6>
-                                        <p>Once your campaign is live, changes to the ad or creative aren't possible. Since every creative must go through a strict approval process, making modifications mid-campaign could cause delays or rejection. To ensure your ad runs smoothly and on time, please upload your final creative before completing the order.</p>
+                                        <h6><strong>10. Can you work with our existing IT infrastructure?</strong></h6>
+                                        <p>Absolutely! We assess your current infrastructure and provide solutions that integrate seamlessly with your existing systems while planning for future growth and scalability.</p>
                                     </div>
                                 </div>
                             </div>
@@ -209,87 +284,70 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingPricing">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePricing" aria-expanded="false" aria-controls="collapsePricing">
-                                    <strong>Plans & Pricing</strong>
+                                    <strong>Pricing & Contracts</strong>
                                 </button>
                             </h2>
                             <div id="collapsePricing" class="accordion-collapse collapse" aria-labelledby="headingPricing" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <div class="mb-4">
-                                        <h6><strong>12. What are the different packages?</strong></h6>
-                                        <p>AdScreenHub offers three packages based on the level of exposure you want:</p>
-                                        <ul>
-                                            <li><strong>Spark (1 day):</strong> Quick Visibility, Tactical/Moment Centric, Occasion Focussed - 700 ads</li>
-                                            <li><strong>Impact (3 days):</strong> Cost Effective/Awareness Booster, Weekend Blitz, Momentum Gainer - 2100 ads</li>
-                                            <li><strong>Thrive (5 days):</strong> Increased Exposure, Behavioural reinforcement/Lasting Recall, Brand Amplification - 3500 ads</li>
-                                        </ul>
+                                        <h6><strong>11. How do you structure your pricing?</strong></h6>
+                                        <p>We offer competitive pricing without compromising on quality. Our pricing is transparent and can be structured as project-based, subscription-based, or custom solutions based on your specific requirements and budget.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>13. Are there any additional costs or fees?</strong></h6>
-                                        <p>No, there are no hidden costs or additional fees. Your package covers everything, including ad creation, location selection and ad plays on the LED digital screen.</p>
+                                        <h6><strong>12. Are there any hidden costs?</strong></h6>
+                                        <p>No, we believe in complete transparency. All costs are clearly outlined in our proposals, and we discuss any potential additional expenses upfront to ensure there are no surprises.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>14. Can I book a long-term LED screen advertising campaign?</strong></h6>
-                                        <p>Absolutely! If you're looking for an extended booking, our team can design a custom solution tailored to your campaign goals and duration.</p>
+                                        <h6><strong>13. Do you offer flexible payment terms?</strong></h6>
+                                        <p>Yes, we understand that different businesses have different cash flow requirements. We can work with you to create payment schedules that align with your business cycles and project milestones.</p>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h6><strong>14. What warranty do you provide on your solutions?</strong></h6>
+                                        <p>We provide comprehensive warranties on all our solutions and ongoing support through our maintenance contracts. The specific warranty terms depend on the solution and are clearly outlined in our service agreements.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingApprovals">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseApprovals" aria-expanded="false" aria-controls="collapseApprovals">
-                                    <strong>Approvals & Restrictions</strong>
+                            <h2 class="accordion-header" id="headingCompliance">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompliance" aria-expanded="false" aria-controls="collapseCompliance">
+                                    <strong>Compliance & Security</strong>
                                 </button>
                             </h2>
-                            <div id="collapseApprovals" class="accordion-collapse collapse" aria-labelledby="headingApprovals" data-bs-parent="#faqAccordion">
+                            <div id="collapseCompliance" class="accordion-collapse collapse" aria-labelledby="headingCompliance" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <div class="mb-4">
-                                        <h6><strong>15. Why is ad approval necessary?</strong></h6>
-                                        <p>Ad approval helps guarantee that your advertisement aligns with local laws, governmental regulations and community standards. Certain locations have specific restrictions—for example, ads on specific days are restricted by governmental regulations. This review process ensures your ad is appropriate and eligible for display.</p>
+                                        <h6><strong>15. How do you ensure data security?</strong></h6>
+                                        <p>We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance with international security standards to protect your sensitive data and systems.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>16. What are my responsibilities regarding the content of my advertisements?</strong></h6>
-                                        <p>You are responsible for ensuring that your advertisement content is not misleading and complies with all applicable laws, regulations, and ethical standards. Failure to meet these requirements may result in your ad being rejected or your account being terminated.</p>
+                                        <h6><strong>16. Do you provide compliance consulting?</strong></h6>
+                                        <p>Yes, we offer comprehensive compliance consulting including policy development, risk assessment, audit preparation, and ongoing compliance monitoring to help you meet regulatory requirements.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>17. What happens if my ad gets rejected?</strong></h6>
-                                        <p>If your ad doesn't meet the required guidelines, you'll receive an email outlining the issues. You may need to update the content, such as adjusting images or text, to comply with regulations. Once revised, you can resubmit your ad for another review. However, the revised ad must be resubmitted at least 12 hours before the scheduled start time of the relevant ad slot.</p>
+                                        <h6><strong>17. What certifications do your team members have?</strong></h6>
+                                        <p>Our team holds various industry certifications including Cisco, Microsoft, AWS, Fortinet, and other vendor-specific certifications, along with security and compliance certifications to ensure expertise in all areas.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>18. What happens if I don't resubmit my revised advertisement?</strong></h6>
-                                        <p>If you fail to resubmit the corrected advertisement, the ad slot will be forfeited. In such cases, you will not be entitled to any refund, credit, or compensation.</p>
+                                        <h6><strong>18. What is your project delivery timeline?</strong></h6>
+                                        <p>Project timelines vary based on complexity and scope. We provide detailed project plans during the initial consultation and maintain regular communication throughout the project lifecycle to ensure timely delivery.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>19. What if I need to make changes but there is less than 12 hours before my ad slot starts?</strong></h6>
-                                        <p>It is your responsibility to ensure compliance with all advertisement guidelines during order placements. In such cases, the ad slot will be forfeited, and you will remain liable for the full charges without refund or credit.</p>
+                                        <h6><strong>19. Do you provide post-implementation support?</strong></h6>
+                                        <p>Yes, we provide comprehensive post-implementation support including training, documentation, and ongoing maintenance to ensure smooth operations and maximum ROI from your technology investments.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>20. Will my resubmitted advertisement be reviewed again?</strong></h6>
-                                        <p>Yes, once your revised advertisement is received, AdScreenHub will review it to ensure it complies with all guidelines. Only compliant advertisements will be displayed.</p>
-                                    </div>
-                                    
-                                    <div class="mb-4">
-                                        <h6><strong>21. What are the prohibited ads on the platform?</strong></h6>
-                                        <p>To comply with diverse location-based and time-specific governmental regulations, AdScreenHub does not permit advertisements from the categories listed below.</p>
-                                        <ul>
-                                            <li>False or misleading claims</li>
-                                            <li>Fraudulent financial schemes or get-rich-quick scams</li>
-                                            <li>Hate speech, defamation, or politically sensitive content</li>
-                                            <li>Illegal services, counterfeit products, or copyrighted material without permission</li>
-                                            <li>Alcohol Advertising</li>
-                                            <li>Tobacco & Vaping Products</li>
-                                            <li>Gambling, Betting & Lottery Ads</li>
-                                            <li>Political Ads</li>
-                                            <li>Adult Content</li>
-                                            <li>Language, Religious & Culturally Sensitive Ads</li>
-                                        </ul>
+                                        <h6><strong>20. How do you handle data migration?</strong></h6>
+                                        <p>We follow industry best practices for data migration including thorough planning, testing, validation, and rollback procedures to ensure zero data loss and minimal downtime during transitions.</p>
                                     </div>
                                 </div>
                             </div>
@@ -304,13 +362,13 @@
                             <div id="collapsePayment" class="accordion-collapse collapse" aria-labelledby="headingPayment" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <div class="mb-4">
-                                        <h6><strong>22. What payment methods do you accept?</strong></h6>
-                                        <p>We accept payments via credit/debit cards, UPI, net banking, and mobile wallets.</p>
+                                        <h6><strong>21. What payment methods do you accept?</strong></h6>
+                                        <p>We accept various payment methods including bank transfers, credit cards, and other corporate payment solutions. Payment terms are flexible and can be structured based on project milestones.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>23. Will I get a tax invoice for my booking?</strong></h6>
-                                        <p>Yes, you get a GST invoice for our campaign after the ad is approved.</p>
+                                        <h6><strong>22. Will I get a proper invoice for services?</strong></h6>
+                                        <p>Yes, we provide detailed invoices for all services including breakdown of costs, taxes, and payment terms as per UAE regulations.</p>
                                     </div>
                                 </div>
                             </div>
@@ -319,25 +377,24 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingPerformance">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerformance" aria-expanded="false" aria-controls="collapsePerformance">
-                                    <strong>Ad Performance & Reporting</strong>
+                                    <strong>Project Management & Reporting</strong>
                                 </button>
                             </h2>
                             <div id="collapsePerformance" class="accordion-collapse collapse" aria-labelledby="headingPerformance" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <div class="mb-4">
-                                        <h6><strong>24. How do power cuts affect my ad display and billing?</strong></h6>
-                                        <p>While Bengaluru may experience occasional power cuts, it's important to note that power interruptions can still occur due to various factors such as maintenance activities, infrastructure issues, or unforeseen circumstances. Our LED screens typically operate for about 14 hours daily, offering around 840 ad slots each day. Based on the latest report related to BESCOM, the average daily power outage is approximately 2.2 hours. To account for this, we charge only for 700 slots per day, reflecting typical screen availability.</p>
-                                        <p>In the event of a power outage exceeding the average duration, such occurrence shall be deemed a force majeure event beyond the reasonable control of AdScreenHub, and AdScreenHub shall not be held liable for any failure or delay in the display of advertisements arising therefrom. Conversely, if there are no power interruptions, you'll benefit from additional ad slots beyond the 700 daily allotment at no extra charge.</p>
-                                        <p>Please note, according to Bruhat Bengaluru Mahanagara Palike (Advertisement) Bye-Laws, 2024, applicable to Greater Bengaluru Area under the Greater Bengaluru Governance Act, 2024, digital screens are not allowed to use diesel generators to operate during power outages.</p>
+                                        <h6><strong>23. How do you manage project progress and reporting?</strong></h6>
+                                        <p>We provide regular project updates through scheduled meetings, progress reports, and real-time dashboards. Our project management methodology ensures transparency and keeps you informed at every stage.</p>
                                     </div>
                                     
                                     <div class="mb-4">
-                                        <h6><strong>25. How can I track my ad?</strong></h6>
-                                        <p>After your ad goes live, we will upload an image to your order later the same day containing:</p>
-                                        <ul>
-                                            <li>A view of your ad.</li>
-                                            <li>A map showing the locations of the digital screen(s) displaying your ad.</li>
-                                        </ul>
+                                        <h6><strong>24. What happens if there are project delays?</strong></h6>
+                                        <p>We proactively identify potential delays and communicate them early. Our risk management approach includes contingency planning and alternative solutions to minimize impact on your business operations.</p>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h6><strong>25. How do you measure project success?</strong></h6>
+                                        <p>We define clear success metrics at project initiation and provide regular reporting on KPIs, ROI, and business impact to demonstrate the value delivered through our solutions.</p>
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +403,7 @@
                     </div>
                     
                     <div class="text-center mt-5">
-                        <p class="mb-4">If you have any further questions, feel free to contact us at <a href="mailto:info@adscreenhub.com" class="text-primary">info@adscreenhub.com</a></p>
+                        <p class="mb-4">If you have any further questions, feel free to contact us at <a href="mailto:info.dxb@octalpha.com" class="text-primary">info.dxb@octalpha.com</a></p>
                         <a href="contact.html" class="btn btn-primary py-3 px-5">Contact Us</a>
                     </div>
                 </div>
@@ -390,6 +447,12 @@
                             <div class="d-flex mb-2">
                                 <i class="bi bi-globe text-primary me-2"></i>
                                 <p class="mb-0">www.octalpha.com</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="https://x.com/OctalphaS" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/octalphabusinesssolutions" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -443,7 +506,12 @@
         </div>
     </div>
 
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

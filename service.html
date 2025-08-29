@@ -3,10 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Octalpha - Our Offerings</title>
+    <title>Our Offerings - Octalpha Business Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Digital Solutions, Innovation, Technology" name="keywords">
-    <meta content="Octalpha provides innovative digital solutions for modern businesses" name="description">
+    <meta
+        content="IT Infrastructure, Cybersecurity, Data Center, Cloud Solutions, Managed Services, UAE, Kuwait, NESA, ISO 27001, PCI DSS"
+        name="keywords">
+    <meta
+        content="Comprehensive IT solutions including IT infrastructure, cybersecurity, data center, cloud services, and managed IT services. Octalpha Business Solutions - Your trusted technology partner."
+        name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -31,6 +35,458 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Clean & Appealing Strategic Alliances Styles -->
+    <style>
+        /* Modern Strategic Alliances Design with Glow Effects */
+        .strategic-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 50%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .strategic-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #0d6efd, #6610f2, #0d6efd, transparent);
+            animation: glowLine 3s ease-in-out infinite;
+        }
+        
+        @keyframes glowLine {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        /* Enhanced Section Title with Glow */
+        .section-title h5 {
+            position: relative;
+            font-weight: 700;
+            color: #0d6efd;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+        }
+        
+        .title-underline {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+            border-radius: 2px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 0 20px rgba(13, 110, 253, 0.6);
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(13, 110, 253, 0.6); }
+            50% { box-shadow: 0 0 30px rgba(13, 110, 253, 0.9); }
+        }
+        
+        .title-underline::before,
+        .title-underline::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: #0d6efd;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(13, 110, 253, 0.8);
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes dotPulse {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.2); }
+        }
+        
+        .title-underline::before {
+            left: -5px;
+            animation-delay: 0s;
+        }
+        
+        .title-underline::after {
+            right: -5px;
+            animation-delay: 1s;
+        }
+        
+        /* Category Headers with Glow */
+        .alliance-category {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .alliance-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(13, 110, 253, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .alliance-category:hover::before {
+            opacity: 1;
+        }
+        
+        .alliance-category:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(13, 110, 253, 0.25);
+            border-color: rgba(13, 110, 253, 0.4);
+        }
+        
+        .category-header {
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: rotateGlow 3s linear infinite;
+        }
+        
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .category-icon i {
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .alliance-category:hover .category-icon {
+            transform: scale(1.15) rotate(8deg);
+            box-shadow: 0 15px 45px rgba(13, 110, 253, 0.6);
+        }
+        
+        .category-title {
+            color: #2c3e50;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        /* Dynamic Partners Layout */
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            position: relative;
+            z-index: 2;
+            padding: 2rem 0;
+            min-height: 200px;
+            align-items: flex-start;
+        }
+        
+        .partner-item {
+            flex: 0 0 auto;
+            margin: 0.5rem;
+        }
+        
+        /* Creative Partner Positioning */
+        .partner-item:nth-child(1) { 
+            transform: scale(1.1) translateY(-5px); 
+            margin-top: -10px;
+        }
+        .partner-item:nth-child(3) { 
+            transform: scale(1.05) translateY(-3px); 
+            margin-top: -5px;
+        }
+        .partner-item:nth-child(5) { 
+            transform: scale(1.08) translateY(-7px); 
+            margin-top: -15px;
+        }
+        .partner-item:nth-child(7) { 
+            transform: scale(1.03) translateY(-2px); 
+            margin-top: -8px;
+        }
+        .partner-item:nth-child(9) { 
+            transform: scale(1.06) translateY(-6px); 
+            margin-top: -12px;
+        }
+        
+        .partner-item:nth-child(2) { 
+            transform: scale(0.95) translateY(3px); 
+            margin-top: 8px;
+        }
+        .partner-item:nth-child(4) { 
+            transform: scale(0.98) translateY(1px); 
+            margin-top: 5px;
+        }
+        .partner-item:nth-child(6) { 
+            transform: scale(0.93) translateY(5px); 
+            margin-top: 12px;
+        }
+        .partner-item:nth-child(8) { 
+            transform: scale(0.96) translateY(2px); 
+            margin-top: 6px;
+        }
+        .partner-item:nth-child(10) { 
+            transform: scale(0.94) translateY(4px); 
+            margin-top: 10px;
+        }
+        
+        /* Modern Partner Cards with Dynamic Sizing */
+        .partner-card {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 20px;
+            padding: 1.8rem;
+            min-height: 120px;
+            width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-origin: center;
+        }
+        
+        .partner-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.15), transparent);
+            transition: left 0.8s ease;
+        }
+        
+        .partner-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(45deg, #0d6efd, #6610f2, #0d6efd);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .partner-card:hover::before {
+            left: 100%;
+        }
+        
+        .partner-card:hover::after {
+            opacity: 1;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(13, 110, 253, 0.3);
+            border-color: rgba(13, 110, 253, 0.5);
+        }
+        
+        .partner-card img {
+            max-height: 70px;
+            max-width: 100%;
+            transition: all 0.5s ease;
+            filter: grayscale(100%) brightness(0.8);
+            opacity: 0.8;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .partner-card:hover img {
+            filter: grayscale(0%) brightness(1.1);
+            opacity: 1;
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.4));
+        }
+        
+        /* Organic Floating Animation for Cards */
+        .partner-card {
+            animation: organicFloat 8s ease-in-out infinite;
+        }
+        
+        .partner-card:nth-child(2n) {
+            animation-delay: 1.5s;
+            animation-duration: 7s;
+        }
+        
+        .partner-card:nth-child(3n) {
+            animation-delay: 2.5s;
+            animation-duration: 9s;
+        }
+        
+        .partner-card:nth-child(4n) {
+            animation-delay: 3.5s;
+            animation-duration: 6s;
+        }
+        
+        .partner-card:nth-child(5n) {
+            animation-delay: 4.5s;
+            animation-duration: 8.5s;
+        }
+        
+        @keyframes organicFloat {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+            }
+            25% { 
+                transform: translateY(-8px) rotate(1deg); 
+            }
+            50% { 
+                transform: translateY(-3px) rotate(-0.5deg); 
+            }
+            75% { 
+                transform: translateY(-6px) rotate(0.8deg); 
+            }
+        }
+        
+        .partner-card:hover {
+            animation: none;
+            transform: translateY(-15px) scale(1.1) rotate(2deg);
+        }
+        
+        /* Section Glow Pulse */
+        .strategic-section {
+            animation: sectionGlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes sectionGlow {
+            0%, 100% { 
+                box-shadow: 0 0 30px rgba(13, 110, 253, 0.1);
+            }
+            50% { 
+                box-shadow: 0 0 50px rgba(13, 110, 253, 0.2);
+            }
+        }
+        
+        /* Neon Border Effect on Hover */
+        .alliance-category:hover {
+            border-color: rgba(13, 110, 253, 0.6);
+            box-shadow: 
+                0 20px 50px rgba(13, 110, 253, 0.25),
+                0 0 20px rgba(13, 110, 253, 0.1),
+                inset 0 0 20px rgba(13, 110, 253, 0.05);
+        }
+        
+        /* Enhanced Partner Card Glow */
+        .partner-card:hover {
+            box-shadow: 
+                0 25px 60px rgba(13, 110, 253, 0.3),
+                0 0 30px rgba(13, 110, 253, 0.2),
+                inset 0 0 20px rgba(13, 110, 253, 0.1);
+        }
+        
+        /* Glowing Category Icons */
+        .category-icon:hover {
+            box-shadow: 
+                0 15px 45px rgba(13, 110, 253, 0.6),
+                0 0 30px rgba(13, 110, 253, 0.4);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .alliance-category {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .category-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .category-icon i {
+                font-size: 1.5rem;
+            }
+            
+            .category-title {
+                font-size: 1.3rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1rem;
+            }
+            
+            .partner-card {
+                padding: 1.5rem;
+                min-height: 100px;
+            }
+            
+            .partner-card img {
+                max-height: 60px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 0.8rem;
+            }
+            
+            .partner-card {
+                padding: 1.2rem;
+                min-height: 90px;
+            }
+            
+            .partner-card img {
+                max-height: 50px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -87,6 +543,7 @@
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
                     <a href="service.html" class="nav-item nav-link active">OUR OFFERINGS</a>
                     <a href="blog.html" class="nav-item nav-link">BLOGS</a>
+                    <a href="faq.html" class="nav-item nav-link">FAQS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
@@ -117,6 +574,53 @@
     <!-- Navbar End -->
 
 
+    <!-- Company Description Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">About Octalpha</h5>
+                        <h1 class="mb-0">Your Trusted Technology Partner</h1>
+                    </div>
+                    <p class="mb-4"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner
+                        focused on enabling businesses through intelligent and secure IT solutions for the past 10
+                        years.</p>
+                    <p class="mb-4">We have helped various organizations scale faster and smarter with tailored services
+                        in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and
+                        managed services.</p>
+                    <p class="mb-4">Backed by strategic vendor alliances and a strong local presence, we deliver
+                        high-impact, cost-effective solutions — from office IT setups and networking to complex
+                        enterprise-level integrations.</p>
+                    <p class="mb-4">Our lean, expert-driven team ensures agility, accountability, and personalized
+                        service for every project.</p>
+                    <p class="mb-4">At Octalpha, we don't just supply IT — we deliver business continuity, operational
+                        efficiency, and technology-led growth.</p>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Call for advice now!</h5>
+                            <h4 class="text-primary mb-0">+971 4 242 4920</h4>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn"
+                        data-wow-delay="0.9s">Contact us</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 300px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
+                            src="img/our offerings.png" style="object-fit: contain; object-position: center; padding: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Company Description End -->
+
+
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
@@ -143,7 +647,7 @@
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Our Offerings</h5>
-                <h1 class="mb-0">Comprehensive IT Solutions for Your Successful Business</h1>
+                <h1 class="mb-0">End-to-End Technology Solutions for Modern Enterprises</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
@@ -152,9 +656,10 @@
                         <div class="service-icon">
                             <i class="fa fa-server text-white"></i>
                         </div>
-                        <h4 class="mb-3">IT Infra</h4>
-                        <p class="m-0">Comprehensive IT infrastructure solutions including network design, server
-                            management, and cloud services</p>
+                        <h4 class="mb-3">IT Infrastructure & Cloud</h4>
+                        <p class="m-0">Complete IT infrastructure design, virtualization, unified communications,
+                            servers, storage, networking, and cloud solutions including Azure, AWS, Oracle, and Google
+                            Cloud</p>
                         <a class="btn btn-lg btn-primary rounded" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -166,9 +671,9 @@
                         <div class="service-icon">
                             <i class="fa fa-shield-alt text-white"></i>
                         </div>
-                        <h4 class="mb-3">Cyber Security</h4>
-                        <p class="m-0">Advanced cybersecurity solutions to protect your business from evolving digital
-                            threats</p>
+                        <h4 class="mb-3">Cybersecurity Services</h4>
+                        <p class="m-0">Next-Generation Firewalls, EDR, IAM, VAPT, vCISO, SIEM, XDR, MDR, and
+                            comprehensive security frameworks including ISO 27001, NIST CSF, and PCI DSS compliance</p>
                         <a class="btn btn-lg btn-primary rounded" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -180,8 +685,9 @@
                         <div class="service-icon">
                             <i class="fa fa-building text-white"></i>
                         </div>
-                        <h4 class="mb-3">Data Centre n elv solutions</h4>
-                        <p class="m-0">State-of-the-art data center solutions and elevator management systems</p>
+                        <h4 class="mb-3">Data Center & ELV Solutions</h4>
+                        <p class="m-0">Complete data center design, racks, UPS & power, cooling, environmental
+                            monitoring, fire suppression, structured cabling, and disaster recovery solutions</p>
                         <a class="btn btn-lg btn-primary rounded" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -221,9 +727,51 @@
                         <div class="service-icon">
                             <i class="fa fa-balance-scale text-white"></i>
                         </div>
-                        <h4 class="mb-3">GRC Governance risk and compliance</h4>
-                        <p class="m-0">Comprehensive governance, risk management, and compliance solutions for your
-                            business</p>
+                        <h4 class="mb-3">GRC & Compliance</h4>
+                        <p class="m-0">Governance, risk management, and compliance solutions including ISO 27001, NIST
+                            CSF, PCI DSS, and UAE-specific regulations</p>
+                        <a class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-cogs text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Managed IT Services</h4>
+                        <p class="m-0">24/7 monitoring, proactive maintenance, AMC contracts, backup & DR management,
+                            and certified engineering support</p>
+                        <a class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-wifi text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Enterprise Wi-Fi</h4>
+                        <p class="m-0">Access points, controllers, switches, high availability design, and guest user
+                            management for seamless connectivity</p>
+                        <a class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-phone text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Unified Communications</h4>
+                        <p class="m-0">PABX, Microsoft Teams Rooms, Zoom Rooms, smart room booking, and mobile workforce
+                            enablement solutions</p>
                         <a class="btn btn-lg btn-primary rounded" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -235,13 +783,84 @@
                         <h3 class="text-white mb-3">Call Us For Quote</h3>
                         <p class="text-white mb-3">Get in touch with us for a customized quote on our comprehensive IT
                             solutions</p>
-                        <h2 class="text-white mb-0">+971 4 242 4920</h2>
+                        <h2 class="mb-0">+971 4 242 4920</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Service End -->
+
+
+    <!-- Why Choose Octalpha Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Why Choose Octalpha</h5>
+                <h1 class="mb-0">Your Trusted Technology Partner</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.2s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-users text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Multi-disciplinary Expertise</h5>
+                        <p class="mb-0">IT Infrastructure, Cloud, Cybersecurity, GRC, Data Centers, AV, and Managed
+                            Services under one roof</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.4s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-handshake text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Flexible Engagement</h5>
+                        <p class="mb-0">Project-based, AMC, or contract models tailored to your business needs and
+                            budget</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-white"></i>
+                        </div>
+                        <h5 class="mb-3">UAE Compliance Expert</h5>
+                        <p class="mb-0">Deep knowledge of NESA, PCI DSS, ISO 27001, and local regulations for seamless
+                            compliance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt-3">
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-dollar-sign text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Competitive Pricing</h5>
+                        <p class="mb-0">High-quality solutions without compromising on quality, ensuring maximum ROI for
+                            your investment</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.5s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-globe text-white"></i>
+                        </div>
+                        <h5 class="mb-3">GCC Experience</h5>
+                        <p class="mb-0">Over 10 years delivering IT transformation across the Gulf Cooperation Council
+                            region</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Octalpha End -->
 
 
     <!-- Testimonial Start -->
@@ -340,23 +959,394 @@
         <div class="container py-5 mb-5">
             <div class="bg-white">
                 <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor1.png" alt="Vendor 1">
-                    <img src="img/vendor2.png" alt="Vendor 2">
-                    <img src="img/vendor3.png" alt="Vendor 3">
-                    <img src="img/vendor4.png" alt="Vendor 4">
-                    <img src="img/vendor5.png" alt="Vendor 5">
-                    <img src="img/vendor6.png" alt="Vendor 6">
-                    <img src="img/vendor7.png" alt="Vendor 7">
-                    <img src="img/vendor8.png" alt="Vendor 8">
-                    <img src="img/vendor9.png" alt="Vendor 9">
-                    <img src="img/vendor10.png" alt="Vendor 10">
-                    <img src="img/vendor11.png" alt="Vendor 11">
+                    <img src="img/vedors/vendor-1.png" alt="Vendor 1">
+                    <img src="img/vedors/vendor-2.png" alt="Vendor 2">
+                    <img src="img/vedors/vendor-3.png" alt="Vendor 3">
+                    <img src="img/vedors/vendor-4.png" alt="Vendor 4">
+                    <img src="img/vedors/vendor-5.png" alt="Vendor 5">
+                    <img src="img/vedors/vendor-6.png" alt="Vendor 6">
+                    <img src="img/vedors/vendor-7.png" alt="Vendor 7">
+                    <img src="img/vedors/vendor-8.png" alt="Vendor 8">
+                    <img src="img/vedors/vendor-9.png" alt="Vendor 9">
+                    <img src="img/vedors/vendor-10.png" alt="Vendor 10">
+                    <img src="img/vedors/vendor-11.png" alt="Vendor 11">
+                    <img src="img/vedors/vendor-12.png" alt="Vendor 12">
+                    <img src="img/vedors/vendor-13.png" alt="Vendor 13">
+                    <img src="img/vedors/vendor-14.png" alt="Vendor 14">
+                    <img src="img/vedors/vendor-15.png" alt="Vendor 15">
                 </div>
             </div>
         </div>
     </div>
     <!-- Vendor End -->
 
+
+    <!-- Strategic Alliances Start -->
+    <div class="container-fluid py-5 strategic-section">
+        <div class="container py-5">
+            <!-- Section Title -->
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 650px;">
+                <h5 class="fw-bold text-primary text-uppercase">Strategic Alliances</h5>
+                <h1 class="mb-0">Trusted Technology Partnerships</h1>
+                <div class="title-underline mx-auto mt-3"></div>
+            </div>
+
+            <!-- Networking -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-network-wired me-2"></i>Networking</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/networking/n-1.png" alt="Networking Partner 1">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/networking/n-2.png" alt="Networking Partner 2">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/networking/n-3.png" alt="Networking Partner 3">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/networking/n-4.png" alt="Networking Partner 4">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/networking/n-5.png" alt="Networking Partner 5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IT Infrastructure -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-server me-2"></i>IT Infrastructure</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/IT infra/it-1.png" alt="IT Partner 1"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/IT infra/it-2.png" alt="IT Partner 2"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/IT infra/it-3.png" alt="IT Partner 3"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/IT infra/it-4.png" alt="IT Partner 4"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/IT infra/it-5.png" alt="IT Partner 5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud & Virtualization -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-cloud me-2"></i>Virtualization & Cloud
+                        Services</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/V&Cs/v-1.png" alt="Cloud Partner 1"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/V&Cs/v-2.png" alt="Cloud Partner 2"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/V&Cs/v-3.png" alt="Cloud Partner 3"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/V&Cs/v-4.png" alt="Cloud Partner 4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Center -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-database me-2"></i>Data Center</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Datacenter/dc-1.png" alt="DC Partner 1"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Datacenter/dc-2.png" alt="DC Partner 2"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Datacenter/dc-3.png" alt="DC Partner 3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRC -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-balance-scale me-2"></i>Governance, Risk &
+                        Compliance</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/GRC/G-1.png" alt="GRC Partner 1"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/GRC/G-2.png" alt="GRC Partner 2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-shield-alt me-2"></i>Managed Security</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Managed security/ms-1.png" alt="Security Partner 1">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Managed security/ms-2.png" alt="Security Partner 2">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Managed security/ms-3.png" alt="Security Partner 3">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Managed security/ms-4.png" alt="Security Partner 4">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Managed security/ms-5.png" alt="Security Partner 5">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Managed security/ms-6.png" alt="Security Partner 6">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Managed security/ms-7.png" alt="Security Partner 7">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backup & DR -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-hdd me-2"></i>Backup & Disaster Recovery
+                    </h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Backup&DR/bdr-1.png" alt="Backup Partner 1"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/Backup&DR/bdr-2.png" alt="Backup Partner 2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Communication -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-comments me-2"></i>Communication &
+                        Collaboration</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/communication&collaboration/cc-1.png"
+                                    alt="Communication Partner 1"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/communication&collaboration/cc-2.png"
+                                    alt="Communication Partner 2"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/communication&collaboration/cc-3.png"
+                                    alt="Communication Partner 3"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/communication&collaboration/cc-4.png"
+                                    alt="Communication Partner 4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Conferencing -->
+            <div class="row g-4 mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h4 class="text-center mb-4 text-primary"><i class="fa fa-video me-2"></i>Video Conferencing</h4>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/video-conferencing/vc-1.png" alt="VC Partner 1">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/video-conferencing/vc-2.png" alt="VC Partner 2">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/video-conferencing/vc-3.png" alt="VC Partner 3">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/video-conferencing/vc-4.png" alt="VC Partner 4">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="partner-card"><img src="img/video-conferencing/vc-5.png" alt="VC Partner 5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5" data-aos="zoom-in">
+                <div class="bg-primary rounded-4 p-5 text-white shadow-lg">
+                    <h4 class="mb-3">Ready to Partner with Industry Leaders?</h4>
+                    <p class="mb-4">Our strategic alliances enable us to deliver world-class solutions backed by the most trusted technology brands.</p>
+                    <a href="contact.html" class="btn btn-light py-2 px-4 fw-bold shadow-lg">Get Started Today</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Strategic Alliances End -->
+
+    <!-- Clean Strategic Alliances Styles -->
+    <style>
+        /* Additional clean styling */
+        .partner-card {
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title h1 {
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        
+        .section-title h5 {
+            letter-spacing: 1px;
+        }
+        
+        /* Smooth spacing between categories */
+        .row.g-4.mb-5 {
+            margin-bottom: 3rem !important;
+        }
+        
+        /* Enhanced readability */
+        .text-primary {
+            color: #0d6efd !important;
+        }
+        
+        /* Clean category headers */
+        h4.text-center.mb-4.text-primary {
+            font-weight: 600;
+            color: #495057 !important;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        h4.text-center.mb-4.text-primary i {
+            color: #0d6efd;
+        }
+        
+        /* WhatsApp Button Styling */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn i {
+            font-size: 32px;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-left-color: #333;
+        }
+        
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive WhatsApp Button */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 28px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- AOS Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -474,8 +1464,12 @@
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
 
 
     <!-- JavaScript Libraries -->

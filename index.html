@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Octalpha - Innovative Digital Solutions</title>
+    <title>Octalpha Business Solutions - Your End-to-End Technology Partner</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Digital Solutions, Innovation, Technology" name="keywords">
-    <meta content="Octalpha provides innovative digital solutions for modern businesses" name="description">
+    <meta content="IT Infrastructure, Cybersecurity, Data Center, Cloud Solutions, Managed Services, UAE, Kuwait, NESA, ISO 27001, PCI DSS" name="keywords">
+    <meta content="Octalpha Business Solutions is a UAE-based technology partner delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -29,6 +29,91 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- WhatsApp Button Styles -->
+    <style>
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn i {
+            font-size: 32px;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-left-color: #333;
+        }
+        
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive WhatsApp Button */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 28px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -78,6 +163,7 @@
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
                     <a href="service.html" class="nav-item nav-link">OUR OFFERINGS</a>
                     <a href="blog.html" class="nav-item nav-link">BLOGS</a>
+                    <a href="faq.html" class="nav-item nav-link">FAQS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
@@ -94,8 +180,8 @@
                     </video>
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">to the new world of technology</h1>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Your End-to-End Technology Partner</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">From Data Centers to Digital Transformation</h1>
                             <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                         </div>
                     </div>
@@ -208,10 +294,14 @@
             <div class="row g-5">
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Our company</h5>
-                        <h1 class="mb-0">Future proof your Business with Octalpha Solutions</h1>
+                        <h5 class="fw-bold text-primary text-uppercase">Your End-to-End Technology Partner</h5>
+                        <h1 class="mb-0">From Data Centers to Digital Transformation</h1>
                     </div>
-                    <p class="mb-4">We deliver a state of the art IT system from the cloud for small to medium sized businesses just like yours. At Octalpha, we provide a service the larger players simply can't match. A personalized service and a better price using the latest technology.</p>
+                    <p class="mb-4"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
+                    <p class="mb-4">We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
+                    <p class="mb-4">Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
+                    <p class="mb-4">Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
+                    <p class="mb-4">At Octalpha, we don't just supply IT — we deliver business continuity, operational efficiency, and technology-led growth.</p>
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                             <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Minified Technology</h5>
@@ -259,11 +349,12 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">08 Years' Experience in IT</h5>
+                        <h5 class="fw-bold text-primary text-uppercase">10+ Years' Experience in IT</h5>
                         <h1 class="mb-0">Learn More About Our Success Stories</h1>
                     </div>
-                    <p class="mb-4">Octalpha takes into consideration every little detail to make sure the system run smoothly and responsively. Octalpha employs a new technique called Minified Technology for securing customers' database & building up highly confidential firewalls.</p>
-                    <p class="mb-4">Unlike other cloud solutions, you can run ANY business application in the cloud including Windows apps often faster than locally installed apps. We provide an array of essential IT management services on a flat rate subscription basis to small and medium-sized businesses.</p>
+                    <p class="mb-4">Octalpha takes into consideration every little detail to make sure the system runs smoothly and responsively. Our expertise spans across SAP ERP implementations, Microsoft Retail Solutions, and comprehensive IT infrastructure management for businesses of all sizes.</p>
+                    <p class="mb-4">We have successfully implemented solutions for leading retail chains, FMCG distribution companies, and food chains across Kuwait and the UAE. Our proven track record includes managing complex enterprise systems with 16+ stores and over 100 POS terminals, serving thousands of customers and vendors.</p>
+                    <p class="mb-4">Our customer references include building HQ Data Centers for 160+ stores with DR sites, implementing comprehensive cybersecurity solutions, and managing long-term AMC contracts spanning 5-6 years.</p>
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt text-white"></i>
@@ -285,25 +376,25 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our services</h5>
-                <h1 class="mb-0">Don't be caught with your data down. We provide truly prominent IT solutions.</h1>
+                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
+                <h1 class="mb-0">Comprehensive IT Solutions for Modern Businesses</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4">
                     <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-cubes text-white"></i>
+                                <i class="fa fa-cloud text-white"></i>
                             </div>
-                            <h4>Cloud Solutions</h4>
-                            <p class="mb-0">Web hosting, Kout Cloud, and Dubay Cloud services for your business needs</p>
+                            <h4>Cloud & Infrastructure</h4>
+                            <p class="mb-0">Azure, AWS, Oracle, Google Cloud with cost optimization, migration, and containerization solutions</p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-award text-white"></i>
+                                <i class="fa fa-shield-alt text-white"></i>
                             </div>
-                            <h4>Infrastructure & Security</h4>
-                            <p class="mb-0">Managed IT Solutions, Fortinet, and Huawei security implementations</p>
+                            <h4>Cybersecurity</h4>
+                            <p class="mb-0">Next-Gen Firewalls, EDR, IAM, VAPT, vCISO, and comprehensive security frameworks</p>
                         </div>
                     </div>
                 </div>
@@ -318,17 +409,17 @@
                     <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-users-cog text-white"></i>
+                                <i class="fa fa-database text-white"></i>
                             </div>
-                            <h4>Business Applications</h4>
-                            <p class="mb-0">Microsoft 365, Dynamics 365, SharePoint, and SAP solutions</p>
+                            <h4>Data Center Solutions</h4>
+                            <p class="mb-0">Complete data center design, racks, UPS, cooling, monitoring, and disaster recovery solutions</p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-phone-alt text-white"></i>
+                                <i class="fa fa-cogs text-white"></i>
                             </div>
-                            <h4>E-Commerce Solutions</h4>
-                            <p class="mb-0">Complete e-commerce platform solutions for your business growth</p>
+                            <h4>Managed Services</h4>
+                            <p class="mb-0">24/7 monitoring, proactive maintenance, AMC contracts, and certified engineering support</p>
                         </div>
                     </div>
                 </div>
@@ -343,7 +434,7 @@
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Our Offerings</h5>
-                <h1 class="mb-0">Comprehensive Technology Solutions for Your Business</h1>
+                <h1 class="mb-0">End-to-End Technology Solutions for Modern Enterprises</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
@@ -351,8 +442,8 @@
                         <div class="service-icon">
                             <i class="fa fa-server text-white"></i>
                         </div>
-                        <h4 class="mb-3">IT Infrastructure</h4>
-                        <p class="m-0">End-to-end IT infrastructure solutions including network design, server management, virtualization, and enterprise-grade hardware deployment for scalable business growth</p>
+                        <h4 class="mb-3">IT Infrastructure & Cloud</h4>
+                        <p class="m-0">Complete IT infrastructure design, virtualization, unified communications, servers, storage, networking, and cloud solutions including Azure, AWS, Oracle, and Google Cloud</p>
                         <a class="btn btn-lg btn-primary rounded" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -363,8 +454,8 @@
                         <div class="service-icon">
                             <i class="fa fa-shield-alt text-white"></i>
                         </div>
-                        <h4 class="mb-3">Cyber Security</h4>
-                        <p class="m-0">Advanced cybersecurity solutions including threat detection, vulnerability assessment, penetration testing, and compliance frameworks to safeguard your digital assets</p>
+                        <h4 class="mb-3">Cybersecurity Services</h4>
+                        <p class="m-0">Next-Generation Firewalls, EDR, IAM, VAPT, vCISO, SIEM, XDR, MDR, and comprehensive security frameworks including ISO 27001, NIST CSF, and PCI DSS compliance</p>
                         <a class="btn btn-lg btn-primary rounded" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -375,8 +466,8 @@
                         <div class="service-icon">
                             <i class="fa fa-database text-white"></i>
                         </div>
-                        <h4 class="mb-3">Data Centre & ELV Solutions</h4>
-                        <p class="m-0">State-of-the-art data center design, construction, and management including Extra Low Voltage systems, power distribution, cooling, and security infrastructure</p>
+                        <h4 class="mb-3">Data Center & ELV Solutions</h4>
+                        <p class="m-0">Complete data center design, racks, UPS & power, cooling, environmental monitoring, fire suppression, structured cabling, and disaster recovery solutions</p>
                         <a class="btn btn-lg btn-primary rounded" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -422,6 +513,85 @@
         </div>
     </div>
     <!-- Service End -->
+
+
+    <!-- Why Choose Octalpha Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Why Choose Octalpha</h5>
+                <h1 class="mb-0">Your Trusted Technology Partner</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.2s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-users text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Multi-disciplinary Expertise</h5>
+                        <p class="mb-0">IT Infrastructure, Cloud, Cybersecurity, GRC, Data Centers, AV, and Managed Services under one roof</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.4s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-handshake text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Flexible Engagement</h5>
+                        <p class="mb-0">Project-based, AMC, or contract models tailored to your business needs and budget</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-shield-alt text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Vendor-Agnostic</h5>
+                        <p class="mb-0">Best-fit solutions regardless of vendor, ensuring optimal performance and cost-effectiveness</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.8s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-white"></i>
+                        </div>
+                        <h5 class="mb-3">UAE Compliance Expert</h5>
+                        <p class="mb-0">Deep knowledge of NESA, PCI DSS, ISO 27001, and local regulations for seamless compliance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt-3">
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-dollar-sign text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Competitive Pricing</h5>
+                        <p class="mb-0">High-quality solutions without compromising on quality, ensuring maximum ROI for your investment</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.5s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-rocket text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Rapid Deployment</h5>
+                        <p class="mb-0">Quick procurement and deployment processes to get your solutions up and running faster</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.7s">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-globe text-white"></i>
+                        </div>
+                        <h5 class="mb-3">GCC Experience</h5>
+                        <p class="mb-0">Over 10 years delivering IT transformation across the Gulf Cooperation Council region</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Octalpha End -->
 
 
     <!-- Call to Action Start -->
@@ -626,6 +796,9 @@
     <!-- Testimonial End -->
 
 
+
+
+
     <!-- Team Start -->
     <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -807,17 +980,21 @@
         <div class="container py-5 mb-5">
             <div class="bg-white">
                 <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor1.png" alt="Vendor 1">
-                    <img src="img/vendor2.png" alt="Vendor 2">
-                    <img src="img/vendor3.png" alt="Vendor 3">
-                    <img src="img/vendor4.png" alt="Vendor 4">
-                    <img src="img/vendor5.png" alt="Vendor 5">
-                    <img src="img/vendor6.png" alt="Vendor 6">
-                    <img src="img/vendor7.png" alt="Vendor 7">
-                    <img src="img/vendor8.png" alt="Vendor 8">
-                    <img src="img/vendor9.png" alt="Vendor 9">
-                    <img src="img/vendor10.png" alt="Vendor 10">
-                    <img src="img/vendor11.png" alt="Vendor 11">
+                    <img src="img/vedors/vendor-1.png" alt="Vendor 1">
+                    <img src="img/vedors/vendor-2.png" alt="Vendor 2">
+                    <img src="img/vedors/vendor-3.png" alt="Vendor 3">
+                    <img src="img/vedors/vendor-4.png" alt="Vendor 4">
+                    <img src="img/vedors/vendor-5.png" alt="Vendor 5">
+                    <img src="img/vedors/vendor-6.png" alt="Vendor 6">
+                    <img src="img/vedors/vendor-7.png" alt="Vendor 7">
+                    <img src="img/vedors/vendor-8.png" alt="Vendor 8">
+                    <img src="img/vedors/vendor-9.png" alt="Vendor 9">
+                    <img src="img/vedors/vendor-10.png" alt="Vendor 10">
+                    <img src="img/vedors/vendor-11.png" alt="Vendor 11">
+                    <img src="img/vedors/vendor-12.png" alt="Vendor 12">
+                    <img src="img/vedors/vendor-13.png" alt="Vendor 13">
+                    <img src="img/vedors/vendor-14.png" alt="Vendor 14">
+                    <img src="img/vedors/vendor-15.png" alt="Vendor 15">
                 </div>
             </div>
         </div>
@@ -834,7 +1011,7 @@
                         <a href="index.html" class="navbar-brand">
                             <img src="img/logo.png" alt="Octalpha Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
                         </a>
-                        <p class="mt-3 mb-4">Octalpha delivers cutting-edge technology solutions with expertise in IT infrastructure, cybersecurity, and digital transformation. We help businesses thrive in the digital age.</p>
+                        <p class="mt-3 mb-4">Octalpha Business Solutions is your end-to-end technology partner, delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation, we help businesses scale faster and smarter.</p>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
@@ -924,8 +1101,12 @@
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
 
 
     <!-- JavaScript Libraries -->

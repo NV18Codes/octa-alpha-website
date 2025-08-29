@@ -31,6 +31,91 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- WhatsApp Button Styles -->
+    <style>
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn i {
+            font-size: 32px;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-left-color: #333;
+        }
+        
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive WhatsApp Button */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 28px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -87,6 +172,7 @@
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
                     <a href="service.html" class="nav-item nav-link">OUR OFFERINGS</a>
                     <a href="blog.html" class="nav-item nav-link active">BLOGS</a>
+                    <a href="faq.html" class="nav-item nav-link">FAQS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
@@ -492,23 +578,27 @@
         <div class="container py-5 mb-5">
             <div class="bg-white">
                 <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor1.png" alt="Vendor 1">
-                    <img src="img/vendor2.png" alt="Vendor 2">
-                    <img src="img/vendor3.png" alt="Vendor 3">
-                    <img src="img/vendor4.png" alt="Vendor 4">
-                    <img src="img/vendor5.png" alt="Vendor 5">
-                    <img src="img/vendor6.png" alt="Vendor 6">
-                    <img src="img/vendor7.png" alt="Vendor 7">
-                    <img src="img/vendor8.png" alt="Vendor 8">
-                    <img src="img/vendor9.png" alt="Vendor 9">
-                    <img src="img/vendor10.png" alt="Vendor 10">
-                    <img src="img/vendor11.png" alt="Vendor 11">
+                    <img src="img/vedors/vendor-1.png" alt="Vendor 1">
+                    <img src="img/vedors/vendor-2.png" alt="Vendor 2">
+                    <img src="img/vedors/vendor-3.png" alt="Vendor 3">
+                    <img src="img/vedors/vendor-4.png" alt="Vendor 4">
+                    <img src="img/vedors/vendor-5.png" alt="Vendor 5">
+                    <img src="img/vedors/vendor-6.png" alt="Vendor 6">
+                    <img src="img/vedors/vendor-7.png" alt="Vendor 7">
+                    <img src="img/vedors/vendor-8.png" alt="Vendor 8">
+                    <img src="img/vedors/vendor-9.png" alt="Vendor 9">
+                    <img src="img/vedors/vendor-10.png" alt="Vendor 10">
+                    <img src="img/vedors/vendor-11.png" alt="Vendor 11">
+                    <img src="img/vedors/vendor-12.png" alt="Vendor 12">
+                    <img src="img/vedors/vendor-13.png" alt="Vendor 13">
+                    <img src="img/vedors/vendor-14.png" alt="Vendor 14">
+                    <img src="img/vedors/vendor-15.png" alt="Vendor 15">
                 </div>
             </div>
         </div>
     </div>
-    <!-- Vendor End -->
-
+        <!-- Vendor End -->
+    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -627,8 +717,12 @@
 
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
 
 
     <!-- JavaScript Libraries -->
