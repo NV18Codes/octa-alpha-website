@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Octalpha - About Us</title>
+    <title>Cybersecurity Services - Octalpha Business Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Digital Solutions, Innovation, Technology" name="keywords">
-    <meta content="Octalpha provides innovative digital solutions for modern businesses" name="description">
+    <meta content="Cybersecurity, Network Security, Endpoint Security, IAM, SIEM, XDR, MDR, NGFW, EDR, VAPT" name="keywords">
+    <meta content="Next-Generation Firewalls, EDR, IAM, VAPT, vCISO, SIEM, XDR, MDR, and comprehensive security frameworks including ISO 27001, NIST CSF, and PCI DSS compliance." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -96,6 +96,44 @@
             visibility: visible;
         }
         
+        /* Service Card Styles */
+        .service-item {
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: #007bff;
+        }
+        
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .service-item:hover::before {
+            left: 100%;
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-item:hover .service-icon i {
+            transform: scale(1.1);
+            color: #0056b3 !important;
+        }
+        
         /* Responsive WhatsApp Button */
         @media (max-width: 768px) {
             .whatsapp-btn {
@@ -123,7 +161,6 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
@@ -147,7 +184,6 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
@@ -160,9 +196,9 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">HOME</a>
-                    <a href="about.html" class="nav-item nav-link active">ABOUT US</a>
+                    <a href="about.html" class="nav-item nav-link">ABOUT US</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OUR OFFERINGS</a>
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">OUR OFFERINGS</a>
                         <div class="dropdown-menu m-0">
                             <a href="it-infrastructure.html" class="dropdown-item">IT Infrastructure & Cloud Solutions</a>
                             <a href="cybersecurity.html" class="dropdown-item">Cybersecurity Services</a>
@@ -177,28 +213,26 @@
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-                
             </div>
         </nav>
 
         <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 400px;">
             <video class="position-absolute w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
-                <source src="videos/Mysterious technology space particle background.mp4" type="video/mp4">
+                <source src="videos/Video Background Blue light Full HD.mp4" type="video/mp4">
             </video>
             <div class="position-relative" style="z-index: 1;">
                 <div class="row py-5">
                     <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-4 text-white animated zoomIn">About Us</h1>
+                        <h1 class="display-4 text-white animated zoomIn">Cybersecurity Services</h1>
                         <a href="index.html" class="h5 text-white">Home</a>
                         <i class="far fa-circle text-white px-2"></i>
-                        <a href="about.html" class="h5 text-white">About</a>
+                        <a href="cybersecurity.html" class="h5 text-white">Cybersecurity</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Navbar End -->
-
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -218,128 +252,174 @@
     </div>
     <!-- Full Screen Search End -->
 
-
-    <!-- About Start -->
+    <!-- Service Content Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
-                        <h1 class="mb-0">Future-Proof Your Business with Octalpha Solutions</h1>
-                    </div>
-                    <p class="mb-4">Octalpha is a leading technology solutions provider dedicated to transforming businesses through innovative IT infrastructure, cybersecurity, and digital transformation services. With our expertise in cutting-edge technologies, we help organizations navigate the complex digital landscape and achieve sustainable growth.</p>
-                    <div class="row g-0 mb-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Expert IT Infrastructure</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Advanced Cybersecurity</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Technical Support</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Competitive Pricing</h5>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+971 4 242 4920</h4>
-                        </div>
-                    </div>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
-                </div>
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/abtpng2.png" style="object-fit: contain; padding: 20px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Mission & Values Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Our Mission</h5>
-                        <h1 class="mb-0">Empowering Digital Transformation</h1>
-                    </div>
-                    <p class="mb-4">At Octalpha, we believe that technology should be an enabler, not a barrier. Our mission is to provide innovative, scalable, and secure IT solutions that help businesses of all sizes achieve their digital transformation goals.</p>
-                    <div class="row g-0 mb-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Innovation First</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Customer-Centric Approach</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Quality Assurance</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Continuous Learning</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
-                        <h1 class="mb-0">Your Trusted Technology Partner</h1>
-                    </div>
-                    <p class="mb-4">With years of experience in the technology sector, we understand the unique challenges that modern businesses face. Our team of certified professionals is committed to delivering solutions that not only meet your current needs but also prepare you for future growth.</p>
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-shield-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Enterprise-Grade Security</h5>
-                            <h4 class="text-primary mb-0">Protecting Your Assets</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Mission & Values End -->
-
-
-
-
-
-
-
-
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Clients</h5>
-                <h1 class="mb-0">Trusted by Leading Organizations</h1>
+                <h5 class="fw-bold text-primary text-uppercase">Cybersecurity Services</h5>
+                <h1 class="mb-0">Comprehensive Security Solutions for Modern Businesses</h1>
             </div>
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="img/vedors/vendor-16.png" alt="Vendor 16">
-                    <img src="img/vedors/vendor-17.png" alt="Vendor 17">
-                    <img src="img/vedors/vendor-18.png" alt="Vendor 18">
-                    <img src="img/vedors/vendor-19.png" alt="Vendor 19">
-                    <img src="img/vedors/vendor-20.png" alt="Vendor 20">
-                    <img src="img/vedors/vendor-21.png" alt="Vendor 21">
-                    <img src="img/vedors/vendor-22.png" alt="Vendor 22">
-                    <img src="img/vedors/vendor-23.png" alt="Vendor 23">
-                    <img src="img/vedors/vendor-24.png" alt="Vendor 24">
-                    <img src="img/vedors/vendor-25.png" alt="Vendor 25">
-                    <img src="img/vedors/vendor-26.png" alt="Vendor 26">
-                    <img src="img/vedors/vendor-27.png" alt="Vendor 27">
-                    <img src="img/vedors/vendor-28.png" alt="Vendor 28">
-                    <img src="img/vedors/vendor-29.png" alt="Vendor 29">
-                    <img src="img/vedors/vendor-30.png" alt="Vendor 30">
+            
+            <!-- Introduction Section -->
+            <div class="row g-5 mb-5">
+                <div class="col-lg-12">
+                    <div class="bg-light rounded p-5 text-center">
+                        <h3 class="mb-4 text-primary">Protect Your Digital Assets with Advanced Cybersecurity Solutions</h3>
+                        <p class="mb-4">At Octalpha, we provide comprehensive cybersecurity services that protect your organization from evolving threats. Our multi-layered security approach ensures your data, systems, and networks remain secure while maintaining operational efficiency.</p>
+                        <p class="mb-0">From network security to cloud protection, we deliver enterprise-grade security solutions tailored to your business needs and compliance requirements.</p>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Service Grid Start -->
+            <div class="row g-4">
+                <!-- Network Security -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-shield-alt text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Network Security</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Next-Generation Firewalls (NGFW)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Intrusion Detection & Prevention Systems (IDS/IPS)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Secure Web Gateways</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Network Access Control (NAC)</li>
+                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Virtual Private Networks (VPN)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Endpoint Security -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item bg-light rounded p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-laptop text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Endpoint Security</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Endpoint Protection Platforms (EPP)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Endpoint Detection & Response (EDR)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Mobile Device Management (MDM)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Anti-Virus / Anti-Malware</li>
+                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Application Whitelisting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Identity & Access Management -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-user-shield text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Identity & Access Management (IAM)</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Single Sign-On (SSO)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Multi-Factor Authentication (MFA)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Privileged Access Management (PAM)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Directory Services & Identity Governance</li>
+                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Password Vaults</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Threat Detection & Response -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item bg-light rounded p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-search text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Threat Detection & Response</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Security Information & Event Management (SIEM)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Extended Detection & Response (XDR)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Managed Detection & Response (MDR)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Threat Intelligence Platforms (TIP)</li>
+                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Incident Response Automation (SOAR)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cloud Security -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-light rounded p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-cloud-shield-alt text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Cloud Security</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cloud Access Security Broker (CASB)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cloud Security Posture Management (CSPM)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cloud Workload Protection (CWPP)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Web Application Firewall (WAF)</li>
+                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Zero Trust Network Access (ZTNA)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Compliance & Frameworks -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-certificate text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Compliance & Frameworks</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>ISO 27001 Implementation</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>NIST Cybersecurity Framework</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>PCI DSS Compliance</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>GDPR & Data Protection</li>
+                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>UAE NESA IAS Compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Service Grid End -->
+
+            <!-- Benefits Section -->
+            <div class="row g-5 mt-5">
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="bg-primary rounded p-5 text-white h-100">
+                        <h3 class="mb-4">Why Choose Our Cybersecurity Solutions?</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fa fa-check me-2"></i>Multi-layered security approach</li>
+                            <li class="mb-3"><i class="fa fa-check me-2"></i>24/7 threat monitoring and response</li>
+                            <li class="mb-3"><i class="fa fa-check me-2"></i>Compliance with international standards</li>
+                            <li class="mb-3"><i class="fa fa-check me-2"></i>Expert security team and support</li>
+                            <li class="mb-0"><i class="fa fa-check me-2"></i>Proactive threat intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="bg-light rounded p-5 h-100">
+                        <h3 class="mb-4 text-primary">Our Security Expertise</h3>
+                        <p class="mb-4">Stay ahead of cyber threats with our comprehensive security solutions. We provide end-to-end protection that adapts to your business needs while ensuring compliance with industry regulations.</p>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="text-center">
+                                    <h4 class="text-primary mb-1">99.9%</h4>
+                                    <small>Uptime Guarantee</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-center">
+                                    <h4 class="text-primary mb-1">24/7</h4>
+                                    <small>Security Monitoring</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-5">
+                <a href="contact.html" class="btn btn-primary py-3 px-5 wow zoomIn" data-wow-delay="0.9s">Get a Free Security Assessment</a>
             </div>
         </div>
     </div>
-    <!-- Vendor End -->
-    
+    <!-- Service Content End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -420,7 +500,6 @@
                                 <a class="text-light" href="faq.html"><i class="bi bi-arrow-right text-primary me-2"></i>FAQ's</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -437,18 +516,14 @@
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20services." 
        class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
     </a>
 
-
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -456,9 +531,6 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
