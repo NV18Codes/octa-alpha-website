@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -107,7 +107,7 @@
         .service-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            border-color: #007bff;
+            border-color: var(--primary);
         }
         
         .service-item::before {
@@ -131,12 +131,12 @@
         
         .service-item:hover .service-icon i {
             transform: scale(1.1);
-            color: #0056b3 !important;
+            color: var(--primary) !important;
         }
         
         /* Hero Section Styles - Blue Theme */
         .hero-section {
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 50%, #004085 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #0056b3 50%, #004085 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -165,7 +165,7 @@
         
         .progress-line {
             height: 2px;
-            background: #60A5FA;
+            background: var(--primary);
             border-radius: 1px;
             position: relative;
         }
@@ -215,7 +215,7 @@
         }
         
         .gradient-text {
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            background: linear-gradient(45deg, var(--secondary), #4ade80);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -254,7 +254,7 @@
         .stat-number {
             font-size: 3.5rem;
             font-weight: 800;
-            color: #ffd700;
+            color: var(--secondary);
             line-height: 1;
             margin-bottom: 0.5rem;
         }
@@ -305,13 +305,13 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #007bff, #0056b3, #004085);
+            background: linear-gradient(90deg, var(--primary), #0056b3, #004085);
         }
         
         .pillar-icon {
             width: 90px;
             height: 90px;
-            background: linear-gradient(135deg, #007bff, #0056b3);
+            background: linear-gradient(135deg, var(--primary), #0056b3);
             border-radius: 25px;
             display: flex;
             align-items: center;
@@ -328,7 +328,7 @@
         .pillar-title {
             font-size: 1.8rem;
             font-weight: 800;
-            color: #0056b3;
+            color: var(--primary);
             margin-bottom: 1.5rem;
         }
         
@@ -346,7 +346,7 @@
         }
         
         .feature-tag {
-            background: linear-gradient(135deg, #007bff, #0056b3);
+            background: linear-gradient(135deg, var(--primary), #0056b3);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 25px;
@@ -397,7 +397,7 @@
         .card-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #007bff, #0056b3);
+            background: linear-gradient(135deg, var(--primary), #0056b3);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -414,7 +414,7 @@
         .card-header h4 {
             font-size: 1.4rem;
             font-weight: 800;
-            color: #0056b3;
+            color: var(--primary);
             margin: 0;
         }
         
@@ -436,7 +436,7 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #007bff;
+            color: var(--primary);
             font-weight: bold;
             font-size: 1.2rem;
         }
@@ -457,13 +457,13 @@
         .section-title {
             font-size: 3rem;
             font-weight: 800;
-            color: #0056b3;
+            color: var(--primary);
             margin-bottom: 0.5rem;
         }
         
         .section-subtitle {
             font-size: 1.4rem;
-            color: #007bff;
+            color: var(--primary);
             font-weight: 700;
             margin-bottom: 1rem;
         }
@@ -505,7 +505,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #007bff, #0056b3, #004085);
+            background: linear-gradient(90deg, var(--primary), #0056b3, #004085);
         }
         
         .category-header {
@@ -519,7 +519,7 @@
         .category-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #007bff, #0056b3);
+            background: linear-gradient(135deg, var(--primary), #0056b3);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -536,7 +536,7 @@
         .category-header h3 {
             font-size: 1.4rem;
             font-weight: 800;
-            color: #0056b3;
+            color: var(--primary);
             margin: 0;
         }
         
@@ -556,13 +556,13 @@
         
         .framework-item:hover {
             background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
-            border-color: #007bff;
+            border-color: var(--primary);
             transform: translateX(5px);
         }
         
         .framework-badge {
             font-weight: 800;
-            color: #0056b3;
+            color: var(--primary);
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
@@ -695,7 +695,7 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
             </a>
@@ -706,36 +706,39 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">OUR OFFERINGS</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="it-infrastructure.html" class="dropdown-item">IT Infrastructure & Cloud Solutions</a>
-                            <a href="cybersecurity.html" class="dropdown-item">Cybersecurity Services</a>
-                            <a href="vapt.html" class="dropdown-item">Vulnerability Assessment & Penetration Testing (VAPT)</a>
-                            <a href="vciso.html" class="dropdown-item">Virtual Chief Information Security Officer (vCISO)</a>
-                            <a href="grc.html" class="dropdown-item">Governance, Risk & Compliance (GRC)</a>
-                            <a href="managed-services.html" class="dropdown-item">Managed IT Services</a>
-                        </div>
-                    </div>
+                    <a href="our-offerings.html" class="nav-item nav-link">OUR OFFERINGS</a>
                     <a href="blog.html" class="nav-item nav-link">BLOGS</a>
-                    <a href="faq.html" class="nav-item nav-link">FAQS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
             </div>
         </nav>
 
-        <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 400px;">
+        <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 500px;">
             <video class="position-absolute w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
-                <source src="videos/Video Background Blue light Full HD.mp4" type="video/mp4">
+                <source src="https://cdn.pixabay.com/video/2021/07/20/82170-577893740_large.mp4" type="video/mp4">
             </video>
             <div class="position-relative" style="z-index: 1;">
-                <div class="row py-5">
-                    <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-4 text-white animated zoomIn">Governance, Risk & Compliance (GRC)</h1>
-                        <a href="index.html" class="h5 text-white">Home</a>
-                        <i class="far fa-circle text-white px-2"></i>
-                        <a href="grc.html" class="h5 text-white">GRC Services</a>
+                <div class="container py-5">
+                    <div class="row align-items-center min-vh-50">
+                        <div class="col-lg-8 text-center mx-auto">
+                            <h1 class="display-4 animated zoomIn mb-4" style="color: white; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Governance, Risk & Compliance (GRC)</h1>
+                            <p class="lead text-white mb-4 animated fadeInUp" style="font-size: 1.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                Strategic framework for business excellence and regulatory compliance
+                            </p>
+                            <p class="text-white mb-4 animated fadeInUp" style="font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                                Transform your organization with comprehensive GRC solutions including governance frameworks, risk management, compliance automation, and regulatory alignment.
+                            </p>
+                            <div class="animated fadeInUp" data-wow-delay="0.6s">
+                                <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 me-3">Get Started</a>
+                                <a href="our-offerings.html" class="btn btn-outline-light btn-lg px-5 py-3">View All Services</a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="index.html" class="h6 text-white">Home</a>
+                                <i class="far fa-circle text-white px-2"></i>
+                                <a href="grc.html" class="h6 text-white">GRC Services</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1054,6 +1057,39 @@
     </div>
     <!-- Service Content End -->
 
+    <!-- GRC Partners Section -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-6 fw-bold text-primary mb-3">Our GRC Technology Partners</h2>
+                    <p class="lead text-muted">Leading governance, risk management, and compliance solutions we partner with</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel grc-carousel">
+                        <div class="grc-item text-center">
+                            <div class="grc-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="grc-logo mb-3">
+                                    <img src="img/GRC/G-1.png" alt="GRC Partner 1" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grc-item text-center">
+                            <div class="grc-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="grc-logo mb-3">
+                                    <img src="img/GRC/G-2.png" alt="GRC Partner 2" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GRC Partners Section End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -1101,27 +1137,6 @@
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Kuwait Office</h3>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">Salhiya Complex, Kuwait City, P.O.Box 26442, Safat – 13125, Kuwait</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">sales@octalpha.com</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+965 2220 5444</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-clock text-primary me-2"></i>
-                                <p class="mb-0">9:00 AM - 6:00 PM (Sunday to Thursday)</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
                                 <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
@@ -1151,7 +1166,7 @@
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20GRC%20services." 
+    <a href="https://wa.me/971553472868?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20GRC%20services." 
        class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
@@ -1165,5 +1180,32 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- GRC Carousel Initialization -->
+    <script>
+        $(document).ready(function() {
+            // GRC Partners Carousel
+            $('.grc-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 2
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

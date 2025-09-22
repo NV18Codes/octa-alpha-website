@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -151,6 +151,46 @@
                 display: none;
             }
         }
+        
+        /* Alliance Carousel Styles */
+        .alliance-carousel .alliance-item {
+            padding: 0 15px;
+        }
+        
+        .alliance-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            min-height: 200px;
+        }
+        
+        .alliance-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15) !important;
+            border-color: var(--primary);
+        }
+        
+        .alliance-logo i {
+            transition: all 0.3s ease;
+        }
+        
+        .alliance-card:hover .alliance-logo i {
+            transform: scale(1.1);
+            color: var(--secondary) !important;
+        }
+        
+        .alliance-card h5 {
+            font-weight: 600;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        
+        .alliance-card:hover h5 {
+            color: var(--primary);
+        }
+        
+        .alliance-carousel .owl-stage-outer {
+            padding: 20px 0;
+        }
     </style>
 </head>
 
@@ -186,7 +226,7 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
             </a>
@@ -197,36 +237,39 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">OUR OFFERINGS</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="it-infrastructure.html" class="dropdown-item">IT Infrastructure & Cloud Solutions</a>
-                            <a href="cybersecurity.html" class="dropdown-item">Cybersecurity Services</a>
-                            <a href="vapt.html" class="dropdown-item">Vulnerability Assessment & Penetration Testing (VAPT)</a>
-                            <a href="vciso.html" class="dropdown-item">Virtual Chief Information Security Officer (vCISO)</a>
-                            <a href="grc.html" class="dropdown-item">Governance, Risk & Compliance (GRC)</a>
-                            <a href="managed-services.html" class="dropdown-item">Managed IT Services</a>
-                        </div>
-                    </div>
+                    <a href="our-offerings.html" class="nav-item nav-link">OUR OFFERINGS</a>
                     <a href="blog.html" class="nav-item nav-link">BLOGS</a>
-                    <a href="faq.html" class="nav-item nav-link">FAQS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
             </div>
         </nav>
 
-        <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 400px;">
+        <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 500px;">
             <video class="position-absolute w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
-                <source src="videos/Video Background Blue light Full HD.mp4" type="video/mp4">
+                <source src="https://cdn.pixabay.com/video/2021/07/20/82170-577893740_large.mp4" type="video/mp4">
             </video>
             <div class="position-relative" style="z-index: 1;">
-                <div class="row py-5">
-                    <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-4 text-white animated zoomIn">IT Infrastructure & Cloud Solutions</h1>
-                        <a href="index.html" class="h5 text-white">Home</a>
-                        <i class="far fa-circle text-white px-2"></i>
-                        <a href="it-infrastructure.html" class="h5 text-white">IT Infrastructure & Cloud</a>
+                <div class="container py-5">
+                    <div class="row align-items-center min-vh-50">
+                        <div class="col-lg-8 text-center mx-auto">
+                            <h1 class="display-4 animated zoomIn mb-4" style="color: white; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">IT Infrastructure & Cloud Solutions</h1>
+                            <p class="lead text-white mb-4 animated fadeInUp" style="font-size: 1.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                Robust infrastructure solutions and strategic cloud implementations for modern enterprises
+                            </p>
+                            <p class="text-white mb-4 animated fadeInUp" style="font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                                From data centers to cloud migration, we design, implement, and manage scalable IT infrastructure solutions that power your business growth.
+                            </p>
+                            <div class="animated fadeInUp" data-wow-delay="0.6s">
+                                <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 me-3">Get Started</a>
+                                <a href="our-offerings.html" class="btn btn-outline-light btn-lg px-5 py-3">View All Services</a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="index.html" class="h6 text-white">Home</a>
+                                <i class="far fa-circle text-white px-2"></i>
+                                <a href="it-infrastructure.html" class="h6 text-white">IT Infrastructure & Cloud</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -276,10 +319,10 @@
                 <!-- IT Infrastructure Design & Implementation -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-server text-primary" style="font-size: 3rem;"></i>
+                        <div class="service-icon mb-3 text-center">
+                            <!-- <img src="img/IT infra/it-1.png" alt="IT Infrastructure" style="width: 80px; height: 80px; object-fit: contain;"> -->
                         </div>
-                        <h4 class="mb-3 text-primary">IT Infrastructure Design & Implementation</h4>
+                        <h4 class="mb-3 text-primary text-center">IT Infrastructure Design & Implementation</h4>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Servers</li>
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Storage</li>
@@ -292,10 +335,10 @@
                 <!-- Data Center Building -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-building text-primary" style="font-size: 3rem;"></i>
+                        <div class="service-icon mb-3 text-center">
+                            <!-- <img src="img/Datacenter/dc-1.png" alt="Data Center" style="width: 80px; height: 80px; object-fit: contain;"> -->
                         </div>
-                        <h4 class="mb-3 text-primary">Data Center Building</h4>
+                        <h4 class="mb-3 text-primary text-center">Data Center Building</h4>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Racks</li>
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>UPS & Power</li>
@@ -309,10 +352,10 @@
                 <!-- Virtualization & Applications -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-cloud text-primary" style="font-size: 3rem;"></i>
+                        <div class="service-icon mb-3 text-center">
+                            <!-- <img src="img/V&Cs/v-1.png" alt="Virtualization" style="width: 80px; height: 80px; object-fit: contain;"> -->
                         </div>
-                        <h4 class="mb-3 text-primary">Virtualization & Applications</h4>
+                        <h4 class="mb-3 text-primary text-center">Virtualization & Applications</h4>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Hypervisors</li>
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Business Applications</li>
@@ -326,10 +369,10 @@
                 <!-- Cloud Solutions -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-cloud-upload-alt text-primary" style="font-size: 3rem;"></i>
+                        <div class="service-icon mb-3 text-center">
+                            <!-- <img src="img/V&Cs/v-2.png" alt="Cloud Solutions" style="width: 80px; height: 80px; object-fit: contain;"> -->
                         </div>
-                        <h4 class="mb-3 text-primary">Cloud Solutions</h4>
+                        <h4 class="mb-3 text-primary text-center">Cloud Solutions</h4>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Azure, AWS, Oracle, Google</li>
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cost Optimization & Scalability</li>
@@ -343,10 +386,10 @@
                 <!-- Enterprise Wi-Fi -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-wifi text-primary" style="font-size: 3rem;"></i>
+                        <div class="service-icon mb-3 text-center">
+
                         </div>
-                        <h4 class="mb-3 text-primary">Enterprise Wi-Fi</h4>
+                        <h4 class="mb-3 text-primary text-center">Enterprise Wi-Fi</h4>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Access Points</li>
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Controllers</li>
@@ -360,10 +403,10 @@
                 <!-- Unified Communications -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-headset text-primary" style="font-size: 3rem;"></i>
+                        <div class="service-icon mb-3 text-center">
+                            <!-- <i class="fas fa-headset text-primary" style="font-size: 3rem;"></i> -->
                         </div>
-                        <h4 class="mb-3 text-primary">Unified Communications</h4>
+                        <h4 class="mb-3 text-primary text-center">Unified Communications</h4>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>PABX</li>
                             <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Microsoft Teams Rooms</li>
@@ -406,6 +449,100 @@
                                     <h4 class="text-primary mb-1">500+</h4>
                                     <small>Projects Completed</small>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Alliance Carousel Section -->
+            <div class="row g-5 mt-5">
+                <div class="col-12">
+                    <div class="text-center mb-5">
+                        <h2 class="mb-3">Our Strategic Technology Partners</h2>
+                        <p class="text-muted">We work with industry-leading technology partners to deliver cutting-edge IT infrastructure solutions</p>
+                    </div>
+                    
+                    <!-- Alliance Carousel -->
+                    <div class="owl-carousel alliance-carousel wow fadeInUp" data-wow-delay="0.3s">
+                        <!-- Networking Partners -->
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <img src="img/networking/n-1.png" alt="Cisco Systems" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                                <h5 class="mb-2">Cisco Systems</h5>
+                                <p class="text-muted small mb-0">Networking & Security Solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <img src="img/networking/n-2.png" alt="Aruba Networks" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                                <h5 class="mb-2">Aruba Networks</h5>
+                                <p class="text-muted small mb-0">Wireless & Edge Solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <img src="img/IT infra/it-2.png" alt="Dell Technologies" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                                <h5 class="mb-2">Dell Technologies</h5>
+                                <p class="text-muted small mb-0">Servers & Storage Solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <img src="img/IT infra/it-3.png" alt="HPE" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                                <h5 class="mb-2">HPE</h5>
+                                <p class="text-muted small mb-0">Infrastructure & Cloud</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <img src="img/V&Cs/v-3.png" alt="VMware" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                                <h5 class="mb-2">VMware</h5>
+                                <p class="text-muted small mb-0">Virtualization & Cloud</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <img src="img/Managed security/ms-2.png" alt="Fortinet" style="width: 80px; height: 80px; object-fit: contain;">
+                                </div>
+                                <h5 class="mb-2">Fortinet</h5>
+                                <p class="text-muted small mb-0">Network Security</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <i class="fas fa-ethernet text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="mb-2">Juniper Networks</h5>
+                                <p class="text-muted small mb-0">High-Performance Networking</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alliance-item text-center">
+                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                                <div class="alliance-logo mb-3">
+                                    <i class="fas fa-memory text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="mb-2">NetApp</h5>
+                                <p class="text-muted small mb-0">Data Storage Solutions</p>
                             </div>
                         </div>
                     </div>
@@ -467,27 +604,6 @@
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Kuwait Office</h3>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">Salhiya Complex, Kuwait City, P.O.Box 26442, Safat – 13125, Kuwait</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">sales@octalpha.com</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+965 2220 5444</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-clock text-primary me-2"></i>
-                                <p class="mb-0">9:00 AM - 6:00 PM (Sunday to Thursday)</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
                                 <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
@@ -517,7 +633,7 @@
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/97142424920?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20IT%20Infrastructure%20services." 
+    <a href="https://wa.me/971553472868?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20IT%20Infrastructure%20services." 
        class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
@@ -531,5 +647,38 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Alliance Carousel Script -->
+    <script>
+        $(document).ready(function() {
+            // Initialize Alliance Carousel
+            $('.alliance-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    576: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    },
+                    992: {
+                        items: 4
+                    },
+                    1200: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

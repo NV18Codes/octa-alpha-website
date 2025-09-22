@@ -1,9 +1,540 @@
 /********** Template CSS **********/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 :root {
     --primary: #06A3DA;
     --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E;
+    --content-font: 'Newsreader', serif;
+    --heading-font: 'Merriweather', serif;
+}
+
+/* Global Font Styles */
+body {
+    font-family: var(--content-font);
+    font-weight: 300;
+    line-height: 1.7;
+    color: #2c3e50;
+    background-color: #ffffff;
+}
+
+/* Clean, Modern Container Styles */
+.container, .container-fluid {
+    max-width: 1200px;
+}
+
+/* Ensure proper centering for all containers */
+.container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Remove unwanted margins */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Ensure full width sections */
+.section-padding {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Professional Section Spacing - Lighter */
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-padding-sm {
+    padding: 40px 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Highlighted/Emphasized Text */
+em, i, .highlight, .emphasis {
+    font-style: italic;
+    font-family: var(--content-font);
+    font-weight: 300;
+}
+
+/* Strong/Bold Text */
+strong, b, .bold {
+    font-weight: 500;
+    font-family: var(--content-font);
+}
+
+/* Additional Font Overrides */
+p, span, div, li, td, th, label, input, textarea, select {
+    font-family: var(--content-font);
+    font-weight: 300;
+}
+
+/* Navigation and UI Elements */
+.navbar-brand, .nav-link, .btn, .dropdown-item {
+    font-family: var(--content-font);
+    font-weight: 300;
+}
+
+/* Service Cards and Content Areas */
+.service-item, .card, .bg-light, .bg-primary {
+    font-family: var(--content-font);
+}
+
+.service-item h4, .card h4, .card h5 {
+    font-family: var(--heading-font);
+    font-weight: 400;
+}
+
+/* Footer */
+footer, .footer-about, .footer-about p {
+    font-family: var(--content-font);
+    font-weight: 300;
+}
+
+/* Form Elements */
+.form-control, .form-label {
+    font-family: var(--content-font);
+    font-weight: 300;
+}
+
+/* Testimonials and Quotes */
+.testimonial-item, .quote {
+    font-family: var(--content-font);
+    font-weight: 300;
+}
+
+.testimonial-item blockquote {
+    font-style: italic;
+    font-family: var(--content-font);
+    font-weight: 300;
+}
+
+/* Modern Card Styles - Netlogg Inspired */
+.modern-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.modern-card .card-body {
+    padding: 2rem;
+}
+
+/* Clean Service Cards - Lightweight */
+.service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary);
+}
+
+.service-card .icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .icon {
+    transform: scale(1.05);
+    background: var(--secondary);
+}
+
+.service-card .icon i {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.service-card h4 {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.service-card p {
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Clickable Service Cards */
+.service-card[onclick] {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-card[onclick]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary);
+}
+
+.service-card[onclick]:active {
+    transform: translateY(-2px);
+}
+
+/* Clean Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header .section-subtitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.section-header .section-title {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section-header .section-description {
+    color: #6c757d;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Ensure Why Choose Octalpha section is properly centered */
+.section-header {
+    text-align: center !important;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-header .section-subtitle,
+.section-header .section-title,
+.section-header .section-description {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modern Button Styles */
+.btn-modern {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-modern:hover::before {
+    left: 100%;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* Clean Grid Layout */
+.modern-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Professional Hero Section */
+.hero-modern {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.hero-modern .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Clean Navigation */
+.navbar-modern {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-modern.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Text Readability */
+.navbar-modern .navbar-brand {
+    color: #2c3e50 !important;
+    font-weight: 600;
+}
+
+.navbar-modern .nav-link {
+    color: #2c3e50 !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-modern .nav-link:hover,
+.navbar-modern .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-modern .dropdown-toggle::after {
+    border-top-color: #2c3e50;
+}
+
+/* Dropdown Menu Styling */
+.navbar-modern .dropdown-menu {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.navbar-modern .dropdown-item {
+    color: #2c3e50;
+    font-weight: 400;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.navbar-modern .dropdown-item:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Mobile Navigation */
+.navbar-modern .navbar-toggler {
+    border: none;
+    color: #2c3e50;
+}
+
+.navbar-modern .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Override for navbar-light class */
+.navbar-light .navbar-brand {
+    color: #2c3e50 !important;
+    font-weight: 600;
+}
+
+.navbar-light .nav-link {
+    color: #2c3e50 !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .nav-link:hover,
+.navbar-light .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-light .dropdown-toggle::after {
+    border-top-color: #2c3e50;
+}
+
+.navbar-light .dropdown-menu {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.navbar-light .dropdown-item {
+    color: #2c3e50;
+    font-weight: 400;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.navbar-light .dropdown-item:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Enhanced Checkmark Styling */
+.service-card ul li,
+.service-item ul li {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.service-card ul li i.fa-check,
+.service-item ul li i.fa-check {
+    color: var(--primary);
+    margin-right: 0.75rem;
+    margin-top: 0.125rem;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    width: 16px;
+    text-align: center;
+}
+
+.service-card ul li:last-child,
+.service-item ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Enhanced List Styling */
+.service-card ul,
+.service-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.service-card ul li,
+.service-item ul li {
+    font-family: var(--content-font);
+    font-weight: 300;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* Beautiful Checkmark Animation */
+.service-card ul li i.fa-check,
+.service-item ul li i.fa-check {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover ul li i.fa-check,
+.service-item:hover ul li i.fa-check {
+    color: var(--secondary);
+    transform: scale(1.1);
+}
+
+/* Enhanced Checkmark with Background */
+.service-card ul li i.fa-check::before,
+.service-item ul li i.fa-check::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: rgba(6, 163, 218, 0.1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover ul li i.fa-check::before,
+.service-item:hover ul li i.fa-check::before {
+    opacity: 1;
+}
+
+/* Better Typography for List Items */
+.service-card ul li,
+.service-item ul li {
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover ul li,
+.service-item:hover ul li {
+    color: #495057;
 }
 
 
@@ -1523,8 +2054,173 @@ html {
         min-width: 100px !important;
         font-size: 0.9rem !important;
     }
-    
+
     .testimonial-navigation .btn i {
         font-size: 0.8rem !important;
     }
+}
+
+/* WhatsApp Button Styles */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-btn i {
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover i {
+    transform: scale(1.1);
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: #333;
+}
+
+.whatsapp-btn:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* Responsive WhatsApp button */
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .whatsapp-tooltip {
+        right: 60px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* Logo Image Styling */
+.service-card .icon img,
+.service-icon img,
+.alliance-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover .icon img,
+.service-icon:hover img,
+.alliance-logo:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Specific styling for different contexts */
+.service-card .icon img {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.alliance-logo img {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Service icon in service pages */
+.service-icon img {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+    .service-card .icon img,
+    .service-icon img,
+    .alliance-logo img {
+        width: 60px;
+        height: 60px;
+        padding: 8px;
+    }
+}
+
+/* Ensure logos maintain aspect ratio and look professional */
+.service-card .icon,
+.service-icon,
+.alliance-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo hover effects for better user experience */
+.service-card:hover .icon img,
+.alliance-card:hover .alliance-logo img {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
