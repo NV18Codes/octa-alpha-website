@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Octalpha - Customer Journey</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+        content="Managed IT Services, AMC, Annual Maintenance Contracts, Remote Support, Onsite Support, Proactive Maintenance, IT Monitoring, Backup & DR, Asset Management"
+        name="keywords">
+    <meta
+        content="Comprehensive managed IT services including AMC contracts, remote & onsite support, proactive maintenance, monitoring, backup & disaster recovery, and expert engineering support in UAE."
+        name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- WhatsApp Button Styles -->
+    <style>
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn i {
+            font-size: 32px;
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-left-color: #333;
+        }
+
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Service Card Styles */
+        .service-item {
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: #007bff;
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .service-item:hover::before {
+            left: 100%;
+        }
+
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover .service-icon i {
+            transform: scale(1.1);
+            color: #0056b3 !important;
+        }
+
+        /* Responsive WhatsApp Button */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-btn i {
+                font-size: 28px;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- CENTERED THE NAVBAR -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
+                    <a href="about.html" class="nav-item nav-link">ABOUT US</a>
+
+                    
+                    <!-- ---------------- Added/Modified Code ---------------- -->
+                    <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
+                                    Cybersecurity
+                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                                </ul>
+                            </li>
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+
+                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
+                    <style>
+                    /* Nested dropdown positioning */
+                    .dropdown-submenu {
+                        position: relative;
+                    }
+
+                    /* Remove dropdown arrows */
+                    .navbar .dropdown-toggle::after,
+                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
+                        display: none;
+                    }
+
+
+                    .dropdown-submenu > .dropdown-menu {
+                        top: 0;
+                        left: 100%;
+                        margin-left: 0.1rem;
+                        margin-right: 0.1rem;
+                        display: none; /* hidden by default */
+                    }
+
+                    /* Show submenu on hover (desktop) */
+                    @media (min-width: 992px) {
+                        .dropdown-submenu:hover > .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    </style>
+                <!-- ---------------- Added/Modified Code ---------------- -->
+                 
+                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
+                    <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
+                </div>
+
+                <!-- MODIFIED THE BUTTON -->
+                <div class="d-none d-lg-block ms-auto">
+                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+ -->            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+        <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 500px;">
+            <video class="position-absolute w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
+                <source src="https://cdn.pixabay.com/video/2021/07/20/82170-577893740_large.mp4" type="video/mp4">
+            </video>
+            <div class="position-relative" style="z-index: 1;">
+            <div class="container py-5">
+                <div class="row align-items-center min-vh-50">
+                    <div class="col-lg-8 text-center mx-auto">
+                        <h1 class="display-4 animated zoomIn mb-4" style="color: white; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Smart Customer Journey Management</h1>
+                        <p class="lead text-white mb-4 animated fadeInUp" style="font-size: 1.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-weight: 600;" >
+                            Intelligent Customer Journey Management(Smart-CJM)
+                        </p>
+                        <p class="text-white mb-4 animated fadeInUp" style="font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); font-weight: 600;">
+                            In today’s fast-paced world, customer expectations are higher than ever. A smooth, personalized, and efficient experience can make the difference between a one-time visitor and a loyal advocate. With Smart-CJM, Octalpha helps you map, manage, and optimize every stage of your customer or visitor journey — from the very first interaction to the final goodbye.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid section-padding">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle"></div>
+                <h1 class="section-title text-primary">What Smart-CJM Offers</h1>
+                <p class="section-description" style="font-weight: 600; font-size: 1.4rem;">Optimize every touchpoint with data-driven insights and seamless engagement. Our Smart-CJM solutions help you design, monitor, and improve customer experiences across channels—boosting satisfaction, loyalty, and long-term value.</p>
+            </div>
+            
+            <div class="modern-grid">
+                <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <h4>Queue Management & Live Ticketing</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">Keep waiting times low, streamline service desks, and let customers see real-time queue updates, whether they’re online or onsite.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon">
+                        <i class="fa fa-headset"></i>
+                    </div>
+                    <h4>Online Appointment Scheduling & Self-Service Kiosks</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">Let customers take control. Book appointments 24/7, check in with self-service terminals, or get a virtual ticket from their mobile.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="icon">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                    <h4>Guidance & Wayfinding Systems</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">Simplify navigation through buildings, campuses or public spaces — from signage to digital displays — so users always know where to go.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="icon">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <h4>Real-Time Dashboards & Business Intelligence</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">Visualize visitor flow, service load, turnaround times, and more. Use historical and live data to understand patterns and anticipate demand.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="icon">
+                        <i class="fa fa-tags"></i>
+                    </div>
+                    <h4>Tailored & Modular Solutions</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">Whether you’re in public services, healthcare, retail or finance, our Smart-CJM solutions are built to adapt. We can deploy cloud-based or on-premise, integrate with your existing systems, and scale as you grow.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Benefits Start -->
+    <div class="container-fluid section-padding" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Why It Matters</div>
+                <h1 class="section-title">Elevate Every Customer Interaction</h1>
+                 <p class="section-description" style="font-weight: 600; font-size: 1.4rem;">Every touchpoint shapes how customers perceive your brand. Smart-CJM enables consistent, personalized interactions that boost engagement, trust, and conversions.</p>
+            </div>
+            
+            <div class="modern-grid">
+                <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon">
+                        <i class="fa fa-dollar-sign"></i>
+                    </div>
+                    <h4>Reduced Wait Times & Higher Satisfaction</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">Fast, transparent service is a key factor in customer satisfaction. Smart-CJM helps reduce frustration and improve the perception of your service.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon">
+                        <i class="fa fa-clock"></i>
+                    </div>
+                    <h4>Operational Efficiency & Cost Savings</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">With better forecasting, staff planning, and data on which services are most in demand, you can optimize resources and reduce wasted effort.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h4>Data-Driven Decision Making</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">Insights into visitor flow, peak periods, and bottlenecks enable smarter decisions — about layout, staffing, and resource allocation.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="icon">
+                        <i class="fa fa-chart-line"></i>
+                    </div>
+                    <h4>Enhanced Reputation & Loyalty</h4>
+                    <p style="font-weight: 500; font-size: 1.2rem;">SA well-managed service journey leaves an impression. Whether you are serving citizens, patients, or customers, a positive journey builds trust, loyalty, and word-of-mouth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Benefits End -->
+
+    <!-- Our Approach Start -->
+    <div class="container-fluid section-padding">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Our Approach</div>
+                <h1 class="section-title">Strategic, Data-Driven, Customer-Centric</h1>
+            </div>
+            
+            <div class="modern-grid">
+                <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon">
+                        <i class="fa fa-award"></i>
+                    </div>
+                    <h4>Assessment & Mapping </h4>
+                    <p> We start by understanding your existing customer journey: touchpoints, pain points, data sources, and expectations.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon">
+                        <i class="fa fa-building"></i>
+                    </div>
+                    <h4>Custom Solution Design </h4>
+                    <p>Based on your needs, we configure the modules that matter most: appointment scheduling, queue systems, wayfinding, dashboards, self-service, etc</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon">
+                        <i class="fa fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Seamless Integration</h4>
+                    <p>Smart-CJM works with your current systems (on-premise or cloud), terminals, displays, directories, and infrastructure</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="icon">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <h4>Deployment & Monitoring</h4>
+                    <p> Live dashboards, alerts, and analytics to track performance and improve continuously.</p>
+                </div>
+                
+                <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="icon">
+                        <i class="fa fa-certificate"></i>
+                    </div>
+                    <h4>Continuous Improvement </h4>
+                    <p>We help you review metrics, adapt workflows, and refine the experience over time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us End -->
+
+    <!--Who Benefits Most  -->
+    <div class="container-fluid section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+            <div class="section-subtitle">Who Benefits Most</div>
+            <h1 class="section-title">Industries We Empower</h1>
+            </div>
+
+            <div class="card border-0 shadow rounded p-4 mx-auto mb-4" style="max-width: 800px;">
+            <ul class="list-unstyled text-start">
+                <li><i class="fa fa-check text-primary me-2"></i> Public Sector / Government Offices</li>
+                <li><i class="fa fa-check text-primary me-2"></i> Healthcare Providers & Hospitals</li>
+                <li><i class="fa fa-check text-primary me-2"></i> Retail Chains & Financial Institutions</li>
+                <li><i class="fa fa-check text-primary me-2"></i> Customer-Facing Organizations (Offices, Branches, Service Centers)</li>
+            </ul>
+            <div class="text-center mt-3">
+                <h6 class="fw-semibold text-dark mb-0">Let’s Shape Experiences Together</h6>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row mt-5">
+                <div class="col-12 text-center mt-5">
+                    <div class="bg-primary rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <h3 class="text-white mb-3">At Octalpha, we believe every customer journey should leave a positive impression.</h3>
+                        <h3 class="text-white mb-3">If you’re ready to elevate your visitor experience, reduce wait times, improve operational efficiency</h3>
+                        <h3 class="text-white mb-0">Contact us to explore how Smart-CJM can be tailored to your organization.</h1>
+                        <div class="text-center mt-3">
+                            <a href="contact.html" class="btn btn-primary py-3 px-5 wow zoomIn" data-wow-delay="0.9s " style="color: white; border-color: white;">Contact Us
+                            </a>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+    
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/971553472868?text=Hi! I'm interested in your Managed IT Services. Can you provide more information about your AMC contracts and support options?"
+        class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat with us about Managed IT Services</div>
+    </a>
+
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <img src="img/logo.png" alt="Octalpha Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
+                        </a>
+                        <p class="mt-3 mb-4">Octalpha Business Solutions is your end-to-end technology partner, delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation, we help businesses scale faster and smarter.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">UAE Office</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City, Dubai, UAE</p>
+                            </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Socials</h3>
+                            </div>
+                                <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">info.dxb@octalpha.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+971 4 242 4920</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-printer text-primary me-2"></i>
+                                <p class="mb-0">+971 4 242 4917</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-globe text-primary me-2"></i>
+                                <p class="mb-0">www.octalpha.com</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="https://x.com/OctalphaS" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/octalphabusinesssolutions" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                            </div>
+                           <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
+                                    <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
+                                    <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                         </div>
+                    </div>
+
+                        
+                      <!--   <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5 align-items-end">
+                            
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px; width: 100%;">
+                        <p class="mb-0">&copy;Octalpha. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/971553472868?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Managed Services Carousel Initialization -->
+    <script>
+        $(document).ready(function() {
+            // Managed IT Services Technology Partners Carousel
+            $('.managed-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 6
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

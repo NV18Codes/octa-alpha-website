@@ -125,7 +125,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+<!--     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
 
@@ -157,17 +157,86 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
+            <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
+                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
                     <a href="index.html" class="nav-item nav-link active">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-                    <a href="our-offerings.html" class="nav-item nav-link">OUR OFFERINGS</a>
-                    <a href="blog.html" class="nav-item nav-link">BLOGS</a>
+
+                    
+                    <!-- ---------------- Added/Modified Code ---------------- -->
+                    <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
+                                    Cybersecurity
+                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                                </ul>
+                            </li>
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+
+                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                            <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
+                    <style>
+                    /* Nested dropdown positioning */
+                    .dropdown-submenu {
+                        position: relative;
+                    }
+
+                    /* Remove dropdown arrows */
+                    .navbar .dropdown-toggle::after,
+                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
+                        display: none;
+                    }
+
+
+                    .dropdown-submenu > .dropdown-menu {
+                        top: 0;
+                        left: 100%;
+                        margin-left: 0.1rem;
+                        margin-right: 0.1rem;
+                        display: none; /* hidden by default */
+                    }
+
+                    /* Show submenu on hover (desktop) */
+                    @media (min-width: 992px) {
+                        .dropdown-submenu:hover > .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    </style>
+                <!-- ---------------- Added/Modified Code ---------------- -->
+                 
+                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
-                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-                
-            </div>
+
+                <!-- MODIFIED THE BUTTON -->
+                <div class="d-none d-lg-block ms-auto">
+                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+ -->            </div>
         </nav>
 
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -287,11 +356,11 @@
                         <h5 class="fw-bold text-primary text-uppercase">Your End-to-End Technology Partner</h5>
                         <h1 class="mb-0">From Data Centers to Digital Transformation</h1>
                     </div>
-                    <p class="mb-4"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
-                    <p class="mb-4">We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
-                    <p class="mb-4">Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
-                    <p class="mb-4">Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
-                    <p class="mb-4">At Octalpha, we don't just supply IT — we deliver business continuity, operational efficiency, and technology-led growth.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">At Octalpha, we don't just supply IT — we deliver business continuity, operational efficiency, and technology-led growth.</p>
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                             <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Minified Technology</h5>
@@ -303,16 +372,16 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <!-- <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
+                        </div> -->
+                        <!-- <div class="ps-4">
                             <h5 class="mb-2">Call for advice now!</h5>
                             <h4 class="mb-0">+971 4 242 4920</h4>
-                        </div>
+                        </div> -->
                     </div>
-                    <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a>
-                </div>
+<!--                     <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a>
+ -->                </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 10px; overflow: hidden;">
                         <img src="https://cdn.pixabay.com/photo/2023/02/05/01/09/artificial-intelligence-7768524_1280.jpg" alt="Digital Transformation" class="w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" style="object-fit: contain; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
@@ -343,20 +412,20 @@
                         </div>
                         <h1 class="mb-0">Learn More About Our Success Stories</h1>
                     </div>
-                    <p class="mb-4">Octalpha takes into consideration every little detail to make sure the system runs smoothly and responsively. Our expertise spans across SAP ERP implementations, Microsoft Retail Solutions, and comprehensive IT infrastructure management for businesses of all sizes.</p>
-                    <p class="mb-4">We have successfully implemented solutions for leading retail chains, FMCG distribution companies, and food chains across the UAE. Our proven track record includes managing complex enterprise systems with 16+ stores and over 100 POS terminals, serving thousands of customers and vendors.</p>
-                    <p class="mb-4">Our customer references include building HQ Data Centers for 160+ stores with DR sites, implementing comprehensive cybersecurity solutions, and managing long-term AMC contracts spanning 5-6 years.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Octalpha takes into consideration every little detail to make sure the system runs smoothly and responsively. Our expertise spans across SAP ERP implementations, Microsoft Retail Solutions, and comprehensive IT infrastructure management for businesses of all sizes.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">We have successfully implemented solutions for leading retail chains, FMCG distribution companies, and food chains across the UAE. Our proven track record includes managing complex enterprise systems with 16+ stores and over 100 POS terminals, serving thousands of customers and vendors.</p>
+                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Our customer references include building HQ Data Centers for 160+ stores with DR sites, implementing comprehensive cybersecurity solutions, and managing long-term AMC contracts spanning 5-6 years.</p>
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <!-- <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Call for advice now!</h5>
                             <h4 class="mb-0">+971 4 242 4920</h4>
-                        </div>
+                        </div> -->
                     </div>
-                    <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a>
-                </div>
+<!--                     <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a>
+ -->                </div>
             </div>
         </div>
     </div>
@@ -364,61 +433,80 @@
 
 
     <!-- Features Start -->
-        <div class="container-fluid section-padding">
-            <div class="container">
+        <div class="container-fluid py-5">
+            <div class="container py-5">
                 <div class="section-header">
                     <div class="section-subtitle">Our Services</div>
                     <h1 class="section-title">Comprehensive IT Solutions for Modern Businesses</h1>
-                    <p class="section-description">Empowering enterprises with innovative, secure, and scalable technology solutions that drive digital transformation and business growth.</p>
+                    <p class="section-description" style="font-size: 1.2rem; font-weight: 600;">Empowering enterprises with innovative, secure, and scalable technology solutions that drive digital transformation and business growth.</p>
             </div>
-                <div class="modern-grid">
-                    <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="icon">
-                            <i class="fa fa-server"></i>
-                            </div>
-                        <h4>IT Infrastructure</h4>
-                        <p>Complete IT infrastructure design, virtualization, servers, storage, networking, and structured cabling solutions</p>
+                <div class="modern-grid py-18">
+                  <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <i class="fa fa-server fa-2x text-primary"></i>
+                            <h4 class="mb-0">IT Infrastructure</h4>
                         </div>
-                    
+                        <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
+                            Complete IT infrastructure design, virtualization, servers, storage, networking, and structured cabling solutions
+                        </p>
+                    </div>
+
+
                     <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="icon">
-                            <i class="fa fa-shield-alt"></i>
-                            </div>
-                        <h4>Cybersecurity</h4>
-                        <p>Next-Gen Firewalls, EDR, IAM, VAPT, vCISO, and comprehensive security frameworks</p>
+                        <div class="d-flex justify-content-between align-items-center mb-2 flex-row-reverse">
+                            <i class="fa fa-shield-alt fa-2x text-primary"></i>
+                            <h4 class="mb-0">Cybersecurity</h4>
                         </div>
+                        <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
+                                Next-Gen Firewalls, EDR, IAM, VAPT, vCISO, and comprehensive security frameworks
+                        </p>
+                    </div>
+
                     
+                    <!-- Card 1: Icon Left, Title Right -->
                     <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="icon">
-                            <i class="fa fa-gavel"></i>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-gavel fa-2x text-primary"></i>
+                        <h4 class="mb-0">Governance, Risk & Compliance (GRC)</h4>
                     </div>
-                        <h4>Governance, Risk & Compliance (GRC)</h4>
-                        <p>Corporate policies, IT governance, risk management, business continuity, and compliance frameworks</p>
-                </div>
-                    
+                     <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
+                        Corporate policies, IT governance, risk management, business continuity, and compliance frameworks
+                    </p>
+                    </div>
+
+                    <!-- Card 2: Icon Right, Title Left -->
                     <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon">
-                            <i class="fa fa-cloud"></i>
+                    <div class="d-flex justify-content-between align-items-center mb-2 flex-row-reverse">
+                        <i class="fa fa-cloud fa-2x text-primary"></i>
+                        <h4 class="mb-0">Cloud Solutions</h4>
                     </div>
-                        <h4>Cloud Solutions</h4>
-                        <p>Azure, AWS, Oracle, Google Cloud with cost optimization, migration, and containerization</p>
-                </div>
-                    
+                      <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
+                        Azure, AWS, Oracle, Google Cloud with cost optimization, migration, and containerization
+                    </p>
+                    </div>
+
+                    <!-- Card 3: Icon Left, Title Right -->
                     <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="icon">
-                            <i class="fa fa-cogs"></i>
-                            </div>
-                        <h4>Managed IT Services</h4>
-                        <p>24/7 monitoring, proactive maintenance, AMC contracts, backup & DR, and certified engineering support</p>
-                        </div>
-                    
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-cogs fa-2x text-primary"></i>
+                        <h4 class="mb-0">Managed IT Services</h4>
+                    </div>
+                     <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
+                        24/7 monitoring, proactive maintenance, AMC contracts, backup & DR, and certified engineering support
+                    </p>
+                    </div>
+
+                    <!-- Card 4: Icon Right, Title Left -->
                     <div class="service-card wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="icon">
-                            <i class="fa fa-cube"></i>
-                            </div>
-                        <h4>ERP Solutions</h4>
-                        <p>SAP ERP implementations, Microsoft Retail Solutions, and comprehensive business process automation</p>
-                </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2 flex-row-reverse">
+                        <i class="fa fa-cube fa-2x text-primary"></i>
+                        <h4 class="mb-0">ERP Solutions</h4>
+                    </div>
+                     <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
+                        SAP ERP implementations, Microsoft Retail Solutions, and comprehensive business process automation
+                    </p>
+                    </div>
+
             </div>
         </div>
     </div>
@@ -429,7 +517,7 @@
 
 
     <!-- Why Choose Octalpha Start -->
-    <div class="container-fluid section-padding" style="background: #f8f9fa;">
+<!--     <div class="container-fluid section-padding" style="background: #f8f9fa;">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Why Choose Octalpha</div>
@@ -485,9 +573,9 @@
                     <p>Quick procurement and deployment processes to get your solutions up and running faster</p>
                 </div>
                         </div>
-            
+             -->
             <!-- Centered GCC Experience Card -->
-            <div class="row justify-content-center mt-4">
+   <!--          <div class="row justify-content-center mt-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card wow fadeInUp" data-wow-delay="0.7s">
                         <div class="icon">
@@ -499,12 +587,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
     <!-- Why Choose Octalpha End -->
 
 
     <!-- Call to Action Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+ <!--    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-8">
@@ -547,7 +635,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Call to Action End -->
 
 
@@ -626,17 +714,17 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Testimonials</h5>
                 <h1 class="mb-0">What do people think about Octalpha?</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-            </div>
+            </div> -->
             
             <!-- Custom Navigation Buttons -->
-            <div class="testimonial-navigation text-center mt-4">
+            <!-- <div class="testimonial-navigation text-center mt-4">
                 <button class="btn btn-outline-primary btn-sm testimonial-prev me-2">
                     <i class="fa fa-chevron-left"></i> Previous
                 </button>
@@ -645,7 +733,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
 
@@ -724,7 +812,7 @@
 
 
     <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Latest Blog</h5>
@@ -790,7 +878,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Blog Start -->
 
 
@@ -816,11 +904,32 @@
                     <img src="img/vedors/vendor-8.png" alt="Vendor 8">
                     <img src="img/vedors/vendor-9.png" alt="Vendor 9">
                     <img src="img/vedors/vendor-10.png" alt="Vendor 10">
+                </div>
+                <br>
+                <div class="owl-carousel vendor-carousel">
                     <img src="img/vedors/vendor-11.png" alt="Vendor 11">
                     <img src="img/vedors/vendor-12.png" alt="Vendor 12">
                     <img src="img/vedors/vendor-13.png" alt="Vendor 13">
                     <img src="img/vedors/vendor-14.png" alt="Vendor 14">
                     <img src="img/vedors/vendor-15.png" alt="Vendor 15">
+                    <img src="img/vedors/vendor-16.png" alt="Vendor 16">
+                    <img src="img/vedors/vendor-17.png" alt="Vendor 17">
+                    <img src="img/vedors/vendor-18.png" alt="Vendor 18">
+                    <img src="img/vedors/vendor-19.png" alt="Vendor 19">
+                    <img src="img/vedors/vendor-20.png" alt="Vendor 20">
+                </div>
+                <br>
+                <div class="owl-carousel vendor-carousel">
+                    <img src="img/vedors/vendor-21.png" alt="Vendor 21">
+                    <img src="img/vedors/vendor-22.png" alt="Vendor 22">
+                    <img src="img/vedors/vendor-23.png" alt="Vendor 23">
+                    <img src="img/vedors/vendor-24.png" alt="Vendor 24">
+                    <img src="img/vedors/vendor-25.png" alt="Vendor 25">
+                    <img src="img/vedors/vendor-26.png" alt="Vendor 26">
+                    <img src="img/vedors/vendor-27.png" alt="Vendor 27">
+                    <img src="img/vedors/vendor-28.png" alt="Vendor 28">
+                    <img src="img/vedors/vendor-29.png" alt="Vendor 29">
+                    <img src="img/vedors/vendor-30.png" alt="Vendor 30">
                 </div>
             </div>
         </div>
@@ -844,13 +953,19 @@
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Dubai Office</h3>
+                                <h3 class="text-light mb-0">UAE Office</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
                                 <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City, Dubai, UAE</p>
                             </div>
-                            <div class="d-flex mb-2">
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Socials</h3>
+                            </div>
+                                <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
                                 <p class="mb-0">info.dxb@octalpha.com</p>
                             </div>
@@ -872,21 +987,25 @@
                                 <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
-                                <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Blogs</a>
-                                <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                            </div>
-                        </div>
+                           <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
+                                    <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
+                                    <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                         </div>
+                    </div>
 
+                        
+                      <!--   <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5 align-items-end">
+                            
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -894,10 +1013,10 @@
     </div>
     <div class="container-fluid text-white" style="background: #061429;">
         <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; Octalpha. All Rights Reserved.</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px; width: 100%;">
+                        <p class="mb-0">&copy;Octalpha. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -922,6 +1041,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

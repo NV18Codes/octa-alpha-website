@@ -162,7 +162,7 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+   <!--  <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -181,38 +181,105 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 py-lg-0" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.05);">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
+            <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">HOME</a>
+                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-                    <a href="our-offerings.html" class="nav-item nav-link">OUR OFFERINGS</a>
-                    <a href="blog.html" class="nav-item nav-link">BLOGS</a>
+
+                    
+                    <!-- ---------------- Added/Modified Code ---------------- -->
+                    <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
+                                    Cybersecurity
+                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                                </ul>
+                            </li>
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+
+                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
+                    <style>
+                    /* Nested dropdown positioning */
+                    .dropdown-submenu {
+                        position: relative;
+                    }
+
+                    /* Remove dropdown arrows */
+                    .navbar .dropdown-toggle::after,
+                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
+                        display: none;
+                    }
+
+
+                    .dropdown-submenu > .dropdown-menu {
+                        top: 0;
+                        left: 100%;
+                        margin-left: 0.1rem;
+                        margin-right: 0.1rem;
+                        display: none; /* hidden by default */
+                    }
+
+                    /* Show submenu on hover (desktop) */
+                    @media (min-width: 992px) {
+                        .dropdown-submenu:hover > .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    </style>
+                <!-- ---------------- Added/Modified Code ---------------- -->
+                 
+                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
-                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            </div>
+
+                <!-- MODIFIED THE BUTTON -->
+                <div class="d-none d-lg-block ms-auto">
+                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+ -->            </div>
         </nav>
 
         <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 400px; background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('img/feature.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
             <div class="position-relative" style="z-index: 1;">
                 <div class="row py-5">
                     <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-4 animated zoomIn" style="color: #001f3f;">Virtual Chief Information Security Officer (vCISO)</h1>
-                        <a href="index.html" class="h5 text-white">Home</a>
-                        <i class="far fa-circle text-white px-2"></i>
-                        <a href="vciso.html" class="h5 text-white">vCISO Services</a>
+                        <h1 class="display-4 animated zoomIn text-white" style="color: #001f3f;">Virtual Chief Information Security Officer (VCISO)</h1>
                     </div>
                 </div>
             </div>
@@ -251,8 +318,8 @@
                 <div class="col-lg-12">
                     <div class="bg-light rounded p-5 text-center">
                         <h3 class="mb-4 text-primary">Get C-Level Security Expertise When You Need It</h3>
-                        <p class="mb-4">Our vCISO services provide on-demand executive-level cybersecurity leadership without the overhead of a full-time CISO. We deliver strategic security guidance, policy development, and compliance oversight tailored to your business needs.</p>
-                        <p class="mb-0">Access experienced security executives who understand both technical challenges and business objectives, ensuring your security strategy aligns with your organizational goals.</p>
+                        <p class="mb-4"style="font-size: 1.4rem; font-weight: 500;">Our vCISO services provide on-demand executive-level cybersecurity leadership without the overhead of a full-time CISO. We deliver strategic security guidance, policy development, and compliance oversight tailored to your business needs.</p>
+                        <p class="mb-0" style="font-size: 1.3rem; font-weight: 500;">Access experienced security executives who understand both technical challenges and business objectives, ensuring your security strategy aligns with your organizational goals.</p>
                     </div>
                 </div>
             </div>
@@ -267,11 +334,11 @@
                         </div>
                         <h4 class="mb-3 text-primary">On-Demand CISO Expertise</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Flexible engagement models</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>No full-time salary overhead</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Scalable security leadership</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Access to multiple experts</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Cost-effective executive guidance</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Flexible engagement models</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>No full-time salary overhead</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Scalable security leadership</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Access to multiple experts</li>
+                            <li class="mb-0" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Cost-effective executive guidance</li>
                         </ul>
                     </div>
                 </div>
@@ -284,11 +351,11 @@
                         </div>
                         <h4 class="mb-3 text-primary">Security Strategy & Governance</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Security Strategy Development</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Policy Framework Creation</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Governance Structure Design</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Security Roadmap Planning</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Executive Security Reporting</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Security Strategy Development</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Policy Framework Creation</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Governance Structure Design</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Security Roadmap Planning</li>
+                            <li class="mb-0" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Executive Security Reporting</li>
                         </ul>
                     </div>
                 </div>
@@ -301,11 +368,11 @@
                         </div>
                         <h4 class="mb-3 text-primary">Risk Management & Compliance</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Risk Assessment & Mitigation</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Compliance Alignment</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Regulatory Requirements</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Audit Preparation</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Third-Party Risk Management</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Risk Assessment & Mitigation</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Compliance Alignment</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Regulatory Requirements</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Audit Preparation</li>
+                            <li class="mb-0" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Third-Party Risk Management</li>
                         </ul>
                     </div>
                 </div>
@@ -318,11 +385,11 @@
                         </div>
                         <h4 class="mb-3 text-primary">Security Awareness & Training</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Employee Security Training</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Phishing Simulation Programs</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Security Awareness Campaigns</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Executive Security Briefings</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Incident Response Training</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Employee Security Training</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Phishing Simulation Programs</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Security Awareness Campaigns</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Executive Security Briefings</li>
+                            <li class="mb-0" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Incident Response Training</li>
                         </ul>
                     </div>
                 </div>
@@ -335,11 +402,11 @@
                         </div>
                         <h4 class="mb-3 text-primary">Advisory & Audit Support</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Ongoing Security Advisory</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Internal Security Audits</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Vendor Security Assessments</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Security Program Reviews</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Continuous Improvement</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Ongoing Security Advisory</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Internal Security Audits</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Vendor Security Assessments</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Security Program Reviews</li>
+                            <li class="mb-0" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Continuous Improvement</li>
                         </ul>
                     </div>
                 </div>
@@ -352,11 +419,11 @@
                         </div>
                         <h4 class="mb-3 text-primary">Board-Level Guidance</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Executive Security Reporting</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Board Security Presentations</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Strategic Security Planning</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Risk Communication</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Trusted Security Partner</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Executive Security Reporting</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Board Security Presentations</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Strategic Security Planning</li>
+                            <li class="mb-2" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Risk Communication</li>
+                            <li class="mb-0" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check text-primary me-2"></i>Trusted Security Partner</li>
                         </ul>
                     </div>
                 </div>
@@ -368,27 +435,27 @@
                     <div class="bg-primary rounded p-5 text-white h-100">
                         <h3 class="mb-4">Key Benefits of Our vCISO Services</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-3"><i class="fa fa-check me-2"></i>Affordable executive-level cybersecurity leadership</li>
-                            <li class="mb-3"><i class="fa fa-check me-2"></i>Faster compliance readiness</li>
-                            <li class="mb-3"><i class="fa fa-check me-2"></i>Trusted partner for board-level security guidance</li>
-                            <li class="mb-3"><i class="fa fa-check me-2"></i>Access to multiple security experts</li>
-                            <li class="mb-0"><i class="fa fa-check me-2"></i>Scalable security leadership</li>
+                            <li class="mb-3" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Affordable executive-level cybersecurity leadership</li>
+                            <li class="mb-3" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Faster compliance readiness</li>
+                            <li class="mb-3" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Trusted partner for board-level security guidance</li>
+                            <li class="mb-3" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Access to multiple security experts</li>
+                            <li class="mb-0" style="font-size: 1.1rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Scalable security leadership</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
                     <div class="bg-light rounded p-5 h-100">
-                        <h3 class="mb-4 text-primary">Our vCISO Expertise</h3>
-                        <p class="mb-4">Our virtual CISOs bring decades of experience in cybersecurity leadership, risk management, and compliance. We understand both technical security challenges and business objectives, ensuring your security strategy drives business value.</p>
+                        <h3 class="mb-4 text-primary" >Our vCISO Expertise</h3>
+                        <p class="mb-4" style="font-size: 1.1rem; font-weight: 500;">Our virtual CISOs bring decades of experience in cybersecurity leadership, risk management, and compliance. We understand both technical security challenges and business objectives, ensuring your security strategy drives business value.</p>
                         <div class="row g-3">
                             <div class="col-6">
-                                <div class="text-center">
+                                <div class="text-center" style="font-size: 1.1rem; font-weight: 500;">
                                     <h4 class="text-primary mb-1">15+</h4>
                                     <small>Years Experience</small>
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="text-center">
+                                <div class="text-center" style="font-size: 1.1rem; font-weight: 500;">
                                     <h4 class="text-primary mb-1">24/7</h4>
                                     <small>Executive Support</small>
                                 </div>
@@ -415,20 +482,26 @@
                         <a href="index.html" class="navbar-brand">
                             <img src="img/logo.png" alt="Octalpha Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
                         </a>
-                        <p class="mt-3 mb-4">Octalpha delivers cutting-edge technology solutions with expertise in IT infrastructure, cybersecurity, and digital transformation. We help businesses thrive in the digital age.</p>
+                        <p class="mt-3 mb-4">Octalpha Business Solutions is your end-to-end technology partner, delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation, we help businesses scale faster and smarter.</p>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Dubai Office</h3>
+                                <h3 class="text-light mb-0">UAE Office</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
                                 <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City, Dubai, UAE</p>
                             </div>
-                            <div class="d-flex mb-2">
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Socials</h3>
+                            </div>
+                                <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
                                 <p class="mb-0">info.dxb@octalpha.com</p>
                             </div>
@@ -450,20 +523,25 @@
                                 <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
-                                <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Blogs</a>
-                                <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                                <a class="text-light" href="faq.html"><i class="bi bi-arrow-right text-primary me-2"></i>FAQ's</a>
-                            </div>
-                        </div>
+                           <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
+                                    <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
+                                    <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                         </div>
+                    </div>
+
+                        
+                      <!--   <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5 align-items-end">
+                            
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -471,10 +549,10 @@
     </div>
     <div class="container-fluid text-white" style="background: #061429;">
         <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; Octalpha. All Rights Reserved.</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px; width: 100%;">
+                        <p class="mb-0">&copy;Octalpha. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
