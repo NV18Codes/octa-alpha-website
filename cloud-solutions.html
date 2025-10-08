@@ -54,13 +54,13 @@
             <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
-                    <a href="index.html" class="nav-item nav-link active">HOME</a>
+                    <a href="index.html" class="nav-item nav-link ">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
 
                     
                     <!-- ---------------- Added/Modified Code ---------------- -->
                     <div class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <a href="#" class="nav-link active dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             WHAT WE DO
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
@@ -161,44 +161,40 @@
         <!-- Hero Section End -->
 
         <!-- Legacy pain points and Business use cases -->
-         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5">
-               <!--  <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                    <h5 class="fw-bold text-primary text-uppercase">Our Cloud Services</h5>
-                    <h1 class="mb-0">Comprehensive Cloud Solutions for Modern Businesses</h1>
-                </div> -->
-                <div class="row g-5">
-                    <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item bg-light rounded p-4 h-100">
-                            <div class="service-icon mb-3 text-center">
-                                <i class="fa fa-cloud text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h4 class="mb-3 text-primary text-center">Legacy Pain Points</h4>
-                                <ul class="custom-bullets text-start">
-                                <li>Monolithic DCs</li>
-                                <li>High OPEX</li>
-                                <li>Vendor lock-in.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    
-                    <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item bg-light rounded p-4 h-100">
-                            <div class="service-icon mb-3 text-center">
-                                <i class="fa fa-cloud text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h4 class="mb-3 text-primary text-center">Business Use Cases</h4>
-                            <ul class="custom-bullets text-start">
-                                <li>Traditional MPLS</li>
-                                <li>Siloed LAN/WAN</li>
-                                <li>Limited visibility</li>
-                                <li>Poor scalability</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="row justify-content-center align-items-start g-5 text-center">
+
+                <!-- Legacy Pain Points -->
+                <div class="col-lg-5 col-md-6">
+                <div class="info-section p-3">
+                    <div class="diamond mx-auto mb-3"></div>
+                    <h3 class="section-title text-primary mb-3">Legacy Pain Points</h3>
+                    <ul class="styled-list">
+                    <li>Monolithic DCs</li>
+                    <li>High OPEX</li>
+                    <li>Vendor lock-in</li>
+                    </ul>
                 </div>
+                </div>
+
+                <!-- Business Use Cases -->
+                <div class="col-lg-5 col-md-6">
+                <div class="info-section p-3">
+                    <div class="diamond mx-auto mb-3"></div>
+                    <h3 class="section-title text-primary mb-3">Business Use Cases</h3>
+                    <ul class="styled-list">
+                    <li>Traditional MPLS</li>
+                    <li>Siloed LAN/WAN</li>
+                    <li>Limited visibility</li>
+                    <li>Poor scalability</li>
+                    </ul>
+                </div>
+                </div>
+
             </div>
-        </div>
+            </div>
+
+
 
         <!-- Services Start -->
         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -208,55 +204,105 @@
                     <h1 class="mb-0">Comprehensive Cloud Solutions for Modern Businesses</h1>
                 </div>
                 <div class="row g-5">
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item bg-light rounded p-4 h-100">
-                            <div class="service-icon mb-3 text-center">
-                                <i class="fa fa-cloud text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h4 class="mb-3 text-primary text-center">Multi-Cloud Platforms</h4>
-                            <p class="mb-3">Azure, AWS, Oracle, Google Cloud implementations with best practices for security, scalability, and performance optimization</p>
-                            <!-- <div class="text-center">
-                                <a class="btn btn-primary" href="contact.html">Learn More</a>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="service-item bg-light rounded p-4 h-100">
-                            <div class="service-icon mb-3 text-center">
-                                <i class="fa fa-exchange-alt text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h4 class="mb-3 text-primary text-center">Cloud Migration</h4>
-                            <p class="mb-3">Seamless migration of applications, data, and infrastructure to cloud platforms with minimal downtime and maximum efficiency</p>
-                            <!-- <div class="text-center">
-                                <a class="btn btn-primary" href="contact.html">Learn More</a>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                        <div class="service-item bg-light rounded p-4 h-100">
-                            <div class="service-icon mb-3 text-center">
-                                <i class="fa fa-cube text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h4 class="mb-3 text-primary text-center">Containerization</h4>
-                            <p class="mb-3">Docker, Kubernetes, and container orchestration solutions for scalable, portable, and efficient application deployment</p>
-                            <!-- <div class="text-center">
-                                <a class="btn btn-primary" href="contact.html">Learn More</a>
-                            </div> -->
-                        </div>
-                    </div>
+                    <!-- CARD 1 -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/cloudsolutions/card1.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
 
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                        <div class="service-item bg-light rounded p-4 h-100">
-                            <div class="service-icon mb-3 text-center">
-                                <i class="fa fa-cube text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h4 class="mb-3 text-primary text-center">HPC & AI-optimized Infrastructure</h4>
-                            <p class="mb-3">HPC and AI-optimized infrastructure for accelerated computing, high-throughput workloads, and intelligent performance at scale.</p>
-                            <!-- <div class="text-center">
-                                <a class="btn btn-primary" href="contact.html">Learn More</a>
-                            </div> -->
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Multi-Cloud Platforms</h4>
+                        <p style="font-size: 1.1rem; font-weight: 600;">
+                            Azure, AWS, Oracle, Google Cloud implementations with best practices for security, scalability, and performance optimization
+                        </p>
+                        </ul>
                         </div>
                     </div>
+                </div>
+
+                    <!-- CARD-2 -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/cloudsolutions/card2.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Cloud Migration</h4>
+                        <p style="font-size: 1.1rem; font-weight: 600;">
+                            Seamless migration of applications, data, and infrastructure to cloud platforms with minimal downtime and maximum efficiency
+                        </p>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- CARD-3 -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/cloudsolutions/card3.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Containerization</h4>
+                        <p style="font-size: 1.1rem; font-weight: 600;">
+                            Docker, Kubernetes, and container orchestration solutions for scalable, portable, and efficient application deployment
+                        </p>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD-4 -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/cloudsolutions/card4.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">HPC & AI-optimized Infrastructure</h4>
+                        <p style="font-size: 1.1rem; font-weight: 600;">
+                            HPC and AI-optimized infrastructure for accelerated computing, high-throughput workloads, and intelligent performance at scale.
+                        </p>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -279,7 +325,7 @@
                                 <i class="fa fa-cloud text-primary" style="font-size: 3rem;"></i>
                             </div>
                             <h4 class="mb-3 text-primary text-center">On-Premises → Cloud</h4>
-                            <p class="mb-3">Move from physical servers/data centers to AWS, Azure, GCP, or Snowflake.</p>
+                            <p class="mb-3" style="font-size: 1.3rem; font-weight: 600;">Move from physical servers/data centers to AWS, Azure, GCP, or Snowflake.</p>
                             <!-- <div class="text-center">
                                 <a class="btn btn-primary" href="contact.html">Learn More</a>
                             </div> -->
@@ -291,7 +337,7 @@
                                 <i class="fa fa-exchange-alt text-primary" style="font-size: 3rem;"></i>
                             </div>
                             <h4 class="mb-3 text-primary text-center">Cloud → Cloud </h4>
-                            <p class="mb-3">Seamless migration between cloud providers with minimal downtime.</p>
+                            <p class="mb-3" style="font-size: 1.3rem; font-weight: 600;">Seamless migration between cloud providers with minimal downtime.</p>
                             <!-- <div class="text-center">
                                 <a class="btn btn-primary" href="contact.html">Learn More</a>
                             </div> -->
@@ -303,7 +349,7 @@
                                 <i class="fa fa-cube text-primary" style="font-size: 3rem;"></i>
                             </div>
                             <h4 class="mb-3 text-primary text-center">Secure & Compliant Migration </h4>
-                            <p class="mb-3">Data protection, encryption, and compliance with industry standards.</p>
+                            <p class="mb-3" style="font-size: 1.3rem; font-weight: 600;">Data protection, encryption, and compliance with industry standards.</p>
                             <!-- <div class="text-center">
                                 <a class="btn btn-primary" href="contact.html">Learn More</a>
                             </div> -->
@@ -316,7 +362,7 @@
                                 <i class="fa fa-cube text-primary" style="font-size: 3rem;"></i>
                             </div>
                             <h4 class="mb-3 text-primary text-center">Hybrid & Multi-Cloud</h4>
-                            <p class="mb-3">Combine multiple clouds for flexibility and high availability.</p>
+                            <p class="mb-3" style="font-size: 1.3rem; font-weight: 600;">Combine multiple clouds for flexibility and high availability.</p>
                             <!-- <div class="text-center">
                                 <a class="btn btn-primary" href="contact.html">Learn More</a>
                             </div> -->
@@ -341,7 +387,7 @@
                                 <i class="fa fa-cloud text-primary" style="font-size: 3rem;"></i>
                             </div>
                             <h4 class="mb-3 text-primary text-center">Custom Cloud Environments</h4>
-                            <p class="mb-3">Secure, scalable, and high-performance infrastructure design.</p>
+                            <p class="mb-3" style="font-size: 1.3rem; font-weight: 600;">Secure, scalable, and high-performance infrastructure design.</p>
                             <!-- <div class="text-center">
                                 <a class="btn btn-primary" href="contact.html">Learn More</a>
                             </div> -->
@@ -353,7 +399,7 @@
                                 <i class="fa fa-exchange-alt text-primary" style="font-size: 3rem;"></i>
                             </div>
                             <h4 class="mb-3 text-primary text-center">Data Platforms & Big Data</h4>
-                            <p class="mb-3">Deployment of Snowflake, Databricks, BigQuery, and similar solutions.</p>
+                            <p class="mb-3" style="font-size: 1.3rem; font-weight: 600;">Deployment of Snowflake, Databricks, BigQuery, and similar solutions.</p>
                             <!-- <div class="text-center">
                                 <a class="btn btn-primary" href="contact.html">Learn More</a>
                             </div> -->
@@ -365,7 +411,7 @@
                                 <i class="fa fa-cube text-primary" style="font-size: 3rem;"></i>
                             </div>
                             <h4 class="mb-3 text-primary text-center">Governance & Cost Control</h4>
-                            <p class="mb-3">Landing zones, security frameworks, and expense management.</p>
+                            <p class="mb-3" style="font-size: 1.3rem; font-weight: 600;">Landing zones, security frameworks, and expense management.</p>
                             <!-- <div class="text-center">
                                 <a class="btn btn-primary" href="contact.html">Learn More</a>
                             </div> -->
@@ -377,62 +423,17 @@
 
 
         <!-- Benefits Start -->
-        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                    <h5 class="fw-bold text-primary text-uppercase">Benefits</h5>
-                    <h1 class="mb-0">Why Choose Our Cloud Solutions</h1>
-                </div>
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.2s">
-                        <div class="bg-light rounded p-4 text-center h-100">
-                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-dollar-sign text-white"></i>
-                            </div>
-                            <h5 class="mb-3">Cost Optimization</h5>
-                            <p class="mb-0">Reduce IT costs with optimized cloud resource allocation and pay-as-you-use pricing models</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.4s">
-                        <div class="bg-light rounded p-4 text-center h-100">
-                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-expand-arrows-alt text-white"></i>
-                            </div>
-                            <h5 class="mb-3">Scalability</h5>
-                            <p class="mb-0">Scale your infrastructure up or down based on demand with cloud-native auto-scaling capabilities</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-light rounded p-4 text-center h-100">
-                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-shield-alt text-white"></i>
-                            </div>
-                            <h5 class="mb-3">Enhanced Security</h5>
-                            <p class="mb-0">Enterprise-grade security with built-in compliance, encryption, and access controls</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.8s">
-                        <div class="bg-light rounded p-4 text-center h-100">
-                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-globe text-white"></i>
-                            </div>
-                            <h5 class="mb-3">Global Accessibility</h5>
-                            <p class="mb-0">Access your applications and data from anywhere in the world with high availability and performance</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Benefits End -->
 
 
         <!-- Why Choose Us Start -->
         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5">
-                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <!-- <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                     <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
                     <h1 class="mb-0">Expert Cloud Solutions Provider</h1>
-                </div>
+                </div> -->
                 <div class="row g-5">
                     <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
                         <div class="position-relative h-100">
@@ -444,8 +445,8 @@
                             <h5 class="fw-bold text-primary text-uppercase">Proven Expertise</h5>
                             <h1 class="mb-0">Successful Cloud Transformations</h1>
                         </div>
-                        <p class="mb-4">Our certified cloud architects have successfully migrated and optimized cloud solutions for businesses across the UAE. We understand the unique requirements of different industries and provide tailored cloud strategies.</p>
-                        <p class="mb-4">We offer comprehensive cloud services including infrastructure setup, application migration, security implementation, and ongoing optimization to ensure your cloud investment delivers maximum value.</p>
+                        <p class="mb-4" style="font-size: 1.4rem; font-weight: 600;">Our certified cloud architects have successfully migrated and optimized cloud solutions for businesses across the UAE. We understand the unique requirements of different industries and provide tailored cloud strategies.</p>
+                        <p class="mb-4" style="font-size: 1.4rem; font-weight: 600;">We offer comprehensive cloud services including infrastructure setup, application migration, security implementation, and ongoing optimization to ensure your cloud investment delivers maximum value.</p>
                 </div>
             </div>
         </div>

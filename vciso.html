@@ -196,13 +196,13 @@
             <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
-                    <a href="index.html" class="nav-item nav-link active">HOME</a>
+                    <a href="index.html" class="nav-item nav-link ">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
 
                     
                     <!-- ---------------- Added/Modified Code ---------------- -->
                     <div class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <a href="#" class="nav-link active dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             WHAT WE DO
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
@@ -275,11 +275,21 @@
  -->            </div>
         </nav>
 
-        <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 400px; background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('img/feature.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="container-fluid py-3 position-relative" style="margin-bottom: 60px; min-height: 400px;">
+            <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop style="object-fit: cover; z-index: -1;">
+                <source src="videos/VID-20250916-WA0003.mp4" type="video/mp4">
+            </video>
             <div class="position-relative" style="z-index: 1;">
-                <div class="row py-5">
-                    <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-4 animated zoomIn text-white" style="color: #001f3f;">Virtual Chief Information Security Officer (VCISO)</h1>
+                <div class="container py-3">
+                    <div class="row align-items-center min-vh-40">
+                        <div class="col-lg-8 text-center mx-auto">
+                            <br>
+                            <br>
+                            <h1 class="display-4 animated zoomIn mb-4" style="color: #001f3f; font-weight: 600;">Virtual Chief Information Security Officer (VCISO)</h1>
+                            <p class="lead mb-4 animated fadeInUp" style="font-size: 1.8rem; color: #001f3f; font-weight: 600;">
+                               Executive-Level Cybersecurity Leadership Without Full-Time Cost
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,7 +320,6 @@
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Virtual Chief Information Security Officer (vCISO)</h5>
-                <h1 class="mb-0">Executive-Level Cybersecurity Leadership Without Full-Time Cost</h1>
             </div>
             
             <!-- Introduction Section -->
@@ -347,7 +356,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="service-item bg-light rounded p-4 h-100">
                         <div class="service-icon mb-3">
-                            <i class="fas fa-chess text-primary" style="font-size: 3rem;"></i>
+                            <i class="fas fa-chess text-primary" style="font-size: 2.7rem;"></i>
                         </div>
                         <h4 class="mb-3 text-primary">Security Strategy & Governance</h4>
                         <ul class="list-unstyled">
@@ -364,7 +373,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded p-4 h-100">
                         <div class="service-icon mb-3">
-                            <i class="fas fa-balance-scale text-primary" style="font-size: 3rem;"></i>
+                            <i class="fas fa-balance-scale text-primary" style="font-size: 2.3rem;"></i>
                         </div>
                         <h4 class="mb-3 text-primary">Risk Management & Compliance</h4>
                         <ul class="list-unstyled">
@@ -381,7 +390,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="service-item bg-light rounded p-4 h-100">
                         <div class="service-icon mb-3">
-                            <i class="fas fa-graduation-cap text-primary" style="font-size: 3rem;"></i>
+                            <i class="fas fa-graduation-cap text-primary" style="font-size: 2.5rem;"></i>
                         </div>
                         <h4 class="mb-3 text-primary">Security Awareness & Training</h4>
                         <ul class="list-unstyled">
@@ -415,7 +424,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="service-item bg-light rounded p-4 h-100">
                         <div class="service-icon mb-3">
-                            <i class="fas fa-users-cog text-primary" style="font-size: 3rem;"></i>
+                            <i class="fas fa-users-cog text-primary" style="font-size: 2.5rem;"></i>
                         </div>
                         <h4 class="mb-3 text-primary">Board-Level Guidance</h4>
                         <ul class="list-unstyled">
@@ -466,9 +475,9 @@
             </div>
 
             <!-- CTA Section -->
-            <div class="text-center mt-5">
+            <!-- <div class="text-center mt-5">
                 <a href="contact.html" class="btn btn-primary py-3 px-5 wow zoomIn" data-wow-delay="0.9s">Get Your Virtual CISO</a>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Service Content End -->
