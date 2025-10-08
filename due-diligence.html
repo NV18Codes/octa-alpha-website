@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Octalpha - Risk Assessment</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Digital Solutions, Innovation, Technology" name="keywords">
+    <meta content="Octalpha provides innovative digital solutions for modern businesses" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- WhatsApp Button Styles -->
+    <style>
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn i {
+            font-size: 32px;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-left-color: #333;
+        }
+        
+        .whatsapp-btn:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive WhatsApp Button */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 28px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+<!--     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>2408, 24th floor, Tower B,
+                        Business Central Towers, Dubai Internet City, Dubai, UAE</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+971 4 242 4920</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info.dxb@octalpha.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+                            class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- CENTERED THE NAVBAR -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
+                    <a href="about.html" class="nav-item nav-link">ABOUT US</a>
+
+                    
+                    <!-- ---------------- Added/Modified Code ---------------- -->
+                    <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
+                                    Cybersecurity
+                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                                </ul>
+                            </li>
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+
+                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
+                    <style>
+                    /* Nested dropdown positioning */
+                    .dropdown-submenu {
+                        position: relative;
+                    }
+
+                    /* Remove dropdown arrows */
+                    .navbar .dropdown-toggle::after,
+                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
+                        display: none;
+                    }
+
+
+                    .dropdown-submenu > .dropdown-menu {
+                        top: 0;
+                        left: 100%;
+                        margin-left: 0.1rem;
+                        margin-right: 0.1rem;
+                        display: none; /* hidden by default */
+                    }
+
+                    /* Show submenu on hover (desktop) */
+                    @media (min-width: 992px) {
+                        .dropdown-submenu:hover > .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    </style>
+                <!-- ---------------- Added/Modified Code ---------------- -->
+                 
+                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
+                    <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
+                </div>
+
+                <!-- MODIFIED THE BUTTON -->
+                <div class="d-none d-lg-block ms-auto">
+                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+ -->            </div>
+        </nav>
+
+        <!-- Hero Start -->
+        <div class="container-fluid py-3 position-relative" style="margin-bottom: 60px; min-height: 400px;">
+            <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop style="object-fit: cover; z-index: -1;">
+                <source src="videos/VID-20250916-WA0003.mp4" type="video/mp4">
+            </video>
+            <div class="position-relative" style="z-index: 1;">
+                <div class="container py-3">
+                    <div class="row align-items-center min-vh-40">
+                        <div class="col-lg-8 text-center mx-auto">
+                            <h1 class="display-4 animated zoomIn mb-4" style="color: #001f3f; font-weight: 600;">Risk Assessment</h1>
+                            <p class="lead mb-4 animated fadeInUp" style="font-size: 1.8rem; color: #001f3f; font-weight: 600;">
+                                Comprehensive Risk Coverage Across Business Functions
+                            </p>
+                            <p class="mb-4 animated fadeInUp" style="font-size: 1.2rem; color: #001f3f; font-weight: 600;">
+                                 Our Risk Assessment services provide critical visibility into cybersecurity, regulatory, financial, and operational risks. Whether you're evaluating a merger, acquisition, or third-party relationship, we help uncover hidden liabilities and validate security postures — ensuring smarter, safer business decisions.
+                            </p>
+                            <!-- <div class="animated fadeInUp" data-wow-delay="0.6s">
+                                <a href="#blog" class="btn btn-light btn-lg px-5 py-3 me-3">Read Articles</a>
+                                <a href="our-offerings.html" class="btn btn-outline-light btn-lg px-5 py-3">Our Services</a>
+                            </div> -->
+                            <!-- <div class="mt-4">
+                                <a href="index.html" class="h6" style="color: #001f3f;">Home</a>
+                                <i class="far fa-circle px-2" style="color: #001f3f;"></i>
+                                <a href="cybersecurity.html" class="h6" style="color: #001f3f;">Cybersecurity</a>
+                                <i class="far fa-circle px-2" style="color: #001f3f;"></i>
+                                <a href="due-diligence.html" class="h6" style="color: #001f3f;">Risk Assessment</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Risk Assessment Scope -->
+     <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="text-primary fw-bold text-uppercase mb-5">Scope of Risk Assessment /h2>
+
+           <div class="dd-logo-row justify-content-center">
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/1.png" class="dd-logo" alt="Partner 1">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/2.png" class="dd-logo" alt="Partner 2">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/3.png" class="dd-logo" alt="Partner 3">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/4.png" class="dd-logo" alt="Partner 4">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/5.png" class="dd-logo" alt="Partner 5">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/6.png" class="dd-logo" alt="Partner 6">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/7.png" class="dd-logo" alt="Partner 7">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/8.png" class="dd-logo" alt="Partner 8">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/9.png" class="dd-logo" alt="Partner 9">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/10.png" class="dd-logo" alt="Partner 10">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/11.png" class="dd-logo" alt="Partner 11">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/12.png" class="dd-logo" alt="Partner 12">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/13.png" class="dd-logo" alt="Partner 13">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/14.png" class="dd-logo" alt="Partner 14">
+                </div>
+                <div class="dd-logo-item text-center">
+                    <img src="img/DueDiligence/15.png" class="dd-logo" alt="Partner 15">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center my-5">
+        <img src="img/DueDiligence/lifecycle.png" class="img-fluid lifecycle-img" alt="Risk Assessment Lifecycle">
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <img src="img/logo.png" alt="Octalpha Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
+                        </a>
+                        <p class="mt-3 mb-4">Octalpha Business Solutions is your end-to-end technology partner, delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation, we help businesses scale faster and smarter.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">UAE Office</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City, Dubai, UAE</p>
+                            </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Socials</h3>
+                            </div>
+                                <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">info.dxb@octalpha.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+971 4 242 4920</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-printer text-primary me-2"></i>
+                                <p class="mb-0">+971 4 242 4917</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-globe text-primary me-2"></i>
+                                <p class="mb-0">www.octalpha.com</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="https://x.com/OctalphaS" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/octalphabusinesssolutions" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                            </div>
+                           <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
+                                    <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
+                                    <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                         </div>
+                    </div>
+
+                        
+                      <!--   <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5 align-items-end">
+                            
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px; width: 100%;">
+                        <p class="mb-0">&copy;Octalpha. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/971553472868?text=Hi%20Octalpha!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

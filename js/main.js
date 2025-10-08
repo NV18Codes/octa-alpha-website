@@ -52,7 +52,6 @@
         }
     });
 
-
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
         delay: 10,
@@ -108,7 +107,6 @@
     $('.testimonial-next').click(function() {
         testimonialCarousel.trigger('next.owl.carousel');
     });
-
 
     // Vendor carousel
     $('.vendor-carousel').owlCarousel({

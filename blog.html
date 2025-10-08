@@ -126,7 +126,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+<!--     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -151,7 +151,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
 
@@ -164,18 +164,86 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
+            <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">HOME</a>
+                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-                    <a href="our-offerings.html" class="nav-item nav-link">OUR OFFERINGS</a>
-                    <a href="blog.html" class="nav-item nav-link active">BLOGS</a>
+
+                    
+                    <!-- ---------------- Added/Modified Code ---------------- -->
+                    <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
+                                    Cybersecurity
+                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                                </ul>
+                            </li>
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+
+                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
+                    <style>
+                    /* Nested dropdown positioning */
+                    .dropdown-submenu {
+                        position: relative;
+                    }
+
+                    /* Remove dropdown arrows */
+                    .navbar .dropdown-toggle::after,
+                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
+                        display: none;
+                    }
+
+
+                    .dropdown-submenu > .dropdown-menu {
+                        top: 0;
+                        left: 100%;
+                        margin-left: 0.1rem;
+                        margin-right: 0.1rem;
+                        display: none; /* hidden by default */
+                    }
+
+                    /* Show submenu on hover (desktop) */
+                    @media (min-width: 992px) {
+                        .dropdown-submenu:hover > .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    </style>
+                <!-- ---------------- Added/Modified Code ---------------- -->
+                 
+                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
-                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
-                    data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
 
-            </div>
+                <!-- MODIFIED THE BUTTON -->
+                <div class="d-none d-lg-block ms-auto">
+                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+ -->            </div>
         </nav>
 
         <!-- Hero Start -->
@@ -187,22 +255,21 @@
                 <div class="container py-3">
                     <div class="row align-items-center min-vh-40">
                         <div class="col-lg-8 text-center mx-auto">
-                            <h1 class="display-4 animated zoomIn mb-4" style="color: #001f3f; font-weight: 600;">Blogs</h1>
+                            <h1 class="display-4 animated zoomIn mb-4" style="color: #001f3f; font-weight: 600;">Our Partners</h1>
                             <p class="lead mb-4 animated fadeInUp" style="font-size: 1.8rem; color: #001f3f; font-weight: 600;">
-                                Stay updated with the latest technology insights and industry trends
+                                Trusted by Leading Global Brands
                             </p>
-                            <p class="mb-4 animated fadeInUp" style="font-size: 1.1rem; color: #001f3f; font-weight: 600;">
+                            <p class="mb-4 animated fadeInUp" style="font-size: 1.8rem; color: #001f3f; font-weight: 600;">
                                 Discover expert insights, best practices, and cutting-edge solutions in IT infrastructure, cybersecurity, cloud computing, and digital transformation.
                             </p>
-                            <div class="animated fadeInUp" data-wow-delay="0.6s">
-                                <a href="#blog" class="btn btn-light btn-lg px-5 py-3 me-3">Read Articles</a>
+                            <!-- <div class="animated fadeInUp" data-wow-delay="0.6s">
                                 <a href="our-offerings.html" class="btn btn-outline-light btn-lg px-5 py-3">Our Services</a>
-                            </div>
-                            <div class="mt-4">
+                            </div> -->
+                            <!-- <div class="mt-4">
                                 <a href="index.html" class="h6" style="color: #001f3f;">Home</a>
                                 <i class="far fa-circle px-2" style="color: #001f3f;"></i>
-                                <a href="blog.html" class="h6" style="color: #001f3f;">Blogs</a>
-                            </div>
+                                <a href="blog.html" class="h6" style="color: #001f3f;">Partners</a>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -213,470 +280,274 @@
     <!-- Navbar End -->
 
 
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+    <!-- Partner/Strategic Alliances -->
+     <section class="py-5 bg-light">
+        <div class="container text-center">
+            <!-- <h2 class="text-primary fw-bold text-uppercase mb-2">Our Partners</h6>
+            <h2 class="fw-bold mb-4">Trusted by Leading Global Brands</h2> -->
+            <h2 class="fw-bold  mb-5">
+            We collaborate with industry leaders and technology innovators to deliver world-class solutions and services.
+            </h2>
+
+            <div class="row g-4 justify-content-center">
+            <!-- Repeat this block for each partner -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/1.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
                 </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3"
-                            placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/2.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
                 </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/3.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/4.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/5.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/6.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/7.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/8.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div> -->
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/9.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/10.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/11.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/12.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/13.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/14.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/15.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/16.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/17.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+ -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/18.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/19.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/20.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/21.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/22.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/23.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/24.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div> -->
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/25.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/26.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/27.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/28.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/29.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+ -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/30.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/31.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div> -->
+
+            <!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/32.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div> -->
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/33.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/34.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div> -->
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/35.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/36.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="p-3 bg-white shadow-sm rounded d-flex align-items-center justify-content-center h-100">
+                <img src="img/partners/37.jpg" alt="Partner 1" class="img-fluid" style="max-height: 60px;">
+                </div>
+            </div>
+            <!-- Repeat for all 37 logos -->
             </div>
         </div>
-    </div>
-    <!-- Full Screen Search End -->
+    </section>
 
-
-    <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <!-- Blog list Start -->
-                <div class="col-lg-8">
-                    <div class="row g-5">
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">IT Infra</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">Cyber Security</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">Data Centre</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">Smart Journey</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">Audio Visual</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">GRC</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">IT Infra</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">Cyber Security</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">Data Centre</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <div class="bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                                        <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">Smart Journey</a>
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                            Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination pagination-lg m-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link rounded-0" href="#" aria-label="Previous">
-                                            <span aria-hidden="true"><i class="bi bi-arrow-left"></i></span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link rounded-0" href="#" aria-label="Next">
-                                            <span aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog list End -->
-
-                <!-- Sidebar Start -->
-                <div class="col-lg-4">
-                    <!-- Search Form Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3" placeholder="Keyword">
-                            <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                        </div>
-                    </div>
-                    <!-- Search Form End -->
-
-                    <!-- Category Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Categories</h3>
-                        </div>
-                        <div class="link-animated d-flex flex-column justify-content-start">
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i
-                                    class="bi bi-arrow-right me-2"></i>IT Infra</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i
-                                    class="bi bi-arrow-right me-2"></i>Cyber Security</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i
-                                    class="bi bi-arrow-right me-2"></i>Data Centre n elv solutions</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i
-                                    class="bi bi-arrow-right me-2"></i>Smart Customer Journey Management</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i
-                                    class="bi bi-arrow-right me-2"></i>Audio Visual</a>
-                        </div>
-                    </div>
-                    <!-- Category End -->
-
-                    <!-- Recent Post Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Recent Post</h3>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <div class="bg-primary d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
-                                <i class="fas fa-newspaper text-white"></i>
-                            </div>
-                                style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
-                                dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <div class="bg-primary d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
-                                <i class="fas fa-newspaper text-white"></i>
-                            </div>
-                                style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
-                                dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <div class="bg-primary d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
-                                <i class="fas fa-newspaper text-white"></i>
-                            </div>
-                                style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
-                                dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <div class="bg-primary d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
-                                <i class="fas fa-newspaper text-white"></i>
-                            </div>
-                                style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
-                                dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <div class="bg-primary d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
-                                <i class="fas fa-newspaper text-white"></i>
-                            </div>
-                                style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
-                                dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <div class="bg-primary d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
-                                <i class="fas fa-newspaper text-white"></i>
-                            </div>
-                                style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
-                                dolor sit amet adipis elit
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Recent Post End -->
-
-                    <!-- Image Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="bg-primary rounded d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="fas fa-newspaper text-white" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <!-- Image End -->
-
-                    <!-- Tags Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Tag Cloud</h3>
-                        </div>
-                        <div class="d-flex flex-wrap m-n1">
-                            <a href="" class="btn btn-light m-1">IT Infra</a>
-                            <a href="" class="btn btn-light m-1">Cyber Security</a>
-                            <a href="" class="btn btn-light m-1">Data Centre</a>
-                            <a href="" class="btn btn-light m-1">Smart Journey</a>
-                            <a href="" class="btn btn-light m-1">Audio Visual</a>
-                            <a href="" class="btn btn-light m-1">GRC</a>
-                            <a href="" class="btn btn-light m-1">Solutions</a>
-                            <a href="" class="btn btn-light m-1">Technology</a>
-                            <a href="" class="btn btn-light m-1">Digital</a>
-                            <a href="" class="btn btn-light m-1">Innovation</a>
-                            <a href="" class="btn btn-light m-1">Consulting</a>
-                            <a href="" class="btn btn-light m-1">Services</a>
-                        </div>
-                    </div>
-                    <!-- Tags End -->
-
-                    <!-- Plain Text Start -->
-                    <div class="wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Plain Text</h3>
-                        </div>
-                        <div class="bg-light text-center" style="padding: 30px;">
-                            <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor
-                                clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor
-                                ipsum amet diam</p>
-                            <a href="" class="btn btn-primary py-2 px-4">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Plain Text End -->
-                </div>
-                <!-- Sidebar End -->
-            </div>
-        </div>
-    </div>
-    <!-- Blog End -->
-
-
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Clients</h5>
-                <h1 class="mb-0">Trusted by Leading Organizations</h1>
-            </div>
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="img/vedors/vendor-1.png" alt="Vendor 1">
-                    <img src="img/vedors/vendor-2.png" alt="Vendor 2">
-                    <img src="img/vedors/vendor-3.png" alt="Vendor 3">
-                    <img src="img/vedors/vendor-4.png" alt="Vendor 4">
-                    <img src="img/vedors/vendor-5.png" alt="Vendor 5">
-                    <img src="img/vedors/vendor-6.png" alt="Vendor 6">
-                    <img src="img/vedors/vendor-7.png" alt="Vendor 7">
-                    <img src="img/vedors/vendor-8.png" alt="Vendor 8">
-                    <img src="img/vedors/vendor-9.png" alt="Vendor 9">
-                    <img src="img/vedors/vendor-10.png" alt="Vendor 10">
-                    <img src="img/vedors/vendor-11.png" alt="Vendor 11">
-                    <img src="img/vedors/vendor-12.png" alt="Vendor 12">
-                    <img src="img/vedors/vendor-13.png" alt="Vendor 13">
-                    <img src="img/vedors/vendor-14.png" alt="Vendor 14">
-                    <img src="img/vedors/vendor-15.png" alt="Vendor 15">
-                </div>
-            </div>
-        </div>
-    </div>
-        <!-- Vendor End -->
-    
+    <!-- Partner/Strategic Alliances End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <div
-                        class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
                         <a href="index.html" class="navbar-brand">
-                            <img src="img/logo.png" alt="Octalpha Logo"
-                                style="height: 60px; width: auto; margin-bottom: 15px;">
+                            <img src="img/logo.png" alt="Octalpha Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
                         </a>
-                        <p class="mt-3 mb-4">Octalpha delivers cutting-edge technology solutions with expertise in IT
-                            infrastructure, cybersecurity, and digital transformation. We help businesses thrive in the
-                            digital age.</p>
+                        <p class="mt-3 mb-4">Octalpha Business Solutions is your end-to-end technology partner, delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation, we help businesses scale faster and smarter.</p>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Dubai Office</h3>
+                                <h3 class="text-light mb-0">UAE Office</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City,
-                                    Dubai, UAE</p>
+                                <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City, Dubai, UAE</p>
                             </div>
-                            <div class="d-flex mb-2">
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Socials</h3>
+                            </div>
+                                <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
                                 <p class="mb-0">info.dxb@octalpha.com</p>
                             </div>
@@ -693,38 +564,30 @@
                                 <p class="mb-0">www.octalpha.com</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="https://x.com/OctalphaS"
-                                    target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2"
-                                    href="https://www.facebook.com/octalphabusinesssolutions" target="_blank"><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2"
-                                    href="https://www.linkedin.com/company/octalpha/" target="_blank"><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en"
-                                    target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://x.com/OctalphaS" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/octalphabusinesssolutions" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="index.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="about.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="service.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
-                                <a class="text-light mb-2" href="blog.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Blogs</a>
-                                <a class="text-light mb-2" href="contact.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                                <a class="text-light" href="faq.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>FAQ's</a>
-                            </div>
-                        </div>
+                           <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
+                                    <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
+                                    <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                         </div>
+                    </div>
 
+                        
+                      <!--   <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5 align-items-end">
+                            
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -732,10 +595,10 @@
     </div>
     <div class="container-fluid text-white" style="background: #061429;">
         <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; Octalpha. All Rights Reserved.</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px; width: 100%;">
+                        <p class="mb-0">&copy;Octalpha. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

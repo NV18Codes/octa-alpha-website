@@ -126,7 +126,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+    <!-- <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -151,7 +151,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
 
@@ -164,18 +164,86 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
+            <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">HOME</a>
+                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-                    <a href="our-offerings.html" class="nav-item nav-link">OUR OFFERINGS</a>
-                    <a href="blog.html" class="nav-item nav-link">BLOGS</a>
-                    <a href="contact.html" class="nav-item nav-link active">CONTACT US</a>
-                </div>
-                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
-                    data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
 
-            </div>
+                    
+                    <!-- ---------------- Added/Modified Code ---------------- -->
+                    <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
+                                    Cybersecurity
+                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                                </ul>
+                            </li>
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+
+                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
+                    <style>
+                    /* Nested dropdown positioning */
+                    .dropdown-submenu {
+                        position: relative;
+                    }
+
+                    /* Remove dropdown arrows */
+                    .navbar .dropdown-toggle::after,
+                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
+                        display: none;
+                    }
+
+
+                    .dropdown-submenu > .dropdown-menu {
+                        top: 0;
+                        left: 100%;
+                        margin-left: 0.1rem;
+                        margin-right: 0.1rem;
+                        display: none; /* hidden by default */
+                    }
+
+                    /* Show submenu on hover (desktop) */
+                    @media (min-width: 992px) {
+                        .dropdown-submenu:hover > .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    </style>
+                <!-- ---------------- Added/Modified Code ---------------- -->
+                 
+                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
+                    <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
+                </div>
+
+                <!-- MODIFIED THE BUTTON -->
+                <div class="d-none d-lg-block ms-auto">
+                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+ -->            </div>
         </nav>
 
         <div class="container-fluid py-3 position-relative" style="margin-bottom: 60px; min-height: 400px;">
@@ -190,18 +258,11 @@
                             <p class="lead mb-4 animated fadeInUp" style="font-size: 1.8rem; color: #001f3f; font-weight: 600;">
                                 Get in touch with our experts for your technology needs
                             </p>
-                            <p class="mb-4 animated fadeInUp" style="font-size: 1.1rem; color: #001f3f; font-weight: 600;">
+                            <p class="mb-4 animated fadeInUp" style="font-size: 2.1rem; color: #001f3f; font-weight: 600;">
                                 Ready to transform your business? Contact our team of experts to discuss your technology requirements and discover how we can help you achieve your digital transformation goals.
                             </p>
-                            <div class="animated fadeInUp" data-wow-delay="0.6s">
-                                <a href="#contact" class="btn btn-light btn-lg px-5 py-3 me-3">Get Quote</a>
-                                <a href="our-offerings.html" class="btn btn-outline-light btn-lg px-5 py-3">Our Services</a>
-                            </div>
-                            <div class="mt-4">
-                                <a href="index.html" class="h6" style="color: #001f3f;">Home</a>
-                                <i class="far fa-circle px-2" style="color: #001f3f;"></i>
-                                <a href="contact.html" class="h6" style="color: #001f3f;">Contact</a>
-                            </div>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -236,8 +297,8 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Contact Us</h5>
-                <h1 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h1>
+<!--                 <h5 class="fw-bold text-primary text-uppercase">Contact Us</h5>
+ -->                <h1 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h1>
             </div>
             <div class="row g-5 mb-5">
                 <div class="col-lg-4">
@@ -280,7 +341,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form>
+                   <!--  <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name"
@@ -302,9 +363,9 @@
                                 <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
                 </div>
-                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                <div class="col-lg-12 wow slideInUp" data-wow-delay="0.6s">
                     <iframe class="position-relative rounded w-100 h-100"
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.049262837969!2d55.1669168!3d25.1001937!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b5b1616099d%3A0x8549c82ff031dcee!2sOctalpha%20Business%20Solutions!5e0!3m2!1sen!2sin!4v1755927890404!5m2!1sen!2sin"
                         frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
@@ -324,29 +385,30 @@
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <div
-                        class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
                         <a href="index.html" class="navbar-brand">
-                            <img src="img/logo.png" alt="Octalpha Logo"
-                                style="height: 60px; width: auto; margin-bottom: 15px;">
+                            <img src="img/logo.png" alt="Octalpha Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
                         </a>
-                        <p class="mt-3 mb-4">Octalpha delivers cutting-edge technology solutions with expertise in IT
-                            infrastructure, cybersecurity, and digital transformation. We help businesses thrive in the
-                            digital age.</p>
+                        <p class="mt-3 mb-4">Octalpha Business Solutions is your end-to-end technology partner, delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation, we help businesses scale faster and smarter.</p>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Dubai Office</h3>
+                                <h3 class="text-light mb-0">UAE Office</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City,
-                                    Dubai, UAE</p>
+                                <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City, Dubai, UAE</p>
                             </div>
-                            <div class="d-flex mb-2">
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Socials</h3>
+                            </div>
+                                <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
                                 <p class="mb-0">info.dxb@octalpha.com</p>
                             </div>
@@ -363,38 +425,30 @@
                                 <p class="mb-0">www.octalpha.com</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="https://x.com/OctalphaS"
-                                    target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2"
-                                    href="https://www.facebook.com/octalphabusinesssolutions" target="_blank"><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2"
-                                    href="https://www.linkedin.com/company/octalpha/" target="_blank"><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en"
-                                    target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://x.com/OctalphaS" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/octalphabusinesssolutions" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="index.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="about.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="service.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
-                                <a class="text-light mb-2" href="blog.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Blogs</a>
-                                <a class="text-light mb-2" href="contact.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                                <a class="text-light" href="faq.html"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>FAQ's</a>
-                            </div>
-                        </div>
+                           <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
+                                    <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
+                                    <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                         </div>
+                    </div>
 
+                        
+                      <!--   <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5 align-items-end">
+                            
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -402,10 +456,10 @@
     </div>
     <div class="container-fluid text-white" style="background: #061429;">
         <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; Octalpha. All Rights Reserved.</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px; width: 100%;">
+                        <p class="mb-0">&copy;Octalpha. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

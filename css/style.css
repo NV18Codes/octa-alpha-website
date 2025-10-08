@@ -23,7 +23,7 @@ body {
 
 /* Clean, Modern Container Styles */
 .container, .container-fluid {
-    max-width: 1200px;
+    max-width: auto;
 }
 
 /* Ensure proper centering for all containers */
@@ -300,10 +300,19 @@ footer, .footer-about, .footer-about p {
 
 /* Clean Grid Layout */
 .modern-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
 }
+
+@media (min-width: 992px) {
+  .modern-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+  }
+}
+
 
 /* Professional Hero Section */
 .hero-modern {
@@ -2223,4 +2232,122 @@ html {
 .alliance-card:hover .alliance-logo img {
     transform: scale(1.08) rotate(1deg);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.service-item .fa {
+  color: white;
+}
+
+/* Hide list by default */
+/* Ensure the container has relative positioning */
+.service-item {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Blur background on hover */
+.card-hover-blur:hover .bg-image {
+  filter: blur(4px);
+}
+
+/* Title centered initially */
+.service-item .title {
+    display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center;     /* centers horizontally */
+  height: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 90%;
+  text-align: center;
+  line-height: 1.4;
+  transition: transform 0.3s ease;
+}
+
+/* List hidden by default */
+.service-item .service-list {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* Prevents hover issues */
+}
+
+/* On hover: move title up and show list */
+.service-item:hover .title {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.service-item:hover .service-list {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+.dd-logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.dd-logo-item {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.dd-logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .dd-logo-item {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dd-logo-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .dd-logo-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.lifecycle-img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 0 1rem;
+    object-fit: contain;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+    border-radius: 8px;
+}
+
+.digicollab-logo {
+  max-height: 80px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.service-card i {
+  min-width: 40px;
+  text-align: center;
 }

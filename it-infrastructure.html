@@ -202,7 +202,7 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+    <!-- <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -221,7 +221,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
@@ -233,16 +233,86 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
+            <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">HOME</a>
+                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-                    <a href="our-offerings.html" class="nav-item nav-link">OUR OFFERINGS</a>
-                    <a href="blog.html" class="nav-item nav-link">BLOGS</a>
+
+                    
+                    <!-- ---------------- Added/Modified Code ---------------- -->
+                    <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
+                                    Cybersecurity
+                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                                </ul>
+                            </li>
+                            <!-- ---------------- Added Nested Dropdown ---------------- -->
+
+                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
+                    <style>
+                    /* Nested dropdown positioning */
+                    .dropdown-submenu {
+                        position: relative;
+                    }
+
+                    /* Remove dropdown arrows */
+                    .navbar .dropdown-toggle::after,
+                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
+                        display: none;
+                    }
+
+
+                    .dropdown-submenu > .dropdown-menu {
+                        top: 0;
+                        left: 100%;
+                        margin-left: 0.1rem;
+                        margin-right: 0.1rem;
+                        display: none; /* hidden by default */
+                    }
+
+                    /* Show submenu on hover (desktop) */
+                    @media (min-width: 992px) {
+                        .dropdown-submenu:hover > .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    </style>
+                <!-- ---------------- Added/Modified Code ---------------- -->
+                 
+                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
                     <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
-                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            </div>
+
+                <!-- MODIFIED THE BUTTON -->
+                <div class="d-none d-lg-block ms-auto">
+                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+ -->            </div>
         </nav>
 
         <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 500px;">
@@ -254,13 +324,13 @@
                     <div class="row align-items-center min-vh-50">
                         <div class="col-lg-8 text-center mx-auto">
                             <h1 class="display-4 animated zoomIn mb-4" style="color: white; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">IT Infrastructure & Cloud Solutions</h1>
-                            <p class="lead text-white mb-4 animated fadeInUp" style="font-size: 1.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                                Robust infrastructure solutions and strategic cloud implementations for modern enterprises
+                            <p class="lead text-white mb-4 animated fadeInUp" style="font-size: 2.3rem;font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                Comprehensive Technology Infrastructure Services
                             </p>
-                            <p class="text-white mb-4 animated fadeInUp" style="font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                            <p class="text-white mb-4 animated fadeInUp" style="font-size: 1.4rem; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
                                 From data centers to cloud migration, we design, implement, and manage scalable IT infrastructure solutions that power your business growth.
                             </p>
-                            <div class="animated fadeInUp" data-wow-delay="0.6s">
+                            <!-- <div class="animated fadeInUp" data-wow-delay="0.6s">
                                 <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 me-3">Get Started</a>
                                 <a href="our-offerings.html" class="btn btn-outline-light btn-lg px-5 py-3">View All Services</a>
                             </div>
@@ -268,7 +338,7 @@
                                 <a href="index.html" class="h6 text-white">Home</a>
                                 <i class="far fa-circle text-white px-2"></i>
                                 <a href="it-infrastructure.html" class="h6 text-white">IT Infrastructure & Cloud</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -298,18 +368,18 @@
     <!-- Service Content Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <!-- <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">IT Infrastructure & Cloud Solutions</h5>
                 <h1 class="mb-0">Comprehensive Technology Infrastructure Services</h1>
-            </div>
+            </div> -->
             
             <!-- Introduction Section -->
             <div class="row g-5 mb-5">
                 <div class="col-lg-12">
                     <div class="bg-light rounded p-5 text-center">
                         <h3 class="mb-4 text-primary">Future-Proof Your Business with Robust IT Infrastructure & Cloud Solutions</h3>
-                        <p class="mb-4">At Octalpha, we design, implement, and manage cutting-edge IT infrastructure and cloud solutions that form the backbone of your digital operations. From on-premise data centers to scalable cloud environments, we ensure your systems are secure, efficient, and ready for growth.</p>
-                        <p class="mb-0">Our solutions are tailored to meet the unique demands of your business, providing the agility and reliability you need to stay ahead in a competitive landscape.</p>
+                        <p class="mb-4" style="font-size: 1.3rem; font-weight: 500;">At Octalpha, we design, implement, and manage cutting-edge IT infrastructure and cloud solutions that form the backbone of your digital operations. From on-premise data centers to scalable cloud environments, we ensure your systems are secure, efficient, and ready for growth.</p>
+                        <p class="mb-0" style="font-size: 1.3rem; font-weight: 500;">Our solutions are tailored to meet the unique demands of your business, providing the agility and reliability you need to stay ahead in a competitive landscape.</p>
                     </div>
                 </div>
             </div>
@@ -317,114 +387,363 @@
             <!-- Service Grid Start -->
             <div class="row g-4">
                 <!-- IT Infrastructure Design & Implementation -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3 text-center">
-                            <!-- <img src="img/IT infra/it-1.png" alt="IT Infrastructure" style="width: 80px; height: 80px; object-fit: contain;"> -->
-                        </div>
-                        <h4 class="mb-3 text-primary text-center">IT Infrastructure Design & Implementation</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Servers</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Storage</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Networking</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Structured Cabling</li>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/card1.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">IT Infrastructure Design & Implementation</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Servers</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Storage</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Networking</li>
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Structured Cabling</li>
                         </ul>
+                        </div>
                     </div>
                 </div>
+
+
 
                 <!-- Data Center Building -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3 text-center">
-                            <!-- <img src="img/Datacenter/dc-1.png" alt="Data Center" style="width: 80px; height: 80px; object-fit: contain;"> -->
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/card2.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                       <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Data Center Building</h4>
+                            <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                        <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Racks</li>
+                        <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>UPS & Power</li>
+                        <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Cooling</li>
+                        <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Environmental Monitoring</li>
+                        <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Fire Suppression</li>
+                            </ul>
                         </div>
-                        <h4 class="mb-3 text-primary text-center">Data Center Building</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Racks</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>UPS & Power</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cooling</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Environmental Monitoring</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fire Suppression</li>
-                        </ul>
                     </div>
                 </div>
+
+
 
                 <!-- Virtualization & Applications -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3 text-center">
-                            <!-- <img src="img/V&Cs/v-1.png" alt="Virtualization" style="width: 80px; height: 80px; object-fit: contain;"> -->
-                        </div>
-                        <h4 class="mb-3 text-primary text-center">Virtualization & Applications</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Hypervisors</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Business Applications</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Licensing</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Disaster Recovery & Backup</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>IT Monitoring</li>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/card3.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Virtualization & Applications</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                           <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Hypervisors</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Business Applications</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Licensing</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Disaster Recovery & Backup</li>
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>IT Monitoring</li>
                         </ul>
+                        </div>
                     </div>
                 </div>
 
+
                 <!-- Cloud Solutions -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3 text-center">
-                            <!-- <img src="img/V&Cs/v-2.png" alt="Cloud Solutions" style="width: 80px; height: 80px; object-fit: contain;"> -->
-                        </div>
-                        <h4 class="mb-3 text-primary text-center">Cloud Solutions</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Azure, AWS, Oracle, Google</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cost Optimization & Scalability</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cloud Migration</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Cloud-native Security & Backup</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Containerization</li>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/card4.jpg.png'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Cloud Solutions</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Azure, AWS, Oracle, Google</li>
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Cost Optimization & Scalability</li>
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Cloud Migration</li>
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Cloud-native Security & Backup</li>
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Containerization</li>
                         </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Enterprise Wi-Fi -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3 text-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/card5.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
 
-                        </div>
-                        <h4 class="mb-3 text-primary text-center">Enterprise Wi-Fi</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Access Points</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Controllers</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Switches</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>High Availability Design</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Guest User Management</li>
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Enterprise Wi-Fi</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Access Points</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Controllers</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Switches</li>
+                            <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>High Availability Design</li>
+                            <li class="mb-0 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Guest User Management</li>
                         </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Unified Communications -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded p-4 h-100">
-                        <div class="service-icon mb-3 text-center">
-                            <!-- <i class="fas fa-headset text-primary" style="font-size: 3rem;"></i> -->
-                        </div>
-                        <h4 class="mb-3 text-primary text-center">Unified Communications</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>PABX</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Microsoft Teams Rooms</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Zoom Rooms</li>
-                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Smart Room Booking</li>
-                            <li class="mb-0"><i class="fa fa-check text-primary me-2"></i>Mobile & Remote Workforce Enablement</li>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/card6.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Unified Communications</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                        <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>PABX</li>
+                        <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Microsoft Teams Rooms</li>
+                        <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Zoom Rooms</li>
+                        <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Smart Room Booking</li>
+                        <li class="mb-2 text-white" style="font-size: 1.4rem;"><i class="fa fa-check me-2"></i>Guest User Management</li>
                         </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Service Grid End -->
+
+            <br>
+            <br>
+            <!-- MIGRATION POLICY BLOCK -->
+           <!-- ✅ Heading & Description Section -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bg-light rounded p-5 pb-4 d-flex flex-column flex-lg-row justify-content-between align-items-start">
+                        <h3 class="mb-3 text-primary me-lg-5" style="white-space: nowrap; flex-shrink: 0;">
+                            Migration Services Offering
+                        </h3>
+                        <p class="mb-0" style="font-size: 1.2rem; font-weight: 500; max-width: 800px;">
+                            As part of our end-to-end Digital Infrastructure Services, we offer secure, seamless, and scalable Migration Services to help organizations modernize, consolidate, and optimize their IT infrastructure without disruption.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ✅ Info Cards with Circles and left-Justified Text -->
+            <div class="row g-4 pt-4">
+                <style>
+                    .custom-bullets {
+                            list-style: none;
+                            padding-left: 0;
+                        }
+
+                        .custom-bullets li::before {
+                            content: "●";
+                            color: #0d6efd; /* Bootstrap primary blue */
+                            font-weight: bold;
+                            margin-right: 8px;
+                        }
+                </style>
+                <!-- ✅ Card 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/migrationcard1.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Server & Storage Migration</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Migration of physical and virtual servers with zero data loss</li>
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>SAN/NAS to Software Defined Storage (SDS) migration</li>
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Storage consolidation & optimization</li>
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>All Flash System transition and replication</li>
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Migration planning, execution, and post-migration validation</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ✅ Card 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/migrationcard2.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Cloud & Virtualization Migration</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Migration from on-prem to public, private, or hybrid cloud (AWS, Azure, GCP, Huawei, etc.)</li>
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Virtualization migration (VMware, Hyper-V, KVM, Oracle)</li>
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Containerization strategy & orchestration</li>
+                             <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Cloud Assessment, Optimization & Cost Control</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ✅ Card 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/migrationcard3.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Application & Database Migration</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Enterprise applications migration (ERP, CRM, CMS, etc.)</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Database consolidation, migration, and High Availability (HA)/Disaster Recovery (DR)</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Email and collaboration tools migration (e.g., Exchange to O365 or G-Suite)</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>API integration and service migration</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ✅ Card  4-->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/migrationcard4.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Network & Security Migration</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Routing and switching infrastructure upgrades</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>SDN/SD-WAN migration planning and implementation</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Firewall, WAF, and Load Balancer configuration migration</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Identity & Access Control, PAM, SIEM, and Endpoint Security migration</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ✅ Card  5-->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 h-100 position-relative overflow-hidden card-hover-blur">
+                        
+                        <!-- Background Image -->
+                        <div class="bg-image position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-image: url('img/IT_INFRA/migrationcard5.jpg'); background-size: cover; background-position: center; z-index: 0; transition: filter 0.5s ease;"></div>
+
+                        <!-- Overlay -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                            style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+                        <!-- Content -->
+                        <div class="position-relative text-white" style="z-index: 2;" >
+                        <!-- <div class="service-icon mb-3 text-center"></div> -->
+                        <div class="mb-3" style="height: 40px;"></div>
+                        <h4 class="mb-3  text-white text-center">Value-Added Migration Services</h4>
+                        <ul class="service-list list-unstyled mx-auto text-start" style="max-width: 240px;">
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Infrastructure Optimization – Eliminate redundancies and enhance performance</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Policy & Compliance Alignment – Ensure security and regulatory compliance</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Active/Passive Equipment Integration – Seamless migration across DC/branches</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Monitoring & Validation – Pre & post-migration testing, performance validation</li>
+                            <li class="mb-2 text-white" style="font-size: 1.3rem; font-weight: 500;"><i class="fa fa-check me-2"></i>Customer Support & Documentation – Knowledge transfer, training, and SOPs</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            </div>
+
+
+
 
             <!-- Benefits Section -->
             <div class="row g-5 mt-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
                     <div class="bg-primary rounded p-5 text-white h-100">
                         <h3 class="mb-4">Why Choose Our IT Infrastructure Solutions?</h3>
-                        <ul class="list-unstyled">
+                        <ul class="list-unstyled" style="font-size: 1.4rem; font-weight: 500;">
                             <li class="mb-3"><i class="fa fa-check me-2"></i>Scalable and future-proof architecture</li>
                             <li class="mb-3"><i class="fa fa-check me-2"></i>24/7 monitoring and support</li>
                             <li class="mb-3"><i class="fa fa-check me-2"></i>Cost-effective cloud migration strategies</li>
@@ -436,16 +755,16 @@
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
                     <div class="bg-light rounded p-5 h-100">
                         <h3 class="mb-4 text-primary">Our Expertise</h3>
-                        <p class="mb-4">Leverage the power of the cloud with our expert guidance. We help you navigate complex cloud environments, ensuring optimal performance, cost-efficiency, and robust security for your applications and data.</p>
+                        <p class="mb-4" style="font-size: 1.4rem; font-weight: 500;">Leverage the power of the cloud with our expert guidance. We help you navigate complex cloud environments, ensuring optimal performance, cost-efficiency, and robust security for your applications and data.</p>
                         <div class="row g-3">
                             <div class="col-6">
-                                <div class="text-center">
+                                <div class="text-center" style="font-size: 1.4rem; font-weight: 500;">
                                     <h4 class="text-primary mb-1">10+</h4>
                                     <small>Years Experience</small>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="text-center">
+                            <div class="col-6" >
+                                <div class="text-center" style="font-size: 1.4rem; font-weight: 500;">
                                     <h4 class="text-primary mb-1">500+</h4>
                                     <small>Projects Completed</small>
                                 </div>
@@ -455,107 +774,8 @@
                 </div>
             </div>
 
-            <!-- Strategic Alliance Carousel Section -->
-            <div class="row g-5 mt-5">
-                <div class="col-12">
-                    <div class="text-center mb-5">
-                        <h2 class="mb-3">Our Strategic Technology Partners</h2>
-                        <p class="text-muted">We work with industry-leading technology partners to deliver cutting-edge IT infrastructure solutions</p>
-                    </div>
-                    
-                    <!-- Alliance Carousel -->
-                    <div class="owl-carousel alliance-carousel wow fadeInUp" data-wow-delay="0.3s">
-                        <!-- Networking Partners -->
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <img src="img/networking/n-1.png" alt="Cisco Systems" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                                <!-- <h5 class="mb-2">Cisco Systems</h5>
-                                <p class="text-muted small mb-0">Networking & Security Solutions</p> -->
-                            </div>
-                        </div>
-                        
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <img src="img/networking/n-2.png" alt="Aruba Networks" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                                <!-- <h5 class="mb-2">Aruba Networks</h5>
-                                <p class="text-muted small mb-0">Wireless & Edge Solutions</p> -->
-                            </div>
-                        </div>
-                        
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <img src="img/IT infra/it-2.png" alt="Dell Technologies" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                                <!-- <h5 class="mb-2">Dell Technologies</h5>
-                                <p class="text-muted small mb-0">Servers & Storage Solutions</p> -->
-                            </div>
-                        </div>
-                        
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <img src="img/IT infra/it-3.png" alt="HPE" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                                <!-- <h5 class="mb-2">HPE</h5>
-                                <p class="text-muted small mb-0">Infrastructure & Cloud</p> -->
-                            </div>
-                        </div>
-                        
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <img src="img/V&Cs/v-3.png" alt="VMware" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                                <!-- <h5 class="mb-2">VMware</h5>
-                                <p class="text-muted small mb-0">Virtualization & Cloud</p> -->
-                            </div>
-                        </div>
-                        
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <img src="img/Managed security/ms-2.png" alt="Fortinet" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                                <!-- <h5 class="mb-2">Fortinet</h5>
-                                <p class="text-muted small mb-0">Network Security</p> -->
-                            </div>
-                        </div>
-                        
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <i class="fas fa-ethernet text-primary" style="font-size: 3rem;"></i>
-                                </div>
-                                <!-- <h5 class="mb-2">Juniper Networks</h5>
-                                <p class="text-muted small mb-0">High-Performance Networking</p> -->
-                            </div>
-                        </div>
-                        
-                        <div class="alliance-item text-center">
-                            <div class="alliance-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="alliance-logo mb-3">
-                                    <i class="fas fa-memory text-primary" style="font-size: 3rem;"></i>
-                                </div>
-                                <!-- <h5 class="mb-2">NetApp</h5>
-                                <p class="text-muted small mb-0">Data Storage Solutions</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="text-center mt-5">
-                <a href="contact.html" class="btn btn-primary py-3 px-5 wow zoomIn" data-wow-delay="0.9s">Get a Free Consultation</a>
-            </div>
         </div>
     </div>
-    <!-- Service Content End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -566,20 +786,26 @@
                         <a href="index.html" class="navbar-brand">
                             <img src="img/logo.png" alt="Octalpha Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
                         </a>
-                        <p class="mt-3 mb-4">Octalpha delivers cutting-edge technology solutions with expertise in IT infrastructure, cybersecurity, and digital transformation. We help businesses thrive in the digital age.</p>
+                        <p class="mt-3 mb-4">Octalpha Business Solutions is your end-to-end technology partner, delivering intelligent and secure IT solutions for the past 10 years. From data centers to digital transformation, we help businesses scale faster and smarter.</p>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Dubai Office</h3>
+                                <h3 class="text-light mb-0">UAE Office</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
                                 <p class="mb-0">2408, 24th floor, Tower B, Business Central Towers, Dubai Internet City, Dubai, UAE</p>
                             </div>
-                            <div class="d-flex mb-2">
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Socials</h3>
+                            </div>
+                                <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
                                 <p class="mb-0">info.dxb@octalpha.com</p>
                             </div>
@@ -601,20 +827,25 @@
                                 <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/octalpha/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square" href="https://www.instagram.com/octalpha_/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
-                                <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Blogs</a>
-                                <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                                <a class="text-light" href="faq.html"><i class="bi bi-arrow-right text-primary me-2"></i>FAQ's</a>
-                            </div>
-                        </div>
+                           <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
+                                    <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
+                                    <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                         </div>
+                    </div>
+
+                        
+                      <!--   <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5 align-items-end">
+                            
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -622,10 +853,10 @@
     </div>
     <div class="container-fluid text-white" style="background: #061429;">
         <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; Octalpha. All Rights Reserved.</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px; width: 100%;">
+                        <p class="mb-0">&copy;Octalpha. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
