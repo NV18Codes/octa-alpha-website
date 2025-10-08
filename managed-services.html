@@ -207,13 +207,13 @@
             <!-- CENTERED THE NAVBAR -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
-                    <a href="index.html" class="nav-item nav-link active">HOME</a>
+                    <a href="index.html" class="nav-item nav-link ">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT US</a>
 
                     
                     <!-- ---------------- Added/Modified Code ---------------- -->
                     <div class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <a href="#" class="nav-link active dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             WHAT WE DO
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
@@ -297,14 +297,16 @@
             <div class="container py-5">
                 <div class="row align-items-center min-vh-50">
                     <div class="col-lg-8 text-center mx-auto">
+                        <br>
+                        <br>
                         <h1 class="display-4 animated zoomIn mb-4" style="color: white; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Managed IT Services</h1>
-                        <p class="lead text-white mb-4 animated fadeInUp" style="font-size: 1.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                        <p class="lead text-white mb-4 animated fadeInUp" style="font-size: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
                             Comprehensive IT Management Solutions for Modern Businesses
                         </p>
-                        <p class="text-white mb-4 animated fadeInUp" style="font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                        <p class="text-white mb-4 animated fadeInUp" style="font-size: 1.4rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
                             Expert IT support, proactive monitoring, and strategic technology management to keep your business running smoothly with minimal downtime and maximum efficiency.
                         </p>
-                        <div class="animated fadeInUp" data-wow-delay="0.6s">
+                        <!-- <div class="animated fadeInUp" data-wow-delay="0.6s">
                             <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 me-3">Get Started</a>
                             <a href="our-offerings.html" class="btn btn-outline-light btn-lg px-5 py-3">View All Services</a>
                         </div>
@@ -312,7 +314,7 @@
                             <a href="index.html" class="h6 text-white">Home</a>
                             <i class="far fa-circle text-white px-2"></i>
                             <a href="managed-services.html" class="h6 text-white">Managed IT Services</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -321,61 +323,110 @@
     <!-- Hero Section End -->
 
     <!-- Services Start -->
-    <div class="container-fluid section-padding">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">What We Offer</div>
-                <h1 class="section-title">Complete Managed IT Services</h1>
-                <p class="section-description">Comprehensive IT management solutions designed to keep your business running smoothly with minimal downtime and maximum efficiency.</p>
-            </div>
-            
-            <div class="modern-grid">
-                <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="icon">
-                        <i class="fa fa-cogs"></i>
-                    </div>
-                    <h4>Annual Maintenance Contracts</h4>
-                    <p>Comprehensive AMC contracts for completed IT systems with guaranteed response times and SLA compliance.</p>
-                </div>
-                
-                <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="icon">
-                        <i class="fa fa-headset"></i>
-                    </div>
-                    <h4>Remote & Onsite Support</h4>
-                    <p>24/7 remote support and rapid onsite assistance for critical issues requiring physical presence.</p>
-                </div>
-                
-                <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="fa fa-eye"></i>
-                    </div>
-                    <h4>24/7 Monitoring</h4>
-                    <p>Continuous monitoring of IT infrastructure to detect and resolve issues before they cause business disruption.</p>
-                </div>
-                
-                <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="icon">
-                        <i class="fa fa-database"></i>
-                    </div>
-                    <h4>Backup & Disaster Recovery</h4>
-                    <p>Comprehensive backup solutions and disaster recovery planning to ensure business continuity.</p>
-                </div>
-                
-                <div class="service-card wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="icon">
-                        <i class="fa fa-tags"></i>
-                    </div>
-                    <h4>Asset & License Management</h4>
-                    <p>Complete IT asset tracking and software license management to optimize costs and ensure compliance.</p>
-                </div>
-            </div>
-        </div>
+    <section class="container-fluid py-5 bg-light wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <!-- Section Header -->
+    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+      <h5 class="fw-bold text-primary text-uppercase">What We Offer</h5>
+      <h1 class="mb-0">Complete Managed IT Services</h1>
+      <p class="mt-3" style="font-size: 1.1rem; font-weight: 500;">
+        Comprehensive IT management solutions designed to keep your business running smoothly with minimal downtime and maximum efficiency.
+      </p>
     </div>
+
+    <!-- Two Column Layout -->
+    <div class="row g-4">
+      
+      <!-- Column 1 -->
+      <div class="col-lg-6">
+        <div class="d-flex flex-column gap-4">
+          
+          <!-- Service 1 -->
+          <div class="bg-white rounded shadow-sm p-4">
+            <div class="d-flex align-items-start">
+              <i class="fa fa-cogs text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="text-primary">Annual Maintenance Contracts</h5>
+                <p style="font-size: 1.1rem; font-weight: 500;">
+                  Comprehensive AMC contracts for completed IT systems with guaranteed response times and SLA compliance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bg-white rounded shadow-sm p-4">
+            <div class="d-flex align-items-start">
+              <i class="fa fa-headset text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="text-primary">Remote & Onsite Support</h5>
+                <p style="font-size: 1.1rem; font-weight: 500;">
+                  24/7 remote support and rapid onsite assistance for critical issues requiring physical presence.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bg-white rounded shadow-sm p-4">
+            <div class="d-flex align-items-start">
+              <i class="fa fa-eye text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="text-primary">24/7 Monitoring</h5>
+                <p style="font-size: 1.1rem; font-weight: 500;">
+                  Continuous monitoring of IT infrastructure to detect and resolve issues before they cause business disruption.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-lg-6">
+        <div class="d-flex flex-column gap-4">
+
+          
+
+          <!-- Service 4 -->
+          <div class="bg-white rounded shadow-sm p-4">
+            <div class="d-flex align-items-start">
+              <i class="fa fa-database text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="text-primary">Backup & Disaster Recovery</h5>
+                <p style="font-size: 1.1rem; font-weight: 500;">
+                  Comprehensive backup solutions and disaster recovery planning to ensure business continuity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="bg-white rounded shadow-sm p-4">
+            <div class="d-flex align-items-start">
+              <i class="fa fa-tags text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="text-primary">Asset & License Management</h5>
+                <p style="font-size: 1.1rem; font-weight: 500;">
+                  Complete IT asset tracking and software license management to optimize costs and ensure compliance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
     <!-- Services End -->
 
     <!-- Benefits Start -->
-    <div class="container-fluid section-padding" style="background: #f8f9fa;">
+<!--     <div class="container-fluid section-padding" style="background: #f8f9fa;">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Client Benefits</div>
@@ -417,11 +468,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Benefits End -->
 
     <!-- Why Choose Us Start -->
-    <div class="container-fluid section-padding">
+    <!-- <div class="container-fluid section-padding">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Why Choose Octalpha</div>
@@ -479,120 +530,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Why Choose Us End -->
 
     <!-- Technology Partners Section -->
-    <div class="container-fluid py-5 bg-light">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="display-6 fw-bold text-primary mb-3">Our Technology Partners</h2>
-                    <p class="lead text-muted">Leading technology solutions and managed services platforms we leverage for comprehensive IT management</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="owl-carousel managed-carousel">
-                        <!-- Managed Security Partners -->
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Managed security/ms-1.png" alt="Security Partner 1" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Managed security/ms-2.png" alt="Security Partner 2" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Managed security/ms-3.png" alt="Security Partner 3" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Managed security/ms-4.png" alt="Security Partner 4" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Managed security/ms-5.png" alt="Security Partner 5" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Managed security/ms-6.png" alt="Security Partner 6" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Managed security/ms-7.png" alt="Security Partner 7" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Communication & Collaboration Partners -->
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/communication&collaboration/cc-1.png" alt="Communication Partner 1" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/communication&collaboration/cc-2.png" alt="Communication Partner 2" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/communication&collaboration/cc-3.png" alt="Communication Partner 3" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/communication&collaboration/cc-4.png" alt="Communication Partner 4" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Backup & DR Partners -->
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Backup&DR/bdr-1.png" alt="Backup Partner 1" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="managed-item text-center">
-                            <div class="managed-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <div class="managed-logo mb-3">
-                                    <img src="img/Backup&DR/bdr-2.png" alt="Backup Partner 2" style="width: 80px; height: 80px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--  -->
     <!-- Technology Partners Section End -->
 
     <!-- WhatsApp Button -->

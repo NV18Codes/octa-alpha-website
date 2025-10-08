@@ -313,6 +313,24 @@ footer, .footer-about, .footer-about p {
   }
 }
 
+.grid-center {
+  grid-column: span 1;
+  justify-self: center;
+}
+
+.subtle-grid {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .subtle-grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns on large screens */
+  }
+}
 
 /* Professional Hero Section */
 .hero-modern {
@@ -2249,36 +2267,50 @@ html {
 }
 
 /* Blur background on hover */
-.card-hover-blur:hover .bg-image {
-  filter: blur(4px);
+.bg-image {
+  transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1), filter 1.2s ease-in-out;
+  will-change: transform, filter;
 }
 
-/* Title centered initially */
+
+
+.card-hover-blur:hover .bg-image {
+  transform: scale(1.4);
+  filter: blur(6px);
+  transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1), filter 1.2s ease-in-out;
+}
+
+
+
+//* Title centered initially */
 .service-item .title {
-    display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; /* centers vertically */
-  align-items: center;     /* centers horizontally */
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
   height: 100%;
-  text-align: center;
-  font-size: 1.2rem;
   max-width: 90%;
   text-align: center;
+  font-size: 1.2rem;
   line-height: 1.4;
-  transition: transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 /* List hidden by default */
 .service-item .service-list {
   opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none; /* Prevents hover issues */
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
 /* On hover: move title up and show list */
 .service-item:hover .title {
-    opacity: 0;
-    transform: translateY(-20px);
+  opacity: 0;
+  transform: translateY(-30px); /* smoother upward movement */
 }
 
 .service-item:hover .service-list {
@@ -2286,12 +2318,11 @@ html {
   pointer-events: auto;
 }
 
-
-
+/* Due Diliegence */
 .dd-logo-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 15px;
 }
 
 .dd-logo-item {
@@ -2305,6 +2336,15 @@ html {
     height: auto;
     object-fit: contain;
     display: inline-block;
+    margin-bottom: 10px;
+}
+
+.dd-logo {
+  transition: transform 0.4s ease;
+}
+
+.dd-logo-item:hover .dd-logo {
+  transform: scale(1.05);
 }
 
 @media (max-width: 992px) {
@@ -2350,4 +2390,149 @@ html {
 .service-card i {
   min-width: 40px;
   text-align: center;
+}
+
+/* PARTNER LOGOS */
+.partner-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.partner-card:hover {
+    transform: scale(1.10); /* Slight enlarge */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Optional: stronger shadow */
+}
+
+.partner-logo {
+    transition: transform 0.3s ease; /* smooth animation */
+}
+
+.partner-logo:hover {
+    transform: scale(1.1); /* enlarge by 10% */
+}
+
+/* CONTACT PAGE ICONS */
+.contact-item {
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.contact-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #003366;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.contact-text:hover {
+  color: #008ac0 !important;
+  text-decoration: none;
+}
+
+.btn-square {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  font-size: 17px;
+}
+
+.btn-square:hover {
+  background-color: #008ac0 !important;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 767px) {
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-text {
+    font-size: 16px;
+  }
+}
+
+/* CLOUD- Legacy points and use cases */
+/* General layout */
+.info-section {
+  transition: all 0.3s ease;
+}
+
+.info-section:hover {
+  transform: translateY(-4px);
+}
+
+/* Diamond accent */
+.diamond {
+  width: 40px;
+  height: 40px;
+  background-color: #00a8e8;
+  transform: rotate(45deg);
+  margin-bottom: 1rem;
+}
+
+/* Titles */
+.section-title {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #0077b6;
+  letter-spacing: 0.3px;
+}
+
+/* Lists */
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.styled-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00a8e8;
+  font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.2rem;
+  }
+  .styled-list {
+    font-size: 0.95rem;
+  }
+  .diamond {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Customer Journey */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
 }
