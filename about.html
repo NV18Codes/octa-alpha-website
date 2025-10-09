@@ -127,97 +127,89 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3 py-lg-0">
+                <!-- Logo -->
+                <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                </a>
+
+                <!-- Toggler (Mobile) -->
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span>
-            </button>
-            <!-- CENTERED THE NAVBAR -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
-                    <a href="index.html" class="nav-item nav-link ">HOME</a>
-                    <a href="about.html" class="nav-item nav-link active ">ABOUT US</a>
-
-                    
-                    <!-- ---------------- Added/Modified Code ---------------- -->
-                    <div class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            WHAT WE DO
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
-                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
-
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
-                                    Cybersecurity
-                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
-                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
-                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
-                                </ul>
-                            </li>
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-
-                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
-                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
-                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
-                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
-                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
-                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
-                    <style>
-                    /* Nested dropdown positioning */
-                    .dropdown-submenu {
-                        position: relative;
-                    }
-
-                    /* Remove dropdown arrows */
-                    .navbar .dropdown-toggle::after,
-                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
-                        display: none;
-                    }
-
-
-                    .dropdown-submenu > .dropdown-menu {
-                        top: 0;
-                        left: 100%;
-                        margin-left: 0.1rem;
-                        margin-right: 0.1rem;
-                        display: none; /* hidden by default */
-                    }
-
-                    /* Show submenu on hover (desktop) */
-                    @media (min-width: 992px) {
-                        .dropdown-submenu:hover > .dropdown-menu {
-                            display: block;
-                        }
-                    }
-                    </style>
-                <!-- ---------------- Added/Modified Code ---------------- -->
-                 
-                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
-                    <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
-                </div>
-
-                <!-- MODIFIED THE BUTTON -->
-                <div class="d-none d-lg-block ms-auto">
-                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
-                    <i class="fa fa-search"></i>
                 </button>
-<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
- -->            </div>
-        </nav>
+
+                <!-- Navbar Menu -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+               <ul class="navbar-nav mx-auto text-center py-3 py-lg-0 d-lg-flex flex-lg-row gap-lg-4">
+
+                    <li class="nav-item"><a href="index.html" class="nav-link ">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">ABOUT US</a></li>
+
+                    <!-- WHAT WE DO with nested dropdown -->
+                    <li class="nav-item dropdown position-static">
+                    <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        WHAT WE DO
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="whatWeDoDropdown">
+                        <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                        <!-- Nested dropdown -->
+                        <li class="dropdown-submenu">
+                        <a
+                        class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center"
+                        href="cybersecurity.html"
+                        id="cybersecurityDropdown"
+                        >
+                        Cybersecurity
+                        <i class="fa fa-angle-right ms-2"></i>
+                        </a>
+
+                        <ul class="dropdown-menu border-0 shadow">
+
+                            
+                            <!-- 🚨 Mobile-only direct Cybersecurity link -->
+                            <li class="d-block d-lg-none">
+                            <a class="dropdown-item" href="cybersecurity.html">View All Cybersecurity</a>
+                            </li>
+
+                            <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                            <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                            <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                        </ul>
+                        </li>
+
+                        <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                        <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                        <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                        <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                        <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                        <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                    </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="blog.html" class="nav-link">PARTNERS</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+
+                <!-- Right-side icons -->
+                <div class="d-lg-flex justify-content-end d-none d-lg-block">
+                    <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                </div>
+            </nav>
+            </div>
 
         <div class="container-fluid py-3 position-relative" style="margin-bottom: 60px; min-height: 400px;">
-            <video class="position-absolute w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
+            <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop style="object-fit: cover; z-index: -1;">
                 <source src="videos/VID-20250916-WA0003.mp4" type="video/mp4">
             </video>
             <div class="position-relative" style="z-index: 1;">
@@ -364,58 +356,59 @@
 
             <!-- Our Approach Section -->
             <div class="col-md-6">
-                <div class="section-title position-relative pb-3 mb-4">
-                    <h5 class="fw-bold text-primary text-uppercase">Our Approach</h5>
-                    <h1 class="mb-0">Strategy Meets Agility</h1>
-                </div>
-                <ul class="mb-5" style="font-size: 1.3rem; font-weight: 600; padding-left: 1.5rem; line-height: 1.7;">
-                    <li>We <strong>listen</strong>, <strong>collaborate</strong>, and <strong>design tailored solutions</strong> aligned with your specific goals.</li>
-                    <li>Every project begins with a deep <strong>understanding of your vision and challenges</strong>.</li>
-                    <li>Our team blends <strong>strategic insight</strong> with <strong>technical excellence</strong> to craft future-ready solutions.</li>
-                    <li>We prioritize:
-                        <ul style="padding-left: 1.2rem; font-weight: 500;">
-                            <li>Continuous feedback</li>
-                            <li>Transparent communication</li>
-                            <li>Adaptive execution</li>
-                        </ul>
-                    </li>
-                    <li>Goal: Deliver <strong>measurable results</strong>, <strong>lasting impact</strong>, and strengthen your <strong>digital foundation</strong>.</li>
-                </ul>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="img/GRC/card4.jpg" alt="Our Approach Image" class="img-fluid rounded" style="height: 600px; width: auto;">
-            </div>
+  <div class="section-title position-relative pb-3 mb-4">
+    <h5 class="fw-bold text-primary text-uppercase">Our Approach</h5>
+    <h1 class="mb-0">Strategy Meets Agility</h1>
+  </div>
+  <ul class="mb-5 about-list" style="font-size: 1rem; font-weight: 600; padding-left: 1.5rem; line-height: 1.7;">
+    <li style="font-size: 1.3rem; font-weight: 600">We listen, collaborate, and design tailored solutions aligned with your specific goals.</li>
+    <li style="font-size: 1.3rem; font-weight: 600">Every project begins with a deep understanding of your vision and challenges.</li>
+    <li style="font-size: 1.3rem; font-weight: 600">Our team blends strategic insight with technical excellence to craft future-ready solutions.</li>
+    <li style="font-size: 1.3rem; font-weight: 600">We prioritize:
+      <ul style="padding-left: 1.2rem; font-weight: 500;">
+        <li style="font-size: 1.3rem; font-weight: 600">Continuous feedback</li>
+        <li style="font-size: 1.3rem; font-weight: 600">Transparent communication</li>
+        <li style="font-size: 1.3rem; font-weight: 600">Adaptive execution</li>
+      </ul>
+    </li>
+    <li style="font-size: 1.3rem; font-weight: 600">Goal: Deliver measurable results, lasting impact, and strengthen your digital foundation.</li>
+  </ul>
+</div>
 
-            <!-- Our Values Section -->
-           <div class="col-md-6 text-center"> <!-- Image -->
-                <img src="img/GRC/card1.jpg" alt="Our Values Image" class=" mt-4 img-fluid rounded" style="height: 600px; width: auto;">
-            </div>
-            <div class="col-md-6">
-                <div class="section-title position-relative pb-3 mb-4">
-                    <h5 class="fw-bold text-primary text-uppercase">Our Values</h5>
-                    <h1 class="mb-0">Core of Who We Are</h1>
-                </div>
-                <ul class="mb-4" style="font-size: 1.3rem; font-weight: 600; padding-left: 1.5rem; line-height: 1.7;">
-                    <li>Our culture is rooted in four key values:
-                        <ul style="padding-left: 1.2rem; font-weight: 500;">
-                            <li><strong>Integrity</strong> – Building trust through transparency and honesty.</li>
-                            <li><strong>Innovation</strong> – Delivering impactful, cutting-edge solutions.</li>
-                            <li><strong>Excellence</strong> – Exceeding expectations with precision and performance.</li>
-                            <li><strong>Customer-Centricity</strong> – Keeping your success at the core of everything we do.</li>
-                        </ul>
-                    </li>
-                    <li>These values guide:
-                        <ul style="padding-left: 1.2rem; font-weight: 500;">
-                            <li>Every decision we make</li>
-                            <li>Every solution we build</li>
-                            <li>Every relationship we foster</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<div class="col-md-6 text-center">
+  <img src="img/GRC/card4.jpg" alt="Our Approach Image" class="cloud img-fluid rounded" style="height: 600px; width: auto;">
+</div>
 
+<!-- Our Values Section -->
+<div class="col-md-6 text-center mt-4">
+  <img src="img/GRC/card1.jpg" alt="Our Values Image" class=" cloud img-fluid rounded" style="height: 600px; width: auto;">
+</div>
+
+<div class="col-md-6">
+  <div class="section-title position-relative pb-3 mb-4">
+    <h5 class="fw-bold text-primary text-uppercase">Our Values</h5>
+    <h1 class="mb-0">Core of Who We Are</h1>
+  </div>
+  <ul class="mb-4 about-list" style="font-size: 1rem; font-weight: 600; padding-left: 1.5rem; line-height: 1.7;">
+    <li style="font-size: 1.3rem; font-weight: 600">Our culture is rooted in four key values:
+      <ul style="padding-left: 1.2rem; font-weight: 500;">
+        <li style="font-size: 1.3rem; font-weight: 600">Integrity – Building trust through transparency and honesty.</li>
+        <li style="font-size: 1.3rem; font-weight: 600">Innovation – Delivering impactful, cutting-edge solutions.</li>
+        <li style="font-size: 1.3rem; font-weight: 600">Excellence – Exceeding expectations with precision and performance.</li>
+        <li style="font-size: 1.3rem; font-weight: 600">Customer-Centricity – Keeping your success at the core of everything we do.</li>
+      </ul>
+    </li>
+    <li style="font-size: 1.3rem; font-weight: 600">These values guide:
+      <ul style="padding-left: 1.2rem; font-weight: 500;">
+        <li style="font-size: 1.3rem; font-weight: 600">Every decision we make</li>
+        <li style="font-size: 1.3rem; font-weight: 600">Every solution we build</li>
+        <li style="font-size: 1.3rem; font-weight: 600">Every relationship we foster</li>
+      </ul>
+    </li>
+  </ul>
+</div>
         </div>
-    </div>
+    </div>  
 </div>
 
 
@@ -541,7 +534,7 @@
     
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+   <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
@@ -598,7 +591,6 @@
                                 <div class="link-animated d-flex flex-column justify-content-start">
                                     <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                                     <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
                                     <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
                                     <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                                 </div>

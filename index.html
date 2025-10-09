@@ -149,97 +149,90 @@
 
 
     <!-- Navbar & Carousel Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3 py-lg-0">
+                <!-- Logo -->
+                <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                </a>
+
+                <!-- Toggler (Mobile) -->
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span>
-            </button>
-            <!-- CENTERED THE NAVBAR -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
-                    <a href="index.html" class="nav-item nav-link active">HOME</a>
-                    <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-
-                    
-                    <!-- ---------------- Added/Modified Code ---------------- -->
-                    <div class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            WHAT WE DO
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
-                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
-
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
-                                    Cybersecurity
-                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
-                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
-                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
-                                </ul>
-                            </li>
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-
-                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
-                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
-                            <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
-                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
-                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
-                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
-                    <style>
-                    /* Nested dropdown positioning */
-                    .dropdown-submenu {
-                        position: relative;
-                    }
-
-                    /* Remove dropdown arrows */
-                    .navbar .dropdown-toggle::after,
-                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
-                        display: none;
-                    }
-
-
-                    .dropdown-submenu > .dropdown-menu {
-                        top: 0;
-                        left: 100%;
-                        margin-left: 0.1rem;
-                        margin-right: 0.1rem;
-                        display: none; /* hidden by default */
-                    }
-
-                    /* Show submenu on hover (desktop) */
-                    @media (min-width: 992px) {
-                        .dropdown-submenu:hover > .dropdown-menu {
-                            display: block;
-                        }
-                    }
-                    </style>
-                <!-- ---------------- Added/Modified Code ---------------- -->
-                 
-                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
-                    <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
-                </div>
-
-                <!-- MODIFIED THE BUTTON -->
-                <div class="d-none d-lg-block ms-auto">
-                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
-                    <i class="fa fa-search"></i>
                 </button>
-<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
- -->            </div>
-        </nav>
 
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <!-- Navbar Menu -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto text-center py-3 py-lg-0 d-lg-flex flex-lg-row gap-lg-4">
+
+                    <li class="nav-item"><a href="index.html" class="nav-link active">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+
+                    <!-- WHAT WE DO with nested dropdown -->
+                    <li class="nav-item dropdown position-static">
+                    <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        WHAT WE DO
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="whatWeDoDropdown">
+                        <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                        <!-- Nested dropdown -->
+                        <li class="dropdown-submenu">
+                        <a
+                        class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center"
+                        href="cybersecurity.html"
+                        id="cybersecurityDropdown"
+                        >
+                        Cybersecurity
+                        <i class="fa fa-angle-right ms-2"></i>
+                        </a>
+
+                        <ul class="dropdown-menu border-0 shadow">
+
+                            
+                            <!-- 🚨 Mobile-only direct Cybersecurity link -->
+                            <li class="d-block d-lg-none">
+                            <a class="dropdown-item" href="cybersecurity.html">View All Cybersecurity</a>
+                            </li>
+
+                            <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                            <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                            <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                        </ul>
+                        </li>
+
+                        <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                        <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                        <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                        <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                        <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                        <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                    </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="blog.html" class="nav-link">PARTNERS</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+
+                <!-- Right-side icons -->
+                <div class="d-lg-flex justify-content-end d-none d-lg-block">
+                    <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                </div>
+            </nav>
+            </div>
+
+
+        <div id="header-carousel" class="carousel slide carousel-fade responsive-text responsive-video-container" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <video class="w-100" autoplay muted loop playsinline>
@@ -348,165 +341,294 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Your End-to-End Technology Partner</h5>
-                        <h1 class="mb-0">From Data Centers to Digital Transformation</h1>
-                    </div>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">At Octalpha, we don't just supply IT — we deliver business continuity, operational efficiency, and technology-led growth.</p>
-                    <div class="row g-0 mb-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Minified Technology</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Cloud Solutions</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Personalized Service</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Better Pricing</h5>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <!-- <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div> -->
-                        <!-- <div class="ps-4">
-                            <h5 class="mb-2">Call for advice now!</h5>
-                            <h4 class="mb-0">+971 4 242 4920</h4>
-                        </div> -->
-                    </div>
-<!--                     <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a>
- -->                </div>
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 10px; overflow: hidden;">
-                        <img src="https://cdn.pixabay.com/photo/2023/02/05/01/09/artificial-intelligence-7768524_1280.jpg" alt="Digital Transformation" class="w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" style="object-fit: contain; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    </div>
-                </div>
-            </div>
+    <!-- START: Responsive Section -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      
+      <!-- TEXT COLUMN -->
+      <div class="col-lg-7 text-center text-lg-start">
+        <div class="section-title position-relative pb-3 mb-5">
+          <h5 class="fw-bold text-primary text-uppercase">Your End-to-End Technology Partner</h5>
+          <h1 class="mb-0">From Data Centers to Digital Transformation</h1>
         </div>
+        
+        <p class="mb-4 content-paragraph"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
+        
+        <p class="mb-4 content-paragraph">We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
+        
+        <p class="mb-4 content-paragraph">Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
+        
+        <p class="mb-4 content-paragraph">Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
+        
+        <p class="mb-4 content-paragraph">At Octalpha, we don't just supply IT — we deliver business continuity, operational efficiency, and technology-led growth.</p>
+
+        <div class="row g-0 mb-3">
+          <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Minified Technology</h5>
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Cloud Solutions</h5>
+          </div>
+          <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Personalized Service</h5>
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Better Pricing</h5>
+          </div>
+        </div>
+
+        <!-- Optional CTA -->
+        <!-- <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a> -->
+      </div>
+
+      <!-- IMAGE COLUMN -->
+      <div class="col-lg-5 d-flex align-items-center justify-content-center">
+        <div class="responsive-image-wrapper">
+          <img
+            src="https://cdn.pixabay.com/photo/2023/02/05/01/09/artificial-intelligence-7768524_1280.jpg"
+            alt="Digital Transformation"
+            class="img-fluid rounded wow zoomIn"
+            data-wow-delay="0.9s"
+          />
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
+<!-- Responsive Styling -->
+<style>
+  .content-paragraph {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .responsive-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .responsive-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  /* Tablet & Mobile Adjustments */
+  @media (max-width: 992px) {
+    .section-title h1 {
+      font-size: 2rem;
+    }
+
+    .section-title h5 {
+      font-size: 1rem;
+    }
+
+    .content-paragraph {
+      font-size: 1rem !important;
+      font-weight: 500;
+    }
+
+    .responsive-image-wrapper {
+      margin-top: 2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .section-title h1 {
+      font-size: 1.6rem;
+    }
+
+    .content-paragraph {
+      font-size: 0.95rem !important;
+    }
+  }
+</style>
+
+<!-- END -->
+
     <!-- About End -->
 
 
     <!-- Experience Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="position-relative h-100" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 10px; overflow: hidden;">
-                        <img src="https://media.istockphoto.com/id/1721718091/photo/an-arrow-pointing-upwards-mirroring-the-upward-trajectory-of-a-line-graph-symbolizes-the.jpg?s=612x612&w=0&k=20&c=-WZS1aCOzfJI-1JGN3bgSlThTQZFjBNn0kECa5YFavA=" alt="Business Growth" class="w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" style="object-fit: contain; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <div class="d-flex align-items-center mb-3">
-                            <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 8px; padding: 8px; margin-right: 20px;">
-                                <img src="https://media.istockphoto.com/id/1721718091/photo/an-arrow-pointing-upwards-mirroring-the-upward-trajectory-of-a-line-graph-symbolizes-the.jpg?s=612x612&w=0&k=20&c=-WZS1aCOzfJI-1JGN3bgSlThTQZFjBNn0kECa5YFavA=" alt="Business Growth Graph" style="width: 60px; height: 60px; border-radius: 8px; object-fit: contain; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
-                            </div>
-                            <h5 class="fw-bold text-primary text-uppercase mb-0">10+ Years' Experience in IT</h5>
-                        </div>
-                        <h1 class="mb-0">Learn More About Our Success Stories</h1>
-                    </div>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Octalpha takes into consideration every little detail to make sure the system runs smoothly and responsively. Our expertise spans across SAP ERP implementations, Microsoft Retail Solutions, and comprehensive IT infrastructure management for businesses of all sizes.</p>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">We have successfully implemented solutions for leading retail chains, FMCG distribution companies, and food chains across the UAE. Our proven track record includes managing complex enterprise systems with 16+ stores and over 100 POS terminals, serving thousands of customers and vendors.</p>
-                    <p class="mb-4" style="font-size: 1.2rem; font-weight: 600;">Our customer references include building HQ Data Centers for 160+ stores with DR sites, implementing comprehensive cybersecurity solutions, and managing long-term AMC contracts spanning 5-6 years.</p>
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <!-- <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Call for advice now!</h5>
-                            <h4 class="mb-0">+971 4 242 4920</h4>
-                        </div> -->
-                    </div>
-<!--                     <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a>
- -->                </div>
-            </div>
+   <style>
+  /* Ensure images are responsive and well-positioned */
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Section padding adjustment for smaller screens */
+  @media (max-width: 767.98px) {
+    .custom-section {
+      padding: 2rem 1rem !important;
+    }
+
+    .custom-section h1 {
+      font-size: 1.75rem;
+    }
+
+    .custom-section p {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* Optional: show small icon on mobile */
+    .small-icon {
+      display: block !important;
+      margin-bottom: 1rem;
+    }
+  }
+</style>
+
+<div class="container-fluid py-5 custom-section wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- IMAGE COLUMN -->
+      <div class="col-12 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+        <div class="position-relative h-100" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 10px; overflow: hidden;">
+          <img 
+            src="https://media.istockphoto.com/id/1721718091/photo/an-arrow-pointing-upwards-mirroring-the-upward-trajectory-of-a-line-graph-symbolizes-the.jpg?s=612x612&w=0&k=20&c=-WZS1aCOzfJI-1JGN3bgSlThTQZFjBNn0kECa5YFavA=" 
+            alt="Business Growth" 
+            class="responsive-image wow zoomIn" 
+            data-wow-delay="0.1s"
+          >
         </div>
+      </div>
+
+      <!-- TEXT COLUMN -->
+      <div class="col-12 col-lg-6">
+        <div class="section-title position-relative pb-3 mb-5 d-flex align-items-center">
+          <!-- SMALL ICON IMAGE (visible on desktop, optionally on mobile) -->
+          <div class="d-none d-md-block small-icon" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 8px; padding: 8px; margin-right: 20px;">
+            <img 
+              src="https://media.istockphoto.com/id/1721718091/photo/an-arrow-pointing-upwards-mirroring-the-upward-trajectory-of-a-line-graph-symbolizes-the.jpg?s=612x612&w=0&k=20&c=-WZS1aCOzfJI-1JGN3bgSlThTQZFjBNn0kECa5YFavA=" 
+              alt="Business Growth Graph" 
+              style="width: 60px; height: 60px; border-radius: 8px; object-fit: contain; box-shadow: 0 3px 10px rgba(0,0,0,0.2);"
+            >
+          </div>
+          <h5 class="fw-bold text-primary text-uppercase mb-0">10+ Years' Experience in IT</h5>
+        </div>
+        <h1 class="mb-4">Learn More About Our Success Stories</h1>
+
+        <!-- PARAGRAPHS -->
+        <p style="font-size: 1.2rem; font-weight: 600;">
+          Octalpha takes into consideration every little detail to make sure the system runs smoothly and responsively. Our expertise spans across SAP ERP implementations, Microsoft Retail Solutions, and comprehensive IT infrastructure management for businesses of all sizes.
+        </p>
+        <p style="font-size: 1.2rem; font-weight: 600;">
+          We have successfully implemented solutions for leading retail chains, FMCG distribution companies, and food chains across the UAE. Our proven track record includes managing complex enterprise systems with 16+ stores and over 100 POS terminals, serving thousands of customers and vendors.
+        </p>
+        <p style="font-size: 1.2rem; font-weight: 600;">
+          Our customer references include building HQ Data Centers for 160+ stores with DR sites, implementing comprehensive cybersecurity solutions, and managing long-term AMC contracts spanning 5-6 years.
+        </p>
+      </div>
     </div>
+  </div>
+</div>
+
     <!-- Experience End -->
 
 
     <!-- Features Start -->
-        <div class="container-fluid py-5">
+    <div class="container-fluid py-5">
     <div class="container py-5">
-        <div class="section-header">
+        <div class="section-header text-center">
             <div class="section-subtitle">Our Services</div>
             <h1 class="section-title">Comprehensive IT Solutions for Modern Businesses</h1>
             <p class="section-description" style="font-size: 1.2rem; font-weight: 600;">
                 Empowering enterprises with innovative, secure, and scalable technology solutions that drive digital transformation and business growth.
             </p>
         </div>
-        <div class="modern-grid py-18">
 
-            <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <i class="fa fa-server fa-2x text-primary"></i>
-                    <h4 class="mb-0">IT Infrastructure</h4>
+        <!-- Responsive Grid -->
+        <div class="row g-4 mt-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card wow fadeInUp h-100" data-wow-delay="0.1s">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-server fa-2x text-primary"></i>
+                        <h4 class="mb-0">IT Infrastructure</h4>
+                    </div>
+                    <p class="mt-4" style="font-size: 1.1rem; font-weight: 600;">
+                        Complete IT infrastructure design, virtualization, servers, storage, networking, and structured cabling solutions
+                    </p>
                 </div>
-                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
-                    Complete IT infrastructure design, virtualization, servers, storage, networking, and structured cabling solutions
-                </p>
             </div>
 
-            <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <i class="fa fa-shield-alt fa-2x text-primary"></i>
-                    <h4 class="mb-0">Cybersecurity</h4>
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card wow fadeInUp h-100" data-wow-delay="0.2s">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-shield-alt fa-2x text-primary"></i>
+                        <h4 class="mb-0">Cybersecurity</h4>
+                    </div>
+                    <p class="mt-4" style="font-size: 1.1rem; font-weight: 600;">
+                        Next-Gen Firewalls, EDR, IAM, VAPT, vCISO, and comprehensive security frameworks
+                    </p>
                 </div>
-                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
-                    Next-Gen Firewalls, EDR, IAM, VAPT, vCISO, and comprehensive security frameworks
-                </p>
             </div>
 
-            <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <i class="fa fa-gavel fa-2x text-primary"></i>
-                    <h4 class="mb-0">Governance, Risk & Compliance (GRC)</h4>
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card wow fadeInUp h-100" data-wow-delay="0.3s">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-gavel fa-2x text-primary"></i>
+                        <h4 class="mb-0">Governance, Risk & Compliance (GRC)</h4>
+                    </div>
+                    <p class="mt-4" style="font-size: 1.1rem; font-weight: 600;">
+                        Corporate policies, IT governance, risk management, business continuity, and compliance frameworks
+                    </p>
                 </div>
-                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
-                    Corporate policies, IT governance, risk management, business continuity, and compliance frameworks
-                </p>
             </div>
 
-            <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <i class="fa fa-cloud fa-2x text-primary"></i>
-                    <h4 class="mb-0">Cloud Solutions</h4>
+            <!-- Card 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card wow fadeInUp h-100" data-wow-delay="0.4s">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-cloud fa-2x text-primary"></i>
+                        <h4 class="mb-0">Cloud Solutions</h4>
+                    </div>
+                    <p class="mt-4" style="font-size: 1.1rem; font-weight: 600;">
+                        Azure, AWS, Oracle, Google Cloud with cost optimization, migration, and containerization
+                    </p>
                 </div>
-                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
-                    Azure, AWS, Oracle, Google Cloud with cost optimization, migration, and containerization
-                </p>
             </div>
 
-            <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <i class="fa fa-cogs fa-2x text-primary"></i>
-                    <h4 class="mb-0">Managed IT Services</h4>
+            <!-- Card 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card wow fadeInUp h-100" data-wow-delay="0.5s">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-cogs fa-2x text-primary"></i>
+                        <h4 class="mb-0">Managed IT Services</h4>
+                    </div>
+                    <p class="mt-4" style="font-size: 1.1rem; font-weight: 600;">
+                        24/7 monitoring, proactive maintenance, AMC contracts, backup & DR, and certified engineering support
+                    </p>
                 </div>
-                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
-                    24/7 monitoring, proactive maintenance, AMC contracts, backup & DR, and certified engineering support
-                </p>
             </div>
 
-            <div class="service-card wow fadeInUp" data-wow-delay="0.6s">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <i class="fa fa-cube fa-2x text-primary"></i>
-                    <h4 class="mb-0">ERP Solutions</h4>
+            <!-- Card 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card wow fadeInUp h-100" data-wow-delay="0.6s">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <i class="fa fa-cube fa-2x text-primary"></i>
+                        <h4 class="mb-0">ERP Solutions</h4>
+                    </div>
+                    <p class="mt-4" style="font-size: 1.1rem; font-weight: 600;">
+                        SAP ERP implementations, Microsoft Retail Solutions, and comprehensive business process automation
+                    </p>
                 </div>
-                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 2rem;">
-                    SAP ERP implementations, Microsoft Retail Solutions, and comprehensive business process automation
-                </p>
             </div>
-
         </div>
     </div>
 </div>
+
 
     <!-- Features Start -->
 
@@ -993,7 +1115,6 @@
                                 <div class="link-animated d-flex flex-column justify-content-start">
                                     <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                                     <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Offerings</a>
                                     <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Partners</a>
                                     <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                                 </div>
