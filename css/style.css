@@ -1,15 +1,15 @@
 /********** Template CSS **********/
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
     --primary: #06A3DA;
     --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E;
-    --content-font: 'Newsreader', serif;
-    --heading-font: 'Merriweather', serif;
+  --content-font: 'Poppins', sans-serif;
+  --heading-font: 'Poppins', sans-serif;
 }
 
 /* Global Font Styles */
@@ -20,6 +20,13 @@ body {
     color: #2c3e50;
     background-color: #ffffff;
 }
+
+/* * {
+  box-sizing: border-box !important;
+  margin: 0 !important; 
+  padding: 0 !important;
+} */
+
 
 /* Clean, Modern Container Styles */
 .container, .container-fluid {
@@ -2282,12 +2289,12 @@ html {
 
 
 
-//* Title centered initially */
-.service-item .title {
+/* Title centered initially */
+/* .service-item .title {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center;     /* horizontal centering */
+  justify-content: center; 
+  align-items: center;     
   height: 100%;
   max-width: 90%;
   text-align: center;
@@ -2299,25 +2306,51 @@ html {
     opacity 0.5s ease,
     transform 0.5s ease;
 }
-
+ */
 /* List hidden by default */
-.service-item .service-list {
+/* .service-item .service-list {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-}
+} */
 
 /* On hover: move title up and show list */
+/* .service-item:hover .title {
+  opacity: 0;
+  transform: translateY(-30px); 
+}*/
+
+.service-item {
+  display: grid;
+  grid-template-areas: "content";
+  min-height: 200px;
+  align-items: start;
+  padding: 20px; /* Ensure enough padding */
+}
+
+.service-item .title {
+  grid-area: content;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-item .service-list {
+  grid-area: content;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  padding: 20px; /* Match parent padding */
+  width: 100%; /* Ensure full width */
+}
+
 .service-item:hover .title {
   opacity: 0;
-  transform: translateY(-30px); /* smoother upward movement */
+  transform: translateY(-30px);
 }
 
 .service-item:hover .service-list {
   opacity: 1;
   pointer-events: auto;
 }
-
 /* Due Diliegence */
 .dd-logo-row {
     display: flex;
@@ -2536,3 +2569,454 @@ html {
   justify-content: stretch;
   height: 100%;
 }
+
+
+/* NAVBAR RESPONSIVENESS */
+/* Base Navbar Styling */
+.navbar {
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  color: #333 !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0077b6 !important;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  border-radius: 0.4rem;
+  min-width: 220px;
+}
+
+/* Nested dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.15rem;
+  display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Remove default dropdown arrows */
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+/* Nested dropdown (desktop hover + mobile stacked) */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+/* Mobile view: stack dropdowns */
+@media (max-width: 991px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 1rem;
+    display: none;
+  }
+
+  .dropdown-submenu > .dropdown-menu.show {
+    display: block;
+  }
+}
+
+
+/* MOBILE FIXES */
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    margin-left: 0;
+  }
+
+  .dropdown-menu {
+    box-shadow: none;
+    border: none;
+  }
+
+  .dropdown-submenu .dropdown-toggle i {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 991px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+  }
+}
+
+/* OVERFLOW FIX FOR MOBILE */
+/* img, video {
+  max-width: 100%;
+  height: auto;
+}
+ */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* MAKING IMAGES RESPONSIVE */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes small gaps under image */
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .hero-image {
+    width: 80%;
+    margin: 0 auto;
+  }
+} */
+
+/* CLEAN MOBILE PADDING */
+@media (max-width: 768px) {
+  .container,
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* VENDOR CAROUSEL UPDATE */
+/* Ensure logos don’t overflow */
+.vendor-carousel img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 70px;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+/* Use flexbox grid inside Owl items */
+.owl-carousel .owl-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Each logo gets ~30% width to fit 3 per row */
+/* .owl-carousel .owl-item img {
+  flex: 0 0 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+} */
+
+/* Tweak for smaller devices */
+@media (max-width: 768px) {
+  .owl-carousel .owl-item img {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .owl-carousel .owl-item img {
+    flex: 0 0 50%;
+    max-width: 50%;
+    max-height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-lg-5 img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+/* VIDEO CARD */
+/* Base styles for larger screens */
+.responsive-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.responsive-text p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .responsive-text h1 {
+    font-size: 2rem;
+  }
+
+  .responsive-text p {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .responsive-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .responsive-text p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+/* FA-ICON OVERFLOW */
+/* Mobile responsive service list items */
+@media (max-width: 576px) {
+  .service-item ul li {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    word-break: break-word;
+  }
+
+  .service-item ul li i {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  .service-item {
+    padding: 1rem;
+  }
+}
+
+/* GENERAL MOBILE RESPONSIVENESS(PADDING) */
+/* Add horizontal padding on smaller screens */
+@media (max-width: 576px) {
+  .container,
+  .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Optional: adjust headings and paragraph font sizes */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 90%; /* scale headings down a bit */
+  }
+
+  p {
+    font-size: 1rem; /* slightly smaller paragraphs */
+  }
+
+  img {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* custom list styles */
+ul.custom-list,
+ul.custom-list ul {
+  font-size: 1.4rem;      /* match regular paragraph font size */
+  font-weight: 600;     /* normal weight */
+  padding-left: 1.25rem; /* consistent padding */
+  line-height: 1.6;      /* comfortable spacing */
+}
+
+ul.custom-list ul {
+  padding-left: 1.5rem;  /* nested list indentation */
+  font-weight: 500;
+}
+
+/* CLOUD IMAGES HIDDEN ON SMALL SCREENS */
+@media (max-width: 768px) {
+  .cloud {
+    display: none !important;
+  }
+}
+
+/* FIX FOR FA ICONS OVERFLOWING */
+/* Ensure icons scale down properly */
+/* Reset & scale icon cleanly */
+.service-icon i {
+  font-size: 3rem;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+  word-break: break-word;
+}
+
+/* Ensure container doesn't force overflow */
+.service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* prevent protrusions */
+}
+
+/* Responsive scaling */
+@media (max-width: 576px) {
+  .service-icon i {
+    font-size: 2rem;
+  }
+
+  .service-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .service-item p {
+    font-size: 1rem;
+  }
+}
+
+/* MANAGED IT RESPONSIVE */
+/* Managed IT section responsive styling */
+.managed-it-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.managed-it-img {
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .managed-it-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  h3.text-primary {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .managed-it-img {
+    max-height: 250px;
+  }
+}
+
+
+/* CJM CONTENT RESPONSIVENESS */
+/* You can reuse this */
+.managed-it-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.managed-it-img {
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .managed-it-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  h3.text-primary {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .managed-it-img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .fa {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* FONT OVERRIDE */
+html, body{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
+
+
+/* ABOUT_US_LISt */
+.about-list {
+  list-style-type: none;      /* No bullets on top-level */
+  padding-left: 0;            /* Remove default padding */
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.about-list > li {
+  position: relative;
+         /* Indent text for clarity */
+}
+
+.about-list > li::before {
+  content: '';                /* No bullet here */
+}
+
+.about-list ul {
+  list-style-type:circle;      /* Nested lists keep bullets */
+         /* Nested lists indented */
+  font-weight: 500;           /* Slightly lighter for nested */
+}
+

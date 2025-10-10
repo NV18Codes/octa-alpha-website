@@ -143,136 +143,191 @@
     });
     
     // Responsive navigation improvements
-    $(document).ready(function() {
-        // Close mobile menu when clicking on a link
-        $('.navbar-nav .nav-link').on('click', function() {
-            if ($(window).width() < 992) {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
-        
-        // Handle window resize events
-        $(window).on('resize', function() {
-            // Reset any mobile-specific styles
-            if ($(window).width() >= 992) {
-                $('.navbar-collapse').removeClass('show');
-            }
-        });
-        
-        // Improve touch targets on mobile
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-            $('.btn, .nav-link').addClass('touch-device');
-        }
-        
-        // Smooth scrolling for anchor links
-        $('a[href^="#"]').on('click', function(event) {
-            var target = $(this.getAttribute('href'));
-            if (target.length) {
-                event.preventDefault();
-                $('html, body').stop().animate({
-                    scrollTop: target.offset().top - 80
-                }, 1000);
-            }
-        });
-        
-        // Optimize video backgrounds for mobile
-        function optimizeVideos() {
-            if ($(window).width() <= 768) {
-                $('video').each(function() {
-                    $(this).attr('playsinline', '');
-                    $(this).attr('muted', '');
-                    $(this).attr('loop', '');
-                });
-            }
-        }
-        
-        optimizeVideos();
-        $(window).on('resize', optimizeVideos);
-        
-        // Lazy loading for images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-        
-        // Performance optimization for mobile
-        if ($(window).width() <= 768) {
-            // Reduce animation complexity on mobile
-            $('.wow').removeClass('wow');
-            $('[data-wow-delay]').removeAttr('data-wow-delay');
-            
-            // Optimize carousel performance
-            $('.owl-carousel').each(function() {
-                if ($(this).hasClass('vendor-carousel')) {
-                    $(this).trigger('refresh.owl.carousel');
-                }
-            });
-        }
-        
-        // Handle orientation change
-        $(window).on('orientationchange', function() {
-            setTimeout(function() {
-                // Refresh carousels after orientation change
-                $('.owl-carousel').trigger('refresh.owl.carousel');
-                
-                // Adjust video heights
-                $('.carousel-item video, .carousel-item img').css('height', '100vh');
-            }, 100);
-        });
-        
-        // Accessibility improvements
-        $('.navbar-toggler').on('click', function() {
-            var isExpanded = $(this).attr('aria-expanded') === 'true';
-            $(this).attr('aria-expanded', !isExpanded);
-        });
-        
-        // Keyboard navigation support
-        $(document).on('keydown', function(e) {
-            if (e.key === 'Escape') {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
-        
-        // Touch gesture support for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        $(document).on('touchstart', function(e) {
-            touchStartX = e.originalEvent.touches[0].clientX;
-        });
-        
-        $(document).on('touchend', function(e) {
-            touchEndX = e.originalEvent.changedTouches[0].clientX;
-            handleSwipe();
-        });
-        
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    // Swipe left - next carousel item
-                    $('.carousel').carousel('next');
-                } else {
-                    // Swipe right - previous carousel item
-                    $('.carousel').carousel('prev');
-                }
-            }
+   $(document).ready(function () {
+
+    // Handle mobile nav link behavior
+    $('.navbar-nav .nav-link').on('click', function () {
+        if ($(window).width() < 992) {
+            $('.navbar-collapse').collapse('hide');
         }
     });
+
+    // Fix dropdowns on mobile (first level)
+    $('.navbar .dropdown-toggle').off('click').on('click', function (e) {
+        if ($(window).width() < 992) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const $dropdown = $(this).next('.dropdown-menu');
+            const $parent = $(this).closest('.dropdown');
+
+            // Close other open dropdowns
+            $parent.siblings('.dropdown').find('.dropdown-menu.show').removeClass('show');
+
+            // Toggle this dropdown
+            $dropdown.toggleClass('show');
+        }
+    });
+
+    // ✅ Handle nested dropdowns (like Cybersecurity)
+    $('.dropdown-submenu > .dropdown-toggle').off('click').on('click', function (e) {
+        if ($(window).width() < 992) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const $submenu = $(this).next('.dropdown-menu');
+            const $siblings = $(this).parent().siblings('.dropdown-submenu');
+
+            // Close other submenus
+            $siblings.find('.dropdown-menu.show').removeClass('show');
+
+            // Toggle this submenu
+            $submenu.toggleClass('show');
+        }
+    });
+
+    // Cybersecurity open on double click//
+        /*  document.addEventListener("DOMContentLoaded", function () {
+    const link = document.getElementById("cybersecurityDropdown");
+    if (!link) return;
+
+    // Detect if device is mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      let lastTap = 0;
+
+      link.addEventListener("touchend", function (e) {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+
+        if (tapLength < 500 && tapLength > 0) {
+          // Second tap (within 500ms) → navigate
+          e.preventDefault();
+          window.location.href = "cybersecurity.html";
+        } else {
+          // First tap → open dropdown (default Bootstrap behavior)
+          lastTap = currentTime;
+        }
+      });
+    } else {
+      // Desktop: click once to navigate
+      link.addEventListener("click", function (e) {
+        window.location.href = "cybersecurity.html";
+      });
+    }
+  });
+ */
+
+
+    // Close all dropdowns when clicking outside (mobile)
+    $(document).on('click', function (e) {
+        if ($(window).width() < 992 && !$(e.target).closest('.navbar').length) {
+            $('.dropdown-menu.show').removeClass('show');
+        }
+    });
+
+    // Handle window resize (reset on desktop)
+    $(window).on('resize', function () {
+        if ($(window).width() >= 992) {
+            $('.dropdown-menu.show').removeClass('show');
+            $('.navbar-collapse').removeClass('show');
+        }
+    });
+
+    // Other existing code
+    $('a[href^="#"]').on('click', function (event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 80
+            }, 1000);
+        }
+    });
+
+    function optimizeVideos() {
+        if ($(window).width() <= 768) {
+            $('video').each(function () {
+                $(this).attr('playsinline', '');
+                $(this).attr('muted', '');
+                $(this).attr('loop', '');
+            });
+        }
+    }
+
+    optimizeVideos();
+    $(window).on('resize', optimizeVideos);
+
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    if ($(window).width() <= 768) {
+        $('.wow').removeClass('wow');
+        $('[data-wow-delay]').removeAttr('data-wow-delay');
+        $('.owl-carousel').each(function () {
+            if ($(this).hasClass('vendor-carousel')) {
+                $(this).trigger('refresh.owl.carousel');
+            }
+        });
+    }
+
+    $(window).on('orientationchange', function () {
+        setTimeout(function () {
+            $('.owl-carousel').trigger('refresh.owl.carousel');
+            $('.carousel-item video, .carousel-item img').css('height', '100vh');
+        }, 100);
+    });
+
+    $('.navbar-toggler').on('click', function () {
+        var isExpanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', !isExpanded);
+    });
+
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape') {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+
+    // Swipe gestures for carousel
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    $(document).on('touchstart', function (e) {
+        touchStartX = e.originalEvent.touches[0].clientX;
+    });
+
+    $(document).on('touchend', function (e) {
+        touchEndX = e.originalEvent.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) $('.carousel').carousel('next');
+            else $('.carousel').carousel('prev');
+        }
+    }
+});
+
+
     
 })(jQuery);
 

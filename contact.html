@@ -157,97 +157,91 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3 py-lg-0">
+                <!-- Logo -->
+                <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                </a>
+
+                <!-- Toggler (Mobile) -->
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span>
-            </button>
-            <!-- CENTERED THE NAVBAR -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
-                    <a href="index.html" class="nav-item nav-link ">HOME</a>
-                    <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-
-                    
-                    <!-- ---------------- Added/Modified Code ---------------- -->
-                    <div class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            WHAT WE DO
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
-                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
-
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
-                                    Cybersecurity
-                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
-                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
-                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
-                                </ul>
-                            </li>
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-
-                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
-                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
-                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
-                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
-                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
-                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
-                    <style>
-                    /* Nested dropdown positioning */
-                    .dropdown-submenu {
-                        position: relative;
-                    }
-
-                    /* Remove dropdown arrows */
-                    .navbar .dropdown-toggle::after,
-                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
-                        display: none;
-                    }
-
-
-                    .dropdown-submenu > .dropdown-menu {
-                        top: 0;
-                        left: 100%;
-                        margin-left: 0.1rem;
-                        margin-right: 0.1rem;
-                        display: none; /* hidden by default */
-                    }
-
-                    /* Show submenu on hover (desktop) */
-                    @media (min-width: 992px) {
-                        .dropdown-submenu:hover > .dropdown-menu {
-                            display: block;
-                        }
-                    }
-                    </style>
-                <!-- ---------------- Added/Modified Code ---------------- -->
-                 
-                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
-                    <a href="contact.html" class="nav-item nav-link active">CONTACT US</a>
-                </div>
-
-                <!-- MODIFIED THE BUTTON -->
-                <div class="d-none d-lg-block ms-auto">
-                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
-                    <i class="fa fa-search"></i>
                 </button>
-<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
- -->            </div>
-        </nav>
+
+                <!-- Navbar Menu -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+               <ul class="navbar-nav mx-auto text-center py-3 py-lg-0 d-lg-flex flex-lg-row gap-lg-4">
+
+
+                    <li class="nav-item"><a href="index.html" class="nav-link ">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+
+                    <!-- WHAT WE DO with nested dropdown -->
+                    <li class="nav-item dropdown position-static">
+                    <a href="#" class="nav-link dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        WHAT WE DO
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="whatWeDoDropdown">
+                        <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                        <!-- Nested dropdown -->
+                        <li class="dropdown-submenu">
+                        <a
+                        class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center"
+                        href="cybersecurity.html"
+                        id="cybersecurityDropdown"
+                        >
+                        Cybersecurity
+                        <i class="fa fa-angle-right ms-2"></i>
+                        </a>
+
+                        <ul class="dropdown-menu border-0 shadow">
+
+                            
+                            <!-- 🚨 Mobile-only direct Cybersecurity link -->
+                            <li class="d-block d-lg-none">
+                            <a class="dropdown-item" href="cybersecurity.html">View All Cybersecurity</a>
+                            </li>
+
+                            <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                            <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                            <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                        </ul>
+                        </li>
+
+                        <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                        <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                        <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                        <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                        <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                        <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                    </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="blog.html" class="nav-link">PARTNERS</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">CONTACT US</a></li>
+                </ul>
+
+                <!-- Right-side icons -->
+                <div class="d-lg-flex justify-content-end d-none d-lg-block">
+                    <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                </div>
+            </nav>
+            </div>
+
 
         <div class="container-fluid py-3 position-relative" style="margin-bottom: 60px; min-height: 400px;">
-            <video class="position-absolute w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
+            <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop style="object-fit: cover; z-index: -1;">
                 <source src="videos/VID-20250916-WA0003.mp4" type="video/mp4">
             </video>
             <div class="position-relative" style="z-index: 1;">

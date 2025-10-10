@@ -168,100 +168,93 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-modern px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3 py-lg-0">
+                <!-- Logo -->
+                <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                </a>
+
+                <!-- Toggler (Mobile) -->
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span>
-            </button>
-            <!-- CENTERED THE NAVBAR -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto d-flex flex-row gap-4 py-0">
-                    <a href="index.html" class="nav-item nav-link ">HOME</a>
-                    <a href="about.html" class="nav-item nav-link">ABOUT US</a>
-
-                    
-                    <!-- ---------------- Added/Modified Code ---------------- -->
-                    <div class="nav-item dropdown">
-                         <a href="#" class="nav-link active dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            WHAT WE DO
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
-                            <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
-
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="cybersecurity.html">
-                                    Cybersecurity
-                                    <i class="fa fa-angle-right ms-2"></i> <!-- Right arrow icon -->
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
-                                    <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
-                                    <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
-                                </ul>
-                            </li>
-                            <!-- ---------------- Added Nested Dropdown ---------------- -->
-
-                            <li><a class="dropdown-item" href="grc.html">GRC</a></li>
-                            <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
-                             <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
-                            <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
-                            <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
-                            <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- ---------------- Added CSS for nested dropdown ---------------- -->
-                    <style>
-                    /* Nested dropdown positioning */
-                    .dropdown-submenu {
-                        position: relative;
-                    }
-
-                    /* Remove dropdown arrows */
-                    .navbar .dropdown-toggle::after,
-                    .navbar .dropdown-submenu > a.dropdown-toggle::after {
-                        display: none;
-                    }
-
-
-                    .dropdown-submenu > .dropdown-menu {
-                        top: 0;
-                        left: 100%;
-                        margin-left: 0.1rem;
-                        margin-right: 0.1rem;
-                        display: none; /* hidden by default */
-                    }
-
-                    /* Show submenu on hover (desktop) */
-                    @media (min-width: 992px) {
-                        .dropdown-submenu:hover > .dropdown-menu {
-                            display: block;
-                        }
-                    }
-                    </style>
-                <!-- ---------------- Added/Modified Code ---------------- -->
-                 
-                    <a href="blog.html" class="nav-item nav-link">PARTNERS</a>
-                    <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
-                </div>
-
-                <!-- MODIFIED THE BUTTON -->
-                <div class="d-none d-lg-block ms-auto">
-                <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
-                    <i class="fa fa-search"></i>
                 </button>
-<!--                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
- -->            </div>
-        </nav>
+
+                <!-- Navbar Menu -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+               <ul class="navbar-nav mx-auto text-center py-3 py-lg-0 d-lg-flex flex-lg-row gap-lg-4">
+
+                    <li class="nav-item"><a href="index.html" class="nav-link ">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+
+                    <!-- WHAT WE DO with nested dropdown -->
+                    <li class="nav-item dropdown position-static">
+                    <a href="#" class="nav-link active dropdown-toggle" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        WHAT WE DO
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="whatWeDoDropdown">
+                        <li><a class="dropdown-item" href="it-infrastructure.html">IT Infrastructure</a></li>
+
+                        <!-- Nested dropdown -->
+                        <li class="dropdown-submenu">
+                        <a
+                        class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center"
+                        href="cybersecurity.html"
+                        id="cybersecurityDropdown"
+                        >
+                        Cybersecurity
+                        <i class="fa fa-angle-right ms-2"></i>
+                        </a>
+
+                        <ul class="dropdown-menu border-0 shadow">
+
+                            
+                            <!-- 🚨 Mobile-only direct Cybersecurity link -->
+                            <li class="d-block d-lg-none">
+                            <a class="dropdown-item" href="cybersecurity.html">View All Cybersecurity</a>
+                            </li>
+
+                            <li><a class="dropdown-item" href="due-diligence.html">Risk Assessment</a></li>
+                            <li><a class="dropdown-item" href="vapt.html">VAPT</a></li>
+                            <li><a class="dropdown-item" href="vciso.html">VCISO</a></li>
+                        </ul>
+                        </li>
+
+                        <li><a class="dropdown-item" href="grc.html">GRC</a></li>
+                        <li><a class="dropdown-item" href="cloud-solutions.html">Cloud Solutions</a></li>
+                        <li><a class="dropdown-item" href="digital-collab.html">Digital Collaboration</a></li>
+                        <li><a class="dropdown-item" href="managed-services.html">Managed IT Solutions</a></li>
+                        <li><a class="dropdown-item" href="customer-journey.html">Customer Journey</a></li>
+                        <li><a class="dropdown-item" href="erp-solutions.html">ERP</a></li>
+                    </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="blog.html" class="nav-link">PARTNERS</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+
+                <!-- Right-side icons -->
+                <div class="d-lg-flex justify-content-end d-none d-lg-block">
+                    <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                </div>
+            </nav>
+            </div>
+
     </div>
     <!-- Navbar End -->
 
     <!-- Hero Section -->
         <div class="container-fluid py-5 position-relative" style="margin-bottom: 90px; min-height: 500px;">
-            <video class="position-absolute w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
+            <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; z-index: -1;">
                 <source src="https://cdn.pixabay.com/video/2021/07/20/82170-577893740_large.mp4" type="video/mp4">
             </video>
             <div class="position-relative" style="z-index: 1;">
@@ -283,6 +276,24 @@
         </div>
     </div>
     <!-- Hero Section End -->
+
+    <!-- CONTENT FILL -->
+     <!-- Customer Journey Mapping Section -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <h3 class="mb-3 text-primary">Optimize Every Customer Touchpoint</h3>
+      <p class="managed-it-text">
+        Our Customer Journey Mapping services help you visualize, analyze, and enhance every step of your customer's experience. By identifying pain points and opportunities, we enable businesses to create seamless, personalized, and high-converting journeys that boost satisfaction and loyalty.
+      </p>
+    </div>
+    <div class="col-lg-6 text-center">
+      <img src="img/CJM/CJM_left.jpg" alt="Customer Journey Mapping" class="img-fluid rounded shadow-sm managed-it-img">
+    </div>
+  </div>
+</div>
+    <!-- Customer Journey Mapping Section End -->
+
 
     <!-- Services Start -->
     <div class="container-fluid section-padding">
@@ -341,49 +352,62 @@
     <!-- Services End -->
 
     <!-- Benefits Start -->
-    <div class="container-fluid section-padding" style="background: #f8f9fa;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Why It Matters</div>
-                <h1 class="section-title">Elevate Every Customer Interaction</h1>
-                 <p class="section-description" style="font-weight: 600; font-size: 1.4rem;">Every touchpoint shapes how customers perceive your brand. Smart-CJM enables consistent, personalized interactions that boost engagement, trust, and conversions.</p>
-            </div>
-            
-            <div class="subtle-grid">
-                <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="icon">
-                        <i class="fa fa-dollar-sign"></i>
-                    </div>
-                    <h4>Reduced Wait Times & Higher Satisfaction</h4>
-                    <p style="font-weight: 500; font-size: 1.2rem;">Fast, transparent service is a key factor in customer satisfaction. Smart-CJM helps reduce frustration and improve the perception of your service.</p>
-                </div>
-                
-                <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="icon">
-                        <i class="fa fa-clock"></i>
-                    </div>
-                    <h4>Operational Efficiency & Cost Savings</h4>
-                    <p style="font-weight: 500; font-size: 1.2rem;">With better forecasting, staff planning, and data on which services are most in demand, you can optimize resources and reduce wasted effort.</p>
-                </div>
-                
-                <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="icon">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <h4>Data-Driven Decision Making</h4>
-                    <p style="font-weight: 500; font-size: 1.2rem;">Insights into visitor flow, peak periods, and bottlenecks enable smarter decisions — about layout, staffing, and resource allocation.</p>
-                </div>
-                
-                <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="fa fa-chart-line"></i>
-                    </div>
-                    <h4>Enhanced Reputation & Loyalty</h4>
-                    <p style="font-weight: 500; font-size: 1.2rem;">SA well-managed service journey leaves an impression. Whether you are serving citizens, patients, or customers, a positive journey builds trust, loyalty, and word-of-mouth.</p>
-                </div>
-            </div>
-        </div>
+     <div class="container-fluid section-padding" style="background: #f8f9fa;">
+  <div class="container py-5">
+    <!-- Section Header -->
+    <div class="section-header mb-5 text-center">
+      <div class="section-subtitle">Why It Matters</div>
+      <h1 class="section-title">Elevate Every Customer Interaction</h1>
+      <p class="section-description" style="font-weight: 600; font-size: 1.3rem;">
+        Every touchpoint shapes how customers perceive your brand. Smart-CJM enables consistent, personalized experiences that boost trust and conversions.
+      </p>
     </div>
+
+    <!-- Grid: Image Left | Benefits Right -->
+    <div class="row align-items-center">
+      <!-- Image Left -->
+      <div class="col-lg-5 text-center mb-5 mb-lg-0 ">
+        <img src="img/managedIT/card3.jpg" alt="Customer Journey Mapping" class="img-fluid rounded shadow-sm" style="max-height: 450px; object-fit: cover;">
+      </div>
+
+      <!-- Benefits List -->
+      <div class="col-lg-7">
+        <div class="mb-4 d-flex">
+          <div class="me-3 text-primary" style="font-size: 2rem;"><i class="fa fa-clock"></i></div>
+          <div>
+            <h5 class="mb-1">Faster Service, Happier Customers</h5>
+            <p style="font-size: 1.1rem; font-weight: 500;">Minimize wait times and improve customer satisfaction with smoother, faster touchpoints.</p>
+          </div>
+        </div>
+
+        <div class="mb-4 d-flex">
+          <div class="me-3 text-primary" style="font-size: 2rem;"><i class="fa fa-dollar-sign"></i></div>
+          <div>
+            <h5 class="mb-1">Boost Efficiency & Cut Costs</h5>
+            <p style="font-size: 1.1rem; font-weight: 500;">Optimize staff and resources based on real-time demand and behavior patterns.</p>
+          </div>
+        </div>
+
+        <div class="mb-4 d-flex">
+          <div class="me-3 text-primary" style="font-size: 2rem;"><i class="fa fa-users"></i></div>
+          <div>
+            <h5 class="mb-1">Smarter Decision Making</h5>
+            <p style="font-size: 1.1rem; font-weight: 500;">Use real customer data to refine operations, layouts, and service models.</p>
+          </div>
+        </div>
+
+        <div class="mb-4 d-flex">
+          <div class="me-3 text-primary" style="font-size: 2rem;"><i class="fa fa-chart-line"></i></div>
+          <div>
+            <h5 class="mb-1">Increased Loyalty & Trust</h5>
+            <p style="font-size: 1.1rem; font-weight: 500;">Consistent positive experiences build long-term relationships and referrals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Benefits End -->
 
     <!-- Our Approach Start -->
