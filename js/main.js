@@ -17,13 +17,13 @@
 
 
     // Sticky Navbar
-    $(window).scroll(function () {
+   /*  $(window).scroll(function () {
         if ($(this).scrollTop() > 45) {
             $('.navbar').addClass('sticky-top shadow-sm');
         } else {
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
-    });
+    }); */
     
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
@@ -120,8 +120,8 @@
         smartSpeed: 1000,
         responsive: {
             0:{
-                items:2,
-                margin: 20
+                items:1,
+                margin: 10
             },
             576:{
                 items:3,

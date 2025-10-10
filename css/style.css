@@ -3020,3 +3020,52 @@ html, body{
   font-weight: 500;           /* Slightly lighter for nested */
 }
 
+/* NAVBAR FIXED PADDING */
+body {
+  padding-top: 70px;
+}
+
+/* INDEX FACT CARD RESPONSIVENESS */
+/* Fact card styling */
+.fact-card {
+  height: 150px;
+  border-radius: 0.5rem;
+}
+
+/* Icon box (same size and alignment for all cards) */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+/* Responsive fix: Stack vertically on mobile */
+@media (max-width: 767.98px) {
+  .fact-card {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* VENDOR CAROUSEL OVErrIDE FOR MOBILE */
+/* Vendor logo default styling */
+.vendor-carousel img {
+    max-height: 80px;
+    object-fit: contain;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* On smaller screens, make logos appear larger */
+@media (max-width: 576px) {
+    .vendor-carousel img {
+        max-height: 100px;
+        width: auto;
+        display: block;
+    }
+}
