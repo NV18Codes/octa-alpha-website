@@ -150,7 +150,7 @@
 
     <!-- Navbar & Carousel Start -->
             <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3 py-lg-0 fixed-top">
                 <!-- Logo -->
                 <a href="index.html" class="navbar-brand p-0">
                 <img src="img/logo.png" alt="Octalpha Logo" style="height: 40px; width: auto;">
@@ -298,45 +298,52 @@
 
     <!-- Facts Start -->
     <div class="container-fluid facts py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-users text-primary"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Happy Clients</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">300</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-primary mb-0">Finished Projects</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">200</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-award text-primary"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Vendors</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">50</h1>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+  <div class="container py-5 pt-lg-0">
+    <div class="row gx-2 gy-2"> <!-- Added gutter spacing -->
+      
+      <!-- Happy Clients -->
+      <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+        <div class="bg-primary shadow d-flex align-items-center p-4 fact-card">
+          <div class="icon-box bg-white text-primary">
+            <i class="fa fa-users"></i>
+          </div>
+          <div class="ps-4">
+            <h5 class="text-white mb-0">Happy Clients</h5>
+            <h1 class="text-white mb-0" data-toggle="counter-up">300</h1>
+          </div>
         </div>
+      </div>
+
+      <!-- Finished Projects -->
+      <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+        <div class="bg-light shadow d-flex align-items-center p-4 fact-card">
+          <div class="icon-box bg-primary text-white">
+            <i class="fa fa-check"></i>
+          </div>
+          <div class="ps-4">
+            <h5 class="text-primary mb-0">Finished Projects</h5>
+            <h1 class="mb-0" data-toggle="counter-up">200</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vendors -->
+      <div class="col-lg-4 wow zoomIn" data-wow-delay="0.5s">
+        <div class="bg-primary shadow d-flex align-items-center p-4 fact-card">
+          <div class="icon-box bg-white text-primary">
+            <i class="fa fa-award"></i>
+          </div>
+          <div class="ps-4">
+            <h5 class="text-white mb-0">Vendors</h5>
+            <h1 class="text-white mb-0" data-toggle="counter-up">50</h1>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
     <!-- Facts Start -->
 
 
@@ -347,36 +354,42 @@
     <div class="row g-5 align-items-center">
       
       <!-- TEXT COLUMN -->
-      <div class="col-lg-7 text-center text-lg-start">
-        <div class="section-title position-relative pb-3 mb-5">
-          <h5 class="fw-bold text-primary text-uppercase">Your End-to-End Technology Partner</h5>
-          <h1 class="mb-0">From Data Centers to Digital Transformation</h1>
-        </div>
-        
-        <p class="mb-4 content-paragraph"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
-        
-        <p class="mb-4 content-paragraph">We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
-        
-        <p class="mb-4 content-paragraph">Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
-        
-        <p class="mb-4 content-paragraph">Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
-        
-        <p class="mb-4 content-paragraph">At Octalpha, we don't just supply IT — we deliver business continuity, operational efficiency, and technology-led growth.</p>
+      <div class="col-lg-7 text-start">
+  <div class="section-title position-relative pb-3 mb-5">
+    <h5 class="fw-bold text-primary text-uppercase">Your End-to-End Technology Partner</h5>
+    <h1 class="mb-0">From Data Centers to Digital Transformation</h1>
+  </div>
+  
+  <p class="mb-4 content-paragraph"><strong>Octalpha Business Solutions</strong> is a UAE-based technology partner focused on enabling businesses through intelligent and secure IT solutions for the past 10 years.</p>
+  
+  <p class="mb-4 content-paragraph">We have helped various organizations scale faster and smarter with tailored services in IT infrastructure, cybersecurity, data center support, cloud enablement, compliance, and managed services.</p>
+  
+  <p class="mb-4 content-paragraph">Backed by strategic vendor alliances and a strong local presence, we deliver high-impact, cost-effective solutions — from office IT setups and networking to complex enterprise-level integrations.</p>
+  
+  <p class="mb-4 content-paragraph">Our lean, expert-driven team ensures agility, accountability, and personalized service for every project.</p>
+  
+  <p class="mb-4 content-paragraph">At Octalpha, we don't just supply IT — we deliver business continuity, operational efficiency, and technology-led growth.</p>
 
-        <div class="row g-0 mb-3">
-          <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Minified Technology</h5>
-            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Cloud Solutions</h5>
-          </div>
-          <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Personalized Service</h5>
-            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Better Pricing</h5>
-          </div>
-        </div>
+  <div class="row g-0 mb-3">
+    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+      <h5 class="mb-3 d-flex align-items-start">
+        <i class="fa fa-check text-primary me-3"></i>Minified Technology
+      </h5>
+      <h5 class="mb-3 d-flex align-items-start">
+        <i class="fa fa-check text-primary me-3"></i>Cloud Solutions
+      </h5>
+    </div>
+    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+      <h5 class="mb-3 d-flex align-items-start">
+        <i class="fa fa-check text-primary me-3"></i>Personalized Service
+      </h5>
+      <h5 class="mb-3 d-flex align-items-start">
+        <i class="fa fa-check text-primary me-3"></i>Better Pricing
+      </h5>
+    </div>
+  </div>
+</div>
 
-        <!-- Optional CTA -->
-        <!-- <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact us</a> -->
-      </div>
 
       <!-- IMAGE COLUMN -->
       <div class="col-lg-5 d-flex align-items-center justify-content-center">
@@ -491,8 +504,8 @@
   <div class="container py-5">
     <div class="row g-5">
       <!-- IMAGE COLUMN -->
-      <div class="col-12 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-        <div class="position-relative h-100" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 10px; overflow: hidden;">
+      <div class="col-lg-5 d-flex align-items-center justify-content-center">
+        <div class="responsive-image-wrapper">
           <img 
             src="https://media.istockphoto.com/id/1721718091/photo/an-arrow-pointing-upwards-mirroring-the-upward-trajectory-of-a-line-graph-symbolizes-the.jpg?s=612x612&w=0&k=20&c=-WZS1aCOzfJI-1JGN3bgSlThTQZFjBNn0kECa5YFavA=" 
             alt="Business Growth" 
